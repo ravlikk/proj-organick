@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 32" fill="none">
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429" d="M1.057 24.039h19.932" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429" d="M3.309 27.714h15.429" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429" d="M10.738 0.857v8" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429" d="M10.78 8.448v15.104" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M17.1 2.602l-6.32 6.334" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M19.531 5.038l-8.751 8.77" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M20.989 8.935l-10.209 9.744" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M21.476 13.32l-10.695 10.719" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M21.475 18.192l-5.834 5.847" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M0.571 18.192l5.834 5.847" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M4.947 2.602l5.834 6.334" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M2.516 5.038l8.264 8.77" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M1.057 8.448l9.723 10.232" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M0.571 12.833l10.209 10.719" />
+    <path stroke="#7eb693" style="stroke: var(--color1, #7eb693)" stroke-linejoin="miter"
+        stroke-linecap="butt" stroke-miterlimit="10" stroke-width="1.1429"
+        d="M11.023 31.347c-5.772 0-10.452-4.83-10.452-10.789v-9.117c0-5.958 4.68-10.789 10.452-10.789 5.773 0 10.452 4.831 10.452 10.789v9.117c0.001 5.959-4.679 10.789-10.452 10.789z" />
+</svg>
