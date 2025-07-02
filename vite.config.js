@@ -5,7 +5,6 @@ import FullReload from "vite-plugin-full-reload";
 
 export default defineConfig({
   root: "src",
-
   build: {
     target: ["es2022", "chrome89", "firefox89", "safari15"],
     rollupOptions: {
@@ -23,6 +22,5 @@ export default defineConfig({
     },
     outDir: "../dist",
   },
-  plugins: [injectHTML(), FullReload(["./src/**/*.html"])
-],
+  plugins: [injectHTML(), FullReload(["./src/**/*.html"])],
 });

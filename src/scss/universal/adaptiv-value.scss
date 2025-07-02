@@ -1,0 +1,8 @@
+$minWidth: 375;
+$maxWidth: 1920;
+
+@mixin adaptive-value($property, $minSize, $maxSize) {
+  $addSize: $maxSize - $minSize;
+
+  #{$property}: calc(#{$minSize}px + #{$addSize} * ((100vw - #{$minWidth}px) / (#{$maxWidth} - #{$minWidth})));
+}

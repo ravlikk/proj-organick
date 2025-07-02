@@ -1,1 +1,6 @@
-@import url(./reset.scss);
+@import "./universal/reset.scss";
+@import "./universal/_variables.scss";
+@import "./universal/adaptiv-value.scss";
+@import "./homepage/homepage.scss";
+@import "./universal/fonts.scss";
+@import "./universal/varios.scss";
