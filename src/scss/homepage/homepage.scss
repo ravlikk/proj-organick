@@ -173,7 +173,7 @@
 }
 
 .select-header {
-  padding: 10px;
+  @include adaptive-value(padding, 10, 15);
   background: #fff;
   @include adaptive-value(font-size, 16, 32);
 }
