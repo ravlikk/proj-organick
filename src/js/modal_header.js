@@ -8,8 +8,6 @@ function openMenu() {
   sidebar.classList.add('active', 'slide-in-right');
   sidebar.classList.remove('slide-out-right');
 
-  overlay.classList.add('active', 'fade-in');
-  overlay.classList.remove('fade-out');
 
   searchBox.classList.remove('search-animate-out');
   searchBox.classList.add('search-animate-in');
@@ -28,7 +26,7 @@ function closeMenu() {
 
   setTimeout(() => {
     sidebar.classList.remove('active', 'slide-out-right');
-    overlay.classList.remove('active', 'fade-out');
+
     document.body.classList.remove('modal-open');
   }, 400);
 }

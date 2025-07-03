@@ -45,9 +45,7 @@ body{
   @include tablet-above {
     display: none !important;
   }
-  @include mobile {
-    display: none !important;
-  }
+  
 }
 
 .hidden-tablet {

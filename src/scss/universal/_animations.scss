@@ -26,21 +26,24 @@
 }
 #openModalBtn:active,
 #submit:active,
-button svg{
+header button svg,
+.modal button svg {
     transition: transform 0.2s ease, opacity 0.2s ease;
     border-radius: 15px;
 }
 
 #openModalBtn:active,
 #submit:active,
-button svg:active{
+header  button svg:active,
+.modal button svg:active {
   animation-name: rubberBand;
   animation-duration: 0.4s;
   animation-fill-mode: both;
   
 }
 
-button svg:hover{
+header  button svg:active,
+.modal button svg:active{
   cursor: pointer;
 }
 
