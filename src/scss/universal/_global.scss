@@ -1,0 +1,38 @@
+header,
+.modal {
+    @include fluid-text(40, 32);
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 1.28;
+    color: var(--color-blue-dark);
+    background-color: var(--color-light);
+}
+
+header a,
+header button,
+header input,
+header textarea,
+header svg *, 
+.modal  a,
+.modal button,
+.modal input,
+.modal textarea,
+.modal svg * {
+    transition-duration: var(--transition-duration);
+}
+.modal a,
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+.modal h1,
+header h1 {
+    @include fluid-text(82, 62);
+    font-weight: 700;
+}
+.modal h2,
+header h2 {
+    @include fluid-text(40, 32);
+    font-weight: 700;
+}

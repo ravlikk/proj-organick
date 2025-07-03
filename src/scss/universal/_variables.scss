@@ -3,3 +3,56 @@ $grey-text: #525c60;
 $dark-blue-color: #274c5b;
 $white-color: #fff;
 $ligh-grey: #b8b8b8;
+$pc: 1920px;
+$pc-above: 1919px;
+
+$laptop: 1440px;
+$laptop-above: 1439px;
+
+$tablet: 768px;
+$tablet-above: 767px;
+
+$mobile: 376px;
+$mobile-above: 375.98px;
+
+$sidebar-width: 375px;
+$overlay-bg: rgba(0, 0, 0, 0.5);
+$z-sidebar: 1001;
+$z-overlay: 1000;
+:root{
+    --color-light: rgba(255, 255, 255, 0.90);
+    --colot-orange-light: rgba(253, 176, 45, 0.16);
+    --color-blue-dark: #274C5B;
+    --color-green: #7EB693;
+    --color-orange: rgba(253, 177, 45, 0.866);
+    --color-red: #F00;
+
+    --border-small: 1px solid var(--color-green);
+    --border-big: 2px solid var(--color-blue-dark);
+    --border-radius: 16px;
+    --blur: 4px;
+
+    --font-family: 'Roboto';
+
+    --container-width: 375px;
+
+    --header-padding: 15px;
+
+    --section-card-padding: 29px 19px 17px 48px;
+    
+    --footer-padding: 20px 49px 14px;
+
+    --input-search-height: 66px;
+    --input-search-width: 376px;
+
+    --input-quanity-height: 134px;
+    --input-regular-height: 80px;
+    --input-big-height: 247px;
+
+    --button-height: 72px;
+
+    --transition-duration: 0.2s;
+
+    --mobile: 375px
+
+}

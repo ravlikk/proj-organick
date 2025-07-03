@@ -1,0 +1,84 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: $sidebar-width; 
+  background-color: var(--color-orange);
+  padding: 20px;
+  transform: translateX(100%); 
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+
+  &.active {
+    transform: translateX(0); 
+  }
+
+  &__message{
+    @include fluid-text(40, 37);
+     position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  padding: 20px 30px;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translate(-50%, -40%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1001;
+  
+  }
+
+  &__message.visible {
+    opacity: 1;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+}
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0);
+    
+
+    input {
+      width: 100%;
+      padding: 14px 12px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+
+      &:focus {
+        outline: none;
+        background-color: #fff;
+        border-color: var(--color-green);
+        box-shadow: 0 0 0 3px rgba(126, 182, 147, 0.2);
+      }
+    }
+
+    button {
+      background-color: var(--color-blue-dark);
+      padding: 5px;
+      border-radius: var(--border-radius);
+      @include fluid-text(18, 14);
+      color: white;
+      max-width: 70px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
+
+    p {
+      @include fluid-text(18, 14);
+    }
+  }
+}
+
+.hidden{
+    display: none;
+}

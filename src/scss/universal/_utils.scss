@@ -1,0 +1,77 @@
+body{
+    max-width: var(--mobile);
+
+}
+
+.container {
+    max-width: calc(var(--container-width) * 2);
+    margin-inline: auto;
+}
+
+.visually-hidden {
+    position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.visible-mobile {
+  @include mobile {
+    display: block !important;
+  }
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @include mobile-above {
+    @media (max-width: $tablet) {
+      display: block !important;
+    }
+  }
+  @include tablet-above {
+    display: none !important;
+  }
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @include mobile-above {
+    @media (max-width: $laptop-above) {
+      display: none !important;
+    }
+  }
+}
+
+.visible-laptop {
+  @include tablet-above {
+    @media (max-width: $laptop) {
+      display: block !important;
+    }
+  }
+  @include laptop-above {
+    display: none !important;
+  }
+}
+
+
+button{
+    @include reset-button;
+    display: flex;
+    align-content: center;
+}
