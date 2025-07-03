@@ -1,19 +1,38 @@
 import axios from "axios";
 import { createCards } from "../products/getProducts";
 import { loadMore } from "../products/loadMore";
-
+import { createCategoryList, getCategory } from "../products/categoryCards";
 const url = "https://test-nest-api-iqy9.onrender.com/api";
 
 export async function getProducts(params) {
-  const products = axios
+  axios
     .get(`${url}/products`)
     .then((response) => {
       const data = response.data.data;
       createCards(data);
-      loadMore(data)
+      loadMore(data);
     })
     .catch((error) => {
       console.log(error);
       window.location.replace("../404.html");
     });
+}
+export async function getCategoryCards(params) {
+  axios
+    .get(`${url}/categories`)
+    .then((response) => {
+      const data = response.data;
+      getCategory(data);
+    })
+    .catch((error) => {
+      console.log(error);
+      window.location.replace("../404.html");
+    });
+}
+export async function getCardsByCategory(params) {
+    
+  axios.get(`${url}/products`).then((response) => {
+    const data = response.data.data;
+    createCategoryList(data);
+  });
 }

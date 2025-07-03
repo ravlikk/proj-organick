@@ -2,7 +2,7 @@
   font-family: "Yellowtail";
   @include adaptive-value(font-size, 20, 36);
   color: $section-text-color;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 @media (min-width: 768px) {
 }

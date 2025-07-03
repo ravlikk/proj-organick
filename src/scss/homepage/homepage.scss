@@ -1,5 +1,6 @@
 .products {
-  @include adaptive-value(padding-top, 50, 176);
+  @include adaptive-value(padding-bottom, 50, 176);
+
   &__container {
     width: 320px;
     margin: 0 auto;
@@ -121,4 +122,81 @@
       @include adaptive-value(height, 19, 22);
     }
   }
+}
+.offer {
+  background-color: $dark-blue-color;
+  &__container {
+    width: 320px;
+    margin: 0 auto;
+    @include adaptive-value(padding-block, 50, 200);
+    @media (min-width: 768px) {
+      width: 700px;
+    }
+    @media (min-width: 1440px) {
+      width: 1060px;
+    }
+    @media (min-width: 1920px) {
+      width: 1420px;
+    }
+    > div {
+      @include adaptive-value(margin-bottom, 20, 50);
+      text-align: center;
+    }
+  }
+  &__title {
+    color: $white-color;
+    font-family: Roboto;
+    @include adaptive-value(font-size, 32, 50);
+    font-weight: 800;
+    @include adaptive-value(margin-bottom, 10, 30);
+  }
+  &__list {
+    @include adaptive-value(margin-bottom, 20, 122);
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+}
+.custom-select {
+  width: 200px;
+  @include adaptive-value(width, 200, 200);
+
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  font-family: "Roboto";
+  margin: 0 auto;
+}
+
+.select-header {
+  padding: 10px;
+  background: #fff;
+  @include adaptive-value(font-size, 16, 32);
+}
+
+.select-list {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  width: 100%;
+}
+
+.select-list.open {
+  max-height: 210px;
+}
+
+.select-list li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  @include adaptive-value(font-size, 16, 32);
+}
+
+.select-list li:hover {
+  background: #f0f0f0;
 }
