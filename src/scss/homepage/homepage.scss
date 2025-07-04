@@ -200,3 +200,68 @@
 .select-list li:hover {
   background: #f0f0f0;
 }
+.gallery {
+  background: $gray-white-color;
+  @include adaptive-value(padding-block, 50, 187);
+  &__container {
+    width: 320px;
+    margin: 0 auto;
+    @media (min-width: 920px) {
+      width: 100%;
+    }
+  }
+  &__list {
+    @media (min-width: 920px) {
+      display: flex;
+      gap: 35px;
+      @include adaptive-value(gap, 20, 48);
+    }
+  }
+  &__item {
+    @include adaptive-value(height, 320, 550);
+    @include adaptive-value(width, 320, 650);
+    @media (min-width: 768px) {
+      height: 220px;
+      @include adaptive-value(height, 220, 650);
+    }
+    @media (min-width: 920px) {
+      margin-bottom: 0;
+    }
+
+    margin-bottom: 20px;
+    @include adaptive-value(margin-bottom, 20, 125);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__brown {
+    background: url(../../image/gallery/brown.png) lightgray 50% / cover
+      no-repeat;
+  }
+  &__green {
+    background: url(../../image/gallery/green.png) lightgray 50% / cover
+      no-repeat;
+  }
+  &__yellow {
+    background: url(../../image/gallery/yellow.png) lightgray 50% / cover
+      no-repeat;
+  }
+  &__text {
+    color: $dark-blue-color;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 500;
+
+    border-radius: 20px;
+    background: #fff;
+    padding: 20px 33px;
+    @media (min-width: 768px) {
+      @include adaptive-value(padding-block, 20, 33);
+      @include adaptive-value(padding-inline, 33, 83);
+    }
+  }
+}

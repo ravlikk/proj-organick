@@ -29,7 +29,7 @@
     width: 320px;
     margin: 0 auto;
     @media (min-width: 768px) {
-      @include adaptive-value(width, 700, 1200);
+      @include adaptive-value(width, 580, 1200);
       background: url(../../image/subscribe/subscribe-background.png) lightgray
         50% / cover no-repeat;
       border-radius: 30px;
