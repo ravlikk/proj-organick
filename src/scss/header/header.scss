@@ -20,6 +20,10 @@
     color: inherit;
     }
 
+    &__user{
+      
+    }
+
   & h1, h2 {
     @include fluid-text(82, 62);
     font-weight: 700;

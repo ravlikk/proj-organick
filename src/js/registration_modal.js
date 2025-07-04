@@ -22,7 +22,7 @@ checkInputsFilled();
 root.btn.addEventListener('click', (e) => {
   e.preventDefault(); 
 
-  content.classList.add('hidden');
+  root.content.classList.add('hidden');
   root.closeModalBtn.classList.add('hidden');
 
   root.text.classList.add('visible');

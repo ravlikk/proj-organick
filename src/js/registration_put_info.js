@@ -1,11 +1,15 @@
 import axios from 'axios';
 import { root } from '../js/universal/root';
 
+;
+
 window.addEventListener('DOMContentLoaded', () => {
+  root.iconUser.display = 'none';
   const isAuthenticated = localStorage.getItem('isAuthenticated');
   if (isAuthenticated === 'true') {
     root.log.style.display = 'none'; 
-    console.log('Користувач вже авторизований, кнопка прихована');
+    root.iconUser.display = 'block';
+    
   }
 });
 
@@ -36,12 +40,12 @@ async function registerUser(email, password) {
     });
 
     const data = res.data;
-    console.log('Реєстрація успішна:', data);
+    root.iconUser.display = 'block';
 
     if (data.token) {
       localStorage.setItem('token', data.token);
       localStorage.setItem('isAuthenticated', 'true');
-      root.submitBtn.style.display = 'none';
+      
     } else {
       console.warn('Токен не отримано від сервера');
     }
@@ -61,8 +65,8 @@ async function registerUser(email, password) {
 root.submitBtn.addEventListener('click', async (e) => {
   e.preventDefault();
 
-  const email = root.emailInput.value.trim();
-  const password = root.passwordInput.value.trim();
+   const email = root.emailInput.value.trim();
+   const password = root.passwordInput.value.trim();
 
   if (!email || !password) {
     console.warn('Email або пароль не заповнені');
