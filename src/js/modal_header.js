@@ -1,16 +1,12 @@
-const burger = document.getElementById("burger");
-const searchBut = document.getElementById("search-button");
-const sidebar = document.getElementById("sidebar-menu");
-const closeBtn = document.getElementById("close-menu");
-const searchBox = document.getElementById("sidebar-search");
+import { root } from '../js/universal/root';
 
 function openMenu() {
-  sidebar.classList.add('active', 'slide-in-right');
-  sidebar.classList.remove('slide-out-right');
+  root.sidebar.classList.add('active', 'slide-in-right');
+  root.sidebar.classList.remove('slide-out-right');
 
 
-  searchBox.classList.remove('search-animate-out');
-  searchBox.classList.add('search-animate-in');
+  root.searchBox.classList.remove('search-animate-out');
+  root.searchBox.classList.add('search-animate-in');
 
   if (window.innerWidth < 768) {
     document.body.classList.add('modal-open');
@@ -18,25 +14,25 @@ function openMenu() {
 }
 
 function closeMenu() {
-  sidebar.classList.remove('slide-in-right');
-  sidebar.classList.add('slide-out-right');
+  root.sidebar.classList.remove('slide-in-right');
+  root.sidebar.classList.add('slide-out-right');
 
-  searchBox.classList.remove('search-animate-in');
-  searchBox.classList.add('search-animate-out');
+  root.searchBox.classList.remove('search-animate-in');
+  root.searchBox.classList.add('search-animate-out');
 
   setTimeout(() => {
-    sidebar.classList.remove('active', 'slide-out-right');
+    root.sidebar.classList.remove('active', 'slide-out-right');
 
     document.body.classList.remove('modal-open');
   }, 400);
 }
 
 
-burger.addEventListener('click', openMenu);
-searchBut.addEventListener('click', openMenu);
-closeBtn.addEventListener('click', closeMenu);
+root.burger.addEventListener('click', openMenu);
+root.searchBut.addEventListener('click', openMenu);
+root.closeBtn.addEventListener('click', closeMenu);
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+  if (e.key === 'Escape' && root.sidebar.classList.contains('active')) {
     closeMenu();
   }
 });

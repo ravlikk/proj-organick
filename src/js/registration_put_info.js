@@ -1,30 +1,26 @@
 import axios from 'axios';
-
-const log = document.querySelector('.header__registration');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
-const submitBtn = document.getElementById('submit');
+import { root } from '../js/universal/root';
 
 window.addEventListener('DOMContentLoaded', () => {
   const isAuthenticated = localStorage.getItem('isAuthenticated');
   if (isAuthenticated === 'true') {
-    log.style.display = 'none'; 
+    root.log.style.display = 'none'; 
     console.log('Користувач вже авторизований, кнопка прихована');
   }
 });
 
 function validateForm() {
-  const email = emailInput.value.trim();
-  const password = passwordInput.value.trim();
+  const email = root.emailInput.value.trim();
+  const password = root.passwordInput.value.trim();
 
   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isPasswordValid = password.length >= 6;
 
-  submitBtn.disabled = !(isEmailValid && isPasswordValid);
+  root.submitBtn.disabled = !(isEmailValid && isPasswordValid);
 }
 
-emailInput.addEventListener('input', validateForm);
-passwordInput.addEventListener('input', validateForm);
+root.emailInput.addEventListener('input', validateForm);
+root.passwordInput.addEventListener('input', validateForm);
 
 
 async function registerUser(email, password) {
@@ -45,7 +41,7 @@ async function registerUser(email, password) {
     if (data.token) {
       localStorage.setItem('token', data.token);
       localStorage.setItem('isAuthenticated', 'true');
-      submitBtn.style.display = 'none';
+      root.submitBtn.style.display = 'none';
     } else {
       console.warn('Токен не отримано від сервера');
     }
@@ -62,11 +58,11 @@ async function registerUser(email, password) {
   }
 }
 
-submitBtn.addEventListener('click', async (e) => {
+root.submitBtn.addEventListener('click', async (e) => {
   e.preventDefault();
 
-  const email = emailInput.value.trim();
-  const password = passwordInput.value.trim();
+  const email = root.emailInput.value.trim();
+  const password = root.passwordInput.value.trim();
 
   if (!email || !password) {
     console.warn('Email або пароль не заповнені');

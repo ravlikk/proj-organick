@@ -1,11 +1,9 @@
-const modal = document.getElementById('modal');
-const openModalBtn = document.getElementById('openModalBtn');
-const closeModalBtn = document.querySelector('.modal__cancel');
+import { root } from "./universal/root";
 
-openModalBtn.addEventListener('click', () => {
-  modal.classList.add('active');
+root.openModalBtn.addEventListener('click', () => {
+  root.modal.classList.add('active');
 });
 
-closeModalBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
+root.closeModalBtn.addEventListener('click', () => {
+  root.modal.classList.remove('active');
 });

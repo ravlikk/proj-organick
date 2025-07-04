@@ -1,3 +1,23 @@
 export const root = {
-    
+burger: document.getElementById("burger"),
+searchBut: document.getElementById("search-button"),
+sidebar: document.getElementById("sidebar-menu"),
+closeBtn: document.getElementById("close-menu"),
+searchBox: document.getElementById("sidebar-search"),
+modal: document.getElementById('modal'),
+openModalBtn: document.getElementById('openModalBtn'),
+closeModalBtn: document.querySelector('.modal__cancel'),
+btn: document.getElementById('submit'),
+text: document.querySelector('.modal__message'),
+content: document.querySelector('.modal__content'),
+closeModalBtn:document.querySelector('.modal__cancel'),
+log: document.querySelector('.header__registration'),
+modal: document.querySelector('.modal'),
+form: document.getElementById('form'),
+inputs: form.querySelectorAll('input'),
+log: document.querySelector('.header__registration'),
+emailInput: document.getElementById('email'),
+passwordInput: document.getElementById('password'),
+submitBtn: document.getElementById('submit')
 }
+ 

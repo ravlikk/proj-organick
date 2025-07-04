@@ -1,43 +1,36 @@
-const btn = document.getElementById('submit');
-const text = document.querySelector('.modal__message');
-const content = document.querySelector('.modal__content');
-const closeModalBtn = document.querySelector('.modal__cancel');
-const log = document.querySelector('.header__registration');
-const modal = document.querySelector('.modal');
-const form = document.getElementById('form');
-const inputs = form.querySelectorAll('input');
+import { root } from '../js/universal/root';
 
 function checkInputsFilled() {
   let allValid = true;
 
-  inputs.forEach(input => {
+  root.inputs.forEach(input => {
     if (!input.validity.valid) {
       allValid = false;
     }
   });
 
-  btn.disabled = !allValid;
+  root.btn.disabled = !allValid;
 }
 
-inputs.forEach(input => {
+root.inputs.forEach(input => {
   input.addEventListener('input', checkInputsFilled);
 });
 
 checkInputsFilled();
 
 
-btn.addEventListener('click', (e) => {
+root.btn.addEventListener('click', (e) => {
   e.preventDefault(); 
 
   content.classList.add('hidden');
-  closeModalBtn.classList.add('hidden');
+  root.closeModalBtn.classList.add('hidden');
 
-  text.classList.add('visible');
+  root.text.classList.add('visible');
 
-  log.classList.add('log--shrink');
+  root.log.classList.add('log--shrink');
 
   setTimeout(() => {
-    log.classList.add('hidden');
-    modal.classList.remove('active');
+    root.log.classList.add('hidden');
+    root.modal.classList.remove('active');
   }, 1000); 
 });
