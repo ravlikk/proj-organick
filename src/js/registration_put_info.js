@@ -26,7 +26,7 @@ function validateForm() {
 emailInput.addEventListener('input', validateForm);
 passwordInput.addEventListener('input', validateForm);
 
-// 📦 Реєстрація користувача
+
 async function registerUser(email, password) {
   try {
     const res = await axios({
@@ -62,7 +62,6 @@ async function registerUser(email, password) {
   }
 }
 
-// 🔘 Обробка кліку на кнопку
 submitBtn.addEventListener('click', async (e) => {
   e.preventDefault();
 
