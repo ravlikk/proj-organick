@@ -204,7 +204,7 @@
   background: $gray-white-color;
   @include adaptive-value(padding-block, 50, 187);
   &__container {
-    width: 320px;
+    @include adaptive-value(width, 320, 650);
     margin: 0 auto;
     @media (min-width: 920px) {
       width: 100%;
