@@ -2,6 +2,7 @@ import axios from 'axios';
 import { root } from '../js/universal/root';
 
 
+
 window.addEventListener('DOMContentLoaded', () => {
   
   const isAuthenticated = localStorage.getItem('isAuthenticated');

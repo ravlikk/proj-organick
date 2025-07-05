@@ -5,66 +5,40 @@ root.iconUser.addEventListener('click', () => {
   root.modal.classList.add('active');
   root.form.style.display = 'none';
 
-}
+  async function loginUser(email, password) {
+    try {
+      const res = await axios.post('https://test-nest-api-iqy9.onrender.com/api/auth/login', {
+        email,
+        password
+      });
 
+      const data = res.data;
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('isAuthenticated', 'true');
+      console.log('Успішний вхід:', data);
 
-async function loginFromToken() {
-  const token = localStorage.getItem('token');
-  if (!token) {
-    console.warn('Токен не знайдено в localStorage');
-    return;
-  }
-
-  const decoded = parseJwt(token);
-  
-  if (!decoded) {
-    console.warn('Не вдалося декодувати токен');
-    return;
-  }
-
-  const email = decoded.email;
-console.log(decoded);
-  if (!email) {
-    console.warn('У токені відсутні email або password');
-    return;
-  }
-
-  try {
-    const res = await axios({
-      method: 'POST',
-      url: 'https://test-nest-api-iqy9.onrender.com/api/auth/login', 
-      data: {email},
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+      insertHtml(data.user); 
+      return data;
+    } catch (err) {
+      if (err.response) {
+        console.error('Помилка авторизації:', err.response.data.message);
+      } else {
+        console.error('Помилка мережі:', err.message);
       }
-    });
-
-    console.log('Успішний повторний логін:', res.data);
-    return res.data;
-
-  } catch (err) {
-    if (err.response) {
-      console.error('Помилка авторизації:', err.response.data.message);
-    } else {
-      console.error('Помилка мережі:', err.message);
     }
   }
-}
 
-
-loginFromToken();
+  loginUser('user@example.com', 'password123');
+});
 
 function insertHtml(user) {
   const container = document.getElementById('user-container');
 
   container.innerHTML = `
     <div class="user-card">
-      <h2>${user.name}</h2>
+      <h2>${user.first_name || 'Без імені'}</h2>
       <p><strong>Email:</strong> ${user.email}</p>
-      <p><strong>Phone:</strong> ${user.phone}</p>
+      <p><strong>Phone:</strong> ${user.phone || 'Невідомо'}</p>
     </div>
   `;
 }
-});
-
