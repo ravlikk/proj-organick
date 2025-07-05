@@ -1,21 +1,21 @@
 import axios from 'axios';
 import { root } from '../js/universal/root';
 
-;
 
 window.addEventListener('DOMContentLoaded', () => {
-  root.iconUser.display = 'none';
+  
   const isAuthenticated = localStorage.getItem('isAuthenticated');
   if (isAuthenticated === 'true') {
     root.log.style.display = 'none'; 
-    root.iconUser.display = 'block';
-    
+    root.iconUser.classList.add('visible');
   }
 });
 
 function validateForm() {
   const email = root.emailInput.value.trim();
   const password = root.passwordInput.value.trim();
+
+
 
   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isPasswordValid = password.length >= 6;
@@ -26,13 +26,12 @@ function validateForm() {
 root.emailInput.addEventListener('input', validateForm);
 root.passwordInput.addEventListener('input', validateForm);
 
-
 async function registerUser(email, password) {
   try {
     const res = await axios({
       method: 'POST',
       url: 'https://test-nest-api-iqy9.onrender.com/api/users', 
-      data: { email, password },
+      data: { email, password},
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'

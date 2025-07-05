@@ -192,7 +192,6 @@
     &__search-icon{
       width: 56px;
       height: 56px;
-      transform: translateY(10%);
     }
 
     &__search-icon{
@@ -228,12 +227,12 @@
     }
 
     &__info-cart{
-      transform: translateY(17%);
+      align-items: center;
       gap: 10px;
     }
 
     &__cart-text{
-      transform: translateY(20%);
+      
     }
 
     &__cart-count span{
@@ -266,7 +265,7 @@
     &__search-icon{
       width: 56px;
       height: 56px;
-      transform: translateY(10%);
+      
     }
 
     &__search-icon{
@@ -299,12 +298,12 @@
   
 
     &__info-cart{
-      transform: translateY(17%);
+      align-items: center;
       gap: 10px;
     }
 
     &__cart-text{
-      transform: translateY(20%);
+      
     }
 
     &__cart-count span{

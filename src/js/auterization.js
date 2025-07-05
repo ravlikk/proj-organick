@@ -42,7 +42,7 @@ async function loginFromToken() {
   }
 
   const email = decoded.email;
-console.log(email);
+console.log(decoded);
   if (!email) {
     console.warn('У токені відсутні email або password');
     return;
@@ -52,7 +52,7 @@ console.log(email);
     const res = await axios({
       method: 'POST',
       url: 'https://test-nest-api-iqy9.onrender.com/api/auth/login', 
-      data: { email},
+      data: {email},
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
