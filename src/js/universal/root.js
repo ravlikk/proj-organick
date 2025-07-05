@@ -18,6 +18,8 @@ inputs: form.querySelectorAll('input'),
 log: document.querySelector('.header__registration'),
 emailInput: document.getElementById('email'),
 passwordInput: document.getElementById('password'),
-submitBtn: document.getElementById('submit')
+submitBtn: document.getElementById('submit'),
+cartButton: document.getElementById('cart'),
+cartContent: document.querySelectorAll('.cart__content')
 }
  
