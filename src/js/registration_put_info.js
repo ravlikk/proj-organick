@@ -20,7 +20,7 @@ function checkInputsFilled() {
 }
 
 root.emailInput.addEventListener('input', checkInputsFilled);
-root.nameInput.addEventListener('input', checkInputsFilled);
+root.userInput.addEventListener('input', checkInputsFilled);
 root.addressInput.addEventListener('input', checkInputsFilled);
 root.phoneInput.addEventListener('input', checkInputsFilled);
 
@@ -57,4 +57,4 @@ root.submitBtn.addEventListener('click', async (e) => {
 
 
 
-validateForm();
+

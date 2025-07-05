@@ -22,6 +22,7 @@ addressInput: document.getElementById('adress'),
 nameInput: document.getElementById('username'),
 submitBtn: document.getElementById('submit'),
 iconUser: document.querySelector('.header__user'), 
-userInput: document.getElementById('first')
+userInput: document.getElementById('first'),
+phoneInput: document.getElementById('tel')
 }
  

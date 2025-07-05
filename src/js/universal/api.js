@@ -7,7 +7,10 @@ export async function registerUser(email, password, first_name, url) {
    const res = await axios.post(url, {
         email,
         password,
-        first_name
+        first_name,
+        last_name,
+        phone,
+        address
       });
 
     const data = res.data;

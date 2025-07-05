@@ -2,7 +2,7 @@ import { root } from '../js/universal/root';
 
 function checkInputsFilled() {
   const email = root.emailInput.value.trim();
-  const name = root.nameInput.value.trim();
+  const name = root.userInput.value.trim();
   const address = root.addressInput.value.trim();
   const phone = root.phoneInput.value.trim();
 
@@ -17,7 +17,7 @@ function checkInputsFilled() {
 }
 
 root.emailInput.addEventListener('input', checkInputsFilled);
-root.nameInput.addEventListener('input', checkInputsFilled);
+root.userInput.addEventListener('input', checkInputsFilled);
 root.addressInput.addEventListener('input', checkInputsFilled);
 root.phoneInput.addEventListener('input', checkInputsFilled);
 
