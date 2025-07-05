@@ -34,3 +34,4 @@ root.btn.addEventListener('click', (e) => {
     root.modal.classList.remove('active');
   }, 1000); 
 });
+

@@ -19,6 +19,7 @@ log: document.querySelector('.header__registration'),
 emailInput: document.getElementById('email'),
 passwordInput: document.getElementById('password'),
 submitBtn: document.getElementById('submit'),
-iconUser: document.querySelector('.header__user')
+iconUser: document.querySelector('.header__user'), 
+userInput: document.getElementById('first')
 }
  
