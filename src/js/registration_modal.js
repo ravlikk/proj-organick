@@ -9,20 +9,18 @@ function checkInputsFilled() {
   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isNameValid = name.length >= 2;
   const isAddressValid = address.length > 0;
-  const isPhoneValid = /^\+380\d{9}$/.test(phone); // UA формат: +380XXXXXXXXX
+  const isPhoneValid = /^\+380\d{9}$/.test(phone); 
 
   const allValid = isEmailValid && isNameValid && isAddressValid && isPhoneValid;
 
   root.btn.disabled = !allValid;
 }
 
-// Вішай слухачі на окремі поля
 root.emailInput.addEventListener('input', checkInputsFilled);
 root.nameInput.addEventListener('input', checkInputsFilled);
 root.addressInput.addEventListener('input', checkInputsFilled);
 root.phoneInput.addEventListener('input', checkInputsFilled);
 
-// Запуск при завантаженні
 checkInputsFilled();
 
 
