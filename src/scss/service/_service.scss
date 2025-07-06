@@ -2,7 +2,7 @@
 .services__container {
   max-width: 320px;
   margin: 0 auto;
-  background-color: white;
+  background-color: $white-color;
 }
 .services__container__wrapper{
   &__wrapper{
@@ -19,14 +19,14 @@
 }
 
 .subtitle {
-  color: #7eb693;
+  color: $section-text-color;
   font-family: 'Yellowtail', cursive;
   font-size: 18px;
   font-weight: 400;
 }
 
 .title {
-  color: #274c5b;
+  color:$dark-blue-color;
   text-align: center;
   font-family: Roboto;
   font-size: 22px;
@@ -36,8 +36,8 @@
   }
 }
 .text{
-  color: #525C60;
-   font-family: "Open Sans";
+  color: $grey-text;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   line-height: 165.4%; 
@@ -101,7 +101,7 @@
   border-radius: 16px;
   border: 2px solid #335b6b;
   background: #f9f8f8;
-  color: #274c5b;
+  color: $dark-blue-color;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   align-items: center;
@@ -109,8 +109,8 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: #274c5b;
-    color: white;
+    background-color: $dark-blue-color;
+    color: $white-color;
   }
   &__icon{
     width: 14px;
@@ -158,7 +158,7 @@
 .organic-only__video-icon {
   width: 60px;
   height: 60px;
-  background-color: #7EB693;
+  background-color: $section-text-color;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -169,7 +169,7 @@
     fill: currentColor;
     width: 20px;
     height: 20px;
-    color: white;
+    color: $white-color;
   }
 }
 
