@@ -5,5 +5,8 @@ export const rooot = {
   select: document.getElementById("mySelect"),
   categoryName: document.querySelector(".select-header"),
   categoryList: document.querySelector(".select-list"),
-  categoryCardsList: document.querySelector(".offer__list")
+  categoryCardsList: document.querySelector(".offer__list"),
+  modalBlur: document.querySelector(".modal__blur"),
+  modal: document.querySelector(".detail"),
+  btnAddToCart: document.querySelector(".detail__btn"),
 };

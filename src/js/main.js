@@ -1,4 +1,6 @@
+import { createModal } from "./products/showModal.js";
 import {
+  getCardByModal,
   getCardsByCategory,
   getCategoryCards,
   getProducts,
@@ -7,3 +9,4 @@ import {
 getProducts();
 getCategoryCards();
 getCardsByCategory();
+createModal();

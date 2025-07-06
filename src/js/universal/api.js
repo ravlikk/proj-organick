@@ -2,6 +2,9 @@ import axios from "axios";
 import { createCards } from "../products/getProducts";
 import { loadMore } from "../products/loadMore";
 import { createCategoryList, getCategory } from "../products/categoryCards";
+import { modalProduct } from "../products/addHtmlProducts";
+import { closeBtn } from "../products/showModal";
+
 const url = "https://test-nest-api-iqy9.onrender.com/api";
 
 export async function getProducts(params) {
@@ -30,9 +33,15 @@ export async function getCategoryCards(params) {
     });
 }
 export async function getCardsByCategory(params) {
-    
   axios.get(`${url}/products`).then((response) => {
     const data = response.data.data;
     createCategoryList(data);
+  });
+}
+export async function getCardByModal(id) {
+  axios.get(`${url}/products/${id}`).then((response) => {
+    const data = response.data;
+    modalProduct(data);
+    closeBtn();    
   });
 }
