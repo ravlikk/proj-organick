@@ -16,13 +16,13 @@ modal: document.querySelector('.modal'),
 form: document.getElementById('form'),
 inputs: form.querySelectorAll('input'),
 log: document.querySelector('.header__registration'),
-emailInput: document.getElementById('email'),
-phoneInput: document.getElementById('number'),
 addressInput: document.getElementById('adress'),
-nameInput: document.getElementById('username'),
 submitBtn: document.getElementById('submit'),
 iconUser: document.querySelector('.header__user'), 
 userInput: document.getElementById('first'),
-phoneInput: document.getElementById('tel')
+nameInput: document.getElementById('last'),
+emailInput: document.getElementById('email'),
+phoneInput: document.getElementById('tel'),
+passwordInput: document.getElementById('password')
 }
  

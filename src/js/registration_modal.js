@@ -1,27 +1,6 @@
 import { root } from '../js/universal/root';
 
-function checkInputsFilled() {
-  const email = root.emailInput.value.trim();
-  const name = root.userInput.value.trim();
-  const address = root.addressInput.value.trim();
-  const phone = root.phoneInput.value.trim();
 
-  const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  const isNameValid = name.length >= 2;
-  const isAddressValid = address.length > 0;
-  const isPhoneValid = /^\+380\d{9}$/.test(phone); 
-
-  const allValid = isEmailValid && isNameValid && isAddressValid && isPhoneValid;
-
-  root.btn.disabled = !allValid;
-}
-
-root.emailInput.addEventListener('input', checkInputsFilled);
-root.userInput.addEventListener('input', checkInputsFilled);
-root.addressInput.addEventListener('input', checkInputsFilled);
-root.phoneInput.addEventListener('input', checkInputsFilled);
-
-checkInputsFilled();
 
 
 
