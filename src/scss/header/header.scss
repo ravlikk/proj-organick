@@ -4,43 +4,56 @@
 .header {
   position: fixed;
   backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
   background-color: var(--color-light);
   width: 100%;
     z-index: 1000;
-     @include fluid-text(40, 32);
+    
+  &__conteiner {
+    width: 360px;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+      width: 775px;
+    }
+    @media (min-width: 1440px) {
+      width: 1300px;
+    }
+    @media (min-width: 1920px) {
+      width: 1596px;
+    }
+    > div {
+      @include adaptive-value(padding-bottom, 30, 69);
+      @include adaptive-value(padding-top, 30, 69);
+    }
+  }
+    & a{
     font-family: var(--font-family);
     font-weight: 700;
     line-height: 1.28;
     color: var(--color-blue-dark);
-    background-color: var(--color-light);
 
-    & a{
-      text-decoration: none;
-    color: inherit;
     }
 
-    &__user{
-      
+    &__logo-text{
+      @include adaptive-value(font-size, 24, 38);
     }
 
-  & h1, h2 {
-    @include fluid-text(82, 62);
-    font-weight: 700;
-} 
    &__registration{
       background-color: var(--color-blue-dark);
       padding: 5px;
       border-radius: var(--border-radius);
-      @include fluid-text(25, 14);
+      @include adaptive-value(font-size, 18, 24);
       color: white;
-      transform: translateY(-10%);
-      padding: 1vw;
+      padding: 10px;
       display: flex;
       justify-content: center;
       align-self: center;
       
     }
+
+     &__nav-item{
+    @include adaptive-value(font-size, 14, 20);
+    }
+
 
   &__sidebar{
     position: fixed;
@@ -49,7 +62,7 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--color-orange);
-    padding: 20px;
+    
     
   }
 
@@ -58,13 +71,9 @@
     }
 
   &__nav-list{
-      margin: 0;
-      padding: 0;
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
-    width: 40vw;
-      @include fluid-text(20, 18);
+    @include adaptive-value(gap, 14, 40);
     }
 
     &__nav-arrow{
@@ -73,7 +82,6 @@
 
     #menu{
       display: flex;
-      flex-direction: row;
       gap: 10px;
       
     }
@@ -81,6 +89,8 @@
     &__user-item{
       display: none;
     }
+
+    
 
   &__sidebar-list{
     
@@ -90,12 +100,14 @@
     gap: 30px;
     max-width: 50%;
     overflow: hidden;
+    @include adaptive-value(font-size, 30, 48);
   }
   
 &__search-input {
-  margin: 20px;
-  width: 80vw;
-  padding: 12px 16px;
+  height: 40px;
+  @include adaptive-value(width, 300, 500);
+  margin-bottom: 20px;
+  margin-top: 20px;
   font-size: 16px;
   font-family: inherit;
   color: #333;
@@ -118,36 +130,33 @@
 
   &__info {
     display: flex;
-    flex-direction: row;
     gap: 10px;
     
   }
 
   &__logo {
     display: flex;
-    flex-direction: row;
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: inherit;
-    
-    padding-left: 20px;
-    padding-right: 20px;
+    gap: 10px;
   }
 
   &__logo-icon{
     width: 27px;
     height: 44px;
   }
+  }
 
-}
 
 @include tablet {
   .header{
     
+
+
     max-width: var(--tablet);
 
     &__sidebar{
@@ -164,7 +173,6 @@
 
     &__wrapper{
       width: 100%;
-      padding-top: 20px;
     }
 
   
@@ -180,12 +188,12 @@
   .header{
     max-width: var(--laptop);
     
-   
-
-    &__wrapper{
-      padding-top: 30px;
-      padding-left: 50px;
-    padding-right: 50px;
+   &__search-icon{
+       position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    
     }
 
     &__cart-icon,
@@ -194,13 +202,7 @@
       height: 56px;
     }
 
-    &__search-icon{
-       position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    }
+   
 
     &__info-search{
       display: flex;
@@ -210,8 +212,6 @@
     }
 
     &__search-input{
-      height: 66px;
-      width: 306px;
       border-radius: 36px;
     }
 
@@ -231,10 +231,6 @@
       gap: 10px;
     }
 
-    &__cart-text{
-      
-    }
-
     &__cart-count span{
       color: var(--color-red);
     }
@@ -250,15 +246,13 @@
   .header{
     max-width: var(--pc);
     
+    &__nav-item{
+    @include adaptive-value(font-size, 18, 20);
 
+    }
 
     &__wrapper{
-      padding-top: 50px;
-      padding-left: 50px;
-    padding-right: 50px;
-      margin: 0 auto;
        align-items: center;
-       
     }
 
     &__cart-icon,
@@ -280,15 +274,8 @@
       display: flex;
       flex-direction: row;
       position: relative;
-      max-width: var(--input-search-width);
-    }
 
-    &__search-input{
-      height: var(--input-search-height);
-      width: calc(var(--input-search-width));
-      border-radius: 36px;
     }
-
    
 
     h2{
@@ -300,10 +287,6 @@
     &__info-cart{
       align-items: center;
       gap: 10px;
-    }
-
-    &__cart-text{
-      
     }
 
     &__cart-count span{
