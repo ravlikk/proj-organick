@@ -14,7 +14,6 @@
   }
 }
 .subscribe {
-  @include adaptive-value(margin-block, 50, 120);
   background: url(../../image/subscribe/subscribe-background.png) lightgray 50% /
     cover no-repeat;
   @media (min-width: 768px) {
