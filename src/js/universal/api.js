@@ -2,15 +2,11 @@ import axios from "axios";
 
 export const url = "https://test-nest-api-iqy9.onrender.com/api";
 
-export async function registerUser(email, password, first_name, last_name, phone, address, url) {
+export async function registerUser(email, password, url) {
   try {
    const res = await axios.post(url, {
         email, 
-        password,
-        first_name,
-        last_name,
-        phone, 
-        address
+        password
       });
 
     const data = res.data;

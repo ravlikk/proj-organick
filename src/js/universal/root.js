@@ -16,13 +16,9 @@ modal: document.querySelector('.modal'),
 form: document.getElementById('form'),
 inputs: form.querySelectorAll('input'),
 log: document.querySelector('.header__registration'),
-addressInput: document.getElementById('adress'),
 submitBtn: document.getElementById('submit'),
 iconUser: document.querySelector('.header__user'), 
-userInput: document.getElementById('first'),
-nameInput: document.getElementById('last'),
 emailInput: document.getElementById('email'),
-phoneInput: document.getElementById('tel'),
 passwordInput: document.getElementById('password')
 }
  
