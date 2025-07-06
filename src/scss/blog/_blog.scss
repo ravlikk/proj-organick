@@ -1,7 +1,7 @@
 
 .blog-section__container {
   max-width: 320px;
-  background-color: #fff;
+  background-color:$white-color;
   margin: 0 auto;
 }
 
@@ -53,7 +53,7 @@
   left: 20px;
   top: 20px;
   z-index: 2;
-  background-color: #fff;
+  background-color:$white-color;
   border-radius: 50%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Roboto;
@@ -61,11 +61,11 @@
   font-weight: 800;
 
   & .date__day {
-    color: #274c5b;
+    color: $dark-blue-color;
   }
 
   & .date__month {
-    color: #274c5b;
+    color: $dark-blue-color;
     text-transform: uppercase;
   }
 }
@@ -76,7 +76,7 @@
   width: calc(100% - 40px);
   padding: 20px;
   border-radius: 31px 34px 30px 30px;
-  background: #fff;
+  background-color:$white-color;
   box-shadow: 0px 20px 35px 0px rgba(167, 167, 167, 0.25);
   display: flex;
   flex-direction: column;
@@ -88,7 +88,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  color: #274c5b;
+  color: $dark-blue-color;
   font-family: Roboto;
   font-size: 10px;
   font-weight: 400;
@@ -108,7 +108,7 @@
 }
 
 .blog-post-card__title {
-  color: #274c5b;
+  color: $dark-blue-color;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 800;
@@ -117,7 +117,7 @@
 
 .blog-post-card__description {
   width: 100%;
-  color: #525c60;
+  color: $grey-text;
   font-family: 'Open Sans';
   font-size: 12px;
   font-weight: 400;
@@ -132,7 +132,7 @@
 }
 
 .read-more__button {
-  color: #274c5b;
+  color: $dark-blue-color;
   font-family: Roboto;
   font-size: 12px;
   font-weight: 700;
