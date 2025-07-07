@@ -1,0 +1,1224 @@
+.About-us{
+  &__banner{
+    width: 100%;
+    height: 200px;
+    
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  &__container{
+    max-width: 320px;
+    margin: 0 auto;
+    background-color: $white-color;
+  }
+  &__text{
+    color: $grey-text;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165.4%; 
+  }
+  &__title{
+    display: flex;
+    flex-direction: column;
+    color: $dark-blue-color;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: normal;
+  }
+}
+.About-us-creative{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top:100px;
+  padding-bottom: 80px;
+
+  &__img{
+    display: none;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  &__sub-content{
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    align-items: flex-start
+  }
+  &__heading{
+    gap: 4px;
+  }
+  &__title{
+    display: flex;
+    flex-direction: column;
+  }
+  &__groups{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__heading{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__text{
+    display:flex;
+    gap: 7.5px;
+    flex-direction: column;
+  }
+  &__points{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  &__Ellipse{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: -1;
+      use{
+        width: 10px;
+        height: 10px
+      }
+  }
+  
+  &__modern{
+    display: flex;
+    justify-content: row;
+    gap: 7.5px;
+    div{
+      z-index: 1;
+      position: relative;
+      width: 24px;
+      height: 24px;
+
+    }
+    p{
+      color: $dark-blue-color;
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+  }
+  &__tractor{
+    width: 23px;
+    height: 23px;
+
+  }
+  &__hormones{
+    display: flex;
+    justify-content: row;
+    gap: 13.5px;
+    div{
+      z-index: 1;
+      position: relative;
+      width: 28px;
+      height: 28px;
+    }
+    p{
+      color: $dark-blue-color;
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+  }
+  &__chemical{
+    width: 28px;
+    height: 28px;
+
+  }
+  &__button{
+    display: flex;
+    padding: 14px 19px 15px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 16px;
+    background: $dark-blue-color;
+    p{
+      color: $white-color;
+      font-family: Roboto;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    svg{
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.About-us-Why-choose-us{
+  background-color:#F9F8F8;
+  display: flex;
+  flex-direction: column;
+  padding: 95px 0px;
+  &__content{
+    background-color:#F9F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+  &__groups{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+    img{
+      display: none;
+    }
+  }
+  &__groups-content{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+  }
+  &__heading{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    p{
+      color: $grey-text;
+      font-family: "Open Sans";
+      font-size: 12px;
+      line-height: 165.4%; 
+    }
+  }
+  &__main-title{
+    display: flex;
+    flex-direction: column;
+  }
+  &__point{
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  &__content-point-text{
+    display: flex;
+    padding-left: 60px;
+    align-items: flex-start;
+    gap: 15px;
+    color: $grey-text;
+    font-family: "Open Sans";
+    font-size: 12px;
+    line-height: 165.4%;
+  }
+  &__content-point{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    div{
+      background: #ECECEC;
+      display: flex;
+      padding: 15px 45px 15px 14px;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;;
+      gap: 10px;
+      border-radius: 49px;
+
+      p{
+        color: $dark-blue-color;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      svg{
+        width:  10px;
+        height: 10px;
+        use{
+          width:  10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+  &__list{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;  
+    li{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 280px;
+      border-radius: 30px;
+      background: $white-color; 
+      img{
+        position: absolute;
+        top: 22px;
+        left: 25%;
+        z-index: 0;
+        justify-content: center;
+        align-items: center;
+      }
+      svg{
+        position: absolute;
+        top: 20px;
+        right: 22px;
+        width: 20px;
+        height: 20px;
+        use{
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  &__list-content{
+    top:50px;
+    width: 95px;
+    height: 95px;
+    border-radius: 18px;
+    background: #F9F8F8;
+    div{
+      position: relative;
+
+    }
+  } 
+  &__list-text{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    height: 45%;
+    width: 80%;
+  }
+  &__list-text-title{
+    font-size: 16px;
+  }
+  &__list-text-subtitle{
+    text-align: center;
+    font-size: 14px;
+
+  }
+}
+.About-us-team{
+  display: flex;
+  padding: 100px 0 100px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  &__text{
+    display: flex;
+    width: 290px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    p{
+      text-align: center;
+    }
+  }
+  &__heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__list{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    img{
+      border-radius: 20px 20px 0px 0px;
+      width: 240px;
+      height: 260px;
+    }
+  }
+  &__details{
+    border-radius: 0px 0px 20px 20px;
+    width: 240px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-direction: row;
+    background-color: #F9F8F8;
+  }
+  &__name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+    .name{
+      font-size: 20px;
+    }
+    .job{
+      font-size: 18px;
+    }
+
+  }
+  &__follow{
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  svg{
+    width: 14px;
+    height: 14px;
+  use{
+    width: 14px;
+    height: 14px;
+    fill: $dark-blue-color;   
+  }
+  }
+}
+.About-us-offer-product{
+  background-color: $dark-blue-color;
+  padding: 90px 0px ;
+  &__content{
+    background-color: $dark-blue-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  &__heading{
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  &__title{
+    color: $white-color;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+    li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    img{
+      border-radius: 30px;
+      background: $white-color;
+      width: 300px;
+      height: 300px;   
+    }
+    p{
+      padding-top:20px ;
+      color: $white-color;
+      font-family: Roboto;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .About-us{
+    &__banner{
+      height: 300px;
+    }
+    &__container{
+      max-width: 700px;
+    }
+    &__text{
+      font-size: 14px; 
+    }
+    &__title{
+      font-size: 40px;
+
+    }
+  }
+  .About-us-creative{
+    gap: 20px;
+    padding-top:120px;
+    padding-bottom:100px;
+  
+
+    &__content{
+      width: 650px;
+      gap: 40px;
+    }
+    &__sub-content{
+      gap: 10px;
+    }
+    &__heading{
+      gap: 6px;
+    }
+    &__groups{
+      gap: 35px;
+    }
+    &__heading{
+      gap: 4px;
+    }
+  
+    &__text{
+      gap: 22px;
+    }
+    &__points{
+      gap: 35px;
+    }
+    &__Ellipse{
+      width: 15px;
+      height: 15px;
+        use{
+          width: 15px;
+          height: 15px
+        }
+    }
+    
+    &__modern{
+      gap: 10px;
+      div{
+        width: 30px;
+        height: 30px;
+  
+      }
+      p{
+        font-size: 22px;
+      }
+  
+    }
+    &__tractor{
+      width: 30px;
+      height: 30px;
+  
+    }
+    &__hormones{
+      gap: 9px;
+      div{
+        width: 35px;
+        height: 35px;
+      }
+      p{
+        font-size: 22px;
+      }
+  
+    }
+    &__chemical{
+      width: 35px;
+      height: 35px;
+  
+    }
+    &__button{
+      padding: 18px 25px 18px 25px;
+      gap: 10px;
+
+      p{
+        font-size: 18px;
+      }
+      svg{
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  
+  .About-us-Why-choose-us{
+    padding: 120px 0px;
+    &__content{
+      gap: 60px;
+    }
+    &__groups{
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 51px;
+    }
+    &__groups-content{
+      display: flex;
+      width: 650px;
+      gap: 25px;
+    }
+    &__heading{
+      gap: 18px;
+      p{
+        font-size: 16px;
+      }
+    }
+    &__point{
+      width: 456px;
+      gap: 10px;
+    }
+    &__content-point-text{
+      padding-left: 60px;
+      gap: 10px;
+      font-size: 16px;
+    }
+    &__content-point{
+      gap: 10px;
+      div{
+        padding: 22px 70px 22px 20px;
+        gap: 10px;
+        border-radius: 49px;
+  
+        p{
+          font-size: 18px;
+        }
+        svg{
+          width:  14px;
+          height: 14px;
+          use{
+            width:  14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+    &__list{
+      width: 680px;
+      flex-direction: row;
+      gap: 15px;  
+      li{
+        width: 100%;
+        height: 300px;
+        img{
+          position: absolute;
+          top: 29px;
+          left: 22px;
+        }
+        svg{
+          position: absolute;
+          top: 26px;
+          width: 22px;
+          height: 20px;
+          use{
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    &__list-text{
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 125px;
+    }
+    &__list-text-title{
+      font-size: 20px;
+    }
+    &__list-text-subtitle{
+      font-size: 14px;
+  
+    }
+  }
+  .About-us-team{
+    padding: 120px 0 140px;
+    width: 650px;
+    gap: 35px;
+    &__text{
+      width: 450px;
+      gap: 16px;
+      p{
+        text-align: center;
+      }
+    }
+    &__heading{
+      width: 400px;
+    }
+    &__list{
+      flex-direction: row;
+      gap: 22px;
+    }
+    &__content{
+      
+      img{
+        width: 200px;
+        height: 220px;
+      }
+    }
+    &__details{
+      width: 200px;
+      height: 120px;
+      padding: 26px 18px 26px 26px;
+    }
+    &__name{
+      gap:2px;
+      .name{
+        font-size: 22px;
+      }
+  
+    }
+    &__follow{
+      gap: 8px;
+    }
+    svg{
+      width: 16px;
+      height: 16px;
+    use{
+      width: 16px;
+      height: 16px;   
+    }
+    }
+  }
+  .About-us-offer-product{
+    padding: 125px 0px ;
+    &__content{
+      gap: 26px;
+    }
+    &__heading{
+      width: 400px;
+      gap: 6px;
+    }
+    &__list{
+      flex-direction: row;
+      gap: 14px;
+      img{
+        width: 150px;
+        height: 150px;   
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+@media (min-width: 1440px) {
+  .About-us{
+    &__container{
+      max-width: 1200px;
+    }
+    &__text{
+      font-size: 18px;
+    }
+    &__title{
+      font-size: 45px;
+    }
+  }
+  .About-us-creative{
+    flex-direction: row;
+    gap: 18px;
+    padding-top:140px;
+    padding-bottom:120px;
+  
+    &__img{
+      display: block;
+      top: 206px;
+      left: -100px;
+      position: absolute;
+      width: 600px;
+      height: 550px;
+    }
+    &__content{
+      padding: 50px 0px 0px;
+      width: 600px;
+      gap: 45px;
+    }
+    &__sub-content{
+      gap: 12px;
+    }
+    &__heading{
+      gap: 8px;
+    }
+    &__groups{
+      gap: 35px;
+    }
+    &__heading{
+      gap: 6px;
+    }
+  
+    &__text{
+      gap: 25px;
+    }
+    &__points{
+      gap: 50px;
+    }
+    &__Ellipse{
+      width: 16px;
+      height: 16px;
+        use{
+          width: 16px;
+          height: 16px
+        }
+    }
+    
+    &__modern{
+      gap: 15px;
+      div{
+        width: 35px;
+        height: 35px;
+      }
+      p{
+        font-size: 22px;
+      }
+  
+    }
+    &__tractor{
+      width: 35px;
+      height: 35px;
+  
+    }
+    &__hormones{
+      gap: 13.5px;
+      div{
+        z-index: 1;
+        position: relative;
+        width: 45px;
+        height: 45px;
+      }
+      p{
+        font-size: 22px;
+      }
+  
+    }
+    &__chemical{
+      width: 45px;
+      height: 45px;
+  
+    }
+    &__button{
+      padding: 24px 30px 24px 30px;
+      gap: 10px;
+      p{
+        font-size: 20px;
+      }
+      svg{
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+  
+  .About-us-Why-choose-us{
+    padding: 150px 0px;
+    &__content{
+      gap: 75px;
+    }
+    &__groups{
+      gap: 45px;
+      img{
+        display: block;
+        width: 550px;
+        height: 570px;
+      }
+    }
+    &__groups-content{
+      display: flex;
+      width: 550px;
+      gap: 28px;
+    }
+    &__heading{
+      gap: 25px;
+      p{
+        font-size: 18px;
+      }
+    }
+    &__point{
+      width: 400px;
+    }
+    &__content-point-text{
+      padding-left: 45px;
+
+    }
+    &__content-point{
+      gap: 10px;
+      div{
+        padding: 24px 80px 24px 24px;
+        p{
+          font-size: 20px;
+        }
+        svg{
+          width:  17px;
+          height: 17px;
+          use{
+            width:  17px;
+            height: 17px;
+          }
+        }
+      }
+    }
+    &__list{
+      width: 1100px;
+      gap: 25px;  
+      li{
+        padding-bottom: 20px;
+        width: 240px;
+        height: 350px;
+        img{
+          top: 29px;
+          left: 22px;
+        }
+        svg{
+
+          top: 25px;
+          right: 27px;
+          width: 29px;
+          height: 29px;
+          use{
+            width: 29px;
+            height: 29px;
+          }
+        }
+      }
+    }
+
+    &__list-text{
+      padding-bottom: 20px;
+      gap: 12px;
+      width: 180px;
+      height: 115px
+    }
+    &__list-text-title{
+      font-size: 22px;
+    }
+  }
+  .About-us-team{
+    padding: 160px 0 180px;
+    width: 1200px;
+    gap: 38px;
+    &__text{
+      width: 800px;
+    }
+    &__list{
+      gap: 24px;
+    }
+    &__content{
+      
+      img{
+        width: 350px;
+        height: 370px;
+      }
+    }
+    &__details{
+      width: 350px;
+      height: 115px;
+      padding: 30px 22px 30px 30px;
+    }
+    &__name{
+      .name{
+        font-size: 24px;
+      }
+      .job{
+        font-size: 20px;
+      }
+  
+    }
+    &__follow{
+      gap: 14px;
+    }
+    svg{
+      width: 20px;
+      height: 20px;
+    use{
+      width: 20px;
+      height: 20px;   
+    }
+    }
+  }
+  .About-us-offer-product{
+    padding: 160px 0px ;
+    &__content{
+      gap: 28px;
+    }
+    &__heading{
+      width: 450px;
+      gap: 8px;
+    }
+    &__list{
+      gap: 18px;
+      img{
+        width: 280px;
+        height: 270px;   
+      }
+      p{
+        padding-top:18px;
+        font-size: 23px;
+
+      }
+    }
+  }
+  
+}
+@media (min-width: 1920px) {
+  .About-us{
+    &__banner{
+      height: 450px;
+    }
+    &__container{
+      max-width: 1400px;
+    }
+    &__title{
+      font-size: 50px;
+    }
+  }
+  .About-us-creative{
+    gap: 20px;
+    padding-top:163px;
+    padding-bottom:143px;
+  
+    &__img{
+      width: 750px;
+      height: 700px;
+    }
+    &__content{
+      padding: 63px 0px 0px;
+      width: 675px;
+      gap: 58px;
+    }
+    &__sub-content{
+      gap: 14px;
+    }
+    &__heading{
+      gap: 8px;
+    }
+    &__groups{
+      gap: 48px;
+    }
+    &__heading{
+      gap: 8px;
+    }
+  
+    &__text{
+      gap: 30px;
+    }
+    &__points{
+      gap: 65px;
+    }
+    &__Ellipse{
+      width: 20px;
+      height: 19px;
+        use{
+          width: 20px;
+          height: 19px
+        }
+    }
+    
+    &__modern{
+      gap: 15px;
+      div{
+        width: 46px;
+        height: 46px;
+  
+      }
+      p{
+        font-size: 25px;
+      }
+  
+    }
+    &__tractor{
+      width: 46px;
+      height: 46px;
+  
+    }
+    &__hormones{
+      gap: 13.5px;
+      div{
+        width: 56px;
+        height: 56px;
+      }
+      p{
+        font-size: 25px;
+      }
+  
+    }
+    &__chemical{
+      width: 56px;
+      height: 56px;
+  
+    }
+    &__button{
+      padding: 28px 39px 29px 39px;
+      gap: 10px;
+      p{
+        font-size: 20px;
+      }
+      svg{
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+  
+  .About-us-Why-choose-us{
+    padding: 190px 0px;
+    &__content{
+      gap: 91px;
+    }
+    &__groups{
+      gap: 51px;
+      img{
+        width: 670px;
+        height: 690px;
+      }
+    }
+    &__groups-content{
+      width: 671px;
+      gap: 36px;
+    }
+    &__heading{
+      gap: 25px;
+    }
+    &__point{
+      width: 486px;
+      gap: 12px;
+    }
+    &__content-point-text{
+      padding-left: 60px;
+      gap: 10px;
+    }
+    &__content-point{
+      gap: 12px;
+      div{
+        padding: 29px 91px 29px 27px;
+        gap: 10px;
+        border-radius: 49px;
+  
+        p{
+          font-size: 20px;
+        }
+        svg{
+          width:  19px;
+          height: 19px;
+          use{
+            width:  19px;
+            height: 19px;
+          }
+        }
+      }
+    }
+    &__list{
+      width: 1118px;
+      gap: 30px;  
+      li{
+        width: 257px;
+        height: 335px;
+        img{
+          top: 29px;
+          left: 22px;
+        }
+        svg{
+          width: 29px;
+          height: 29px;
+          use{
+            width: 29px;
+            height: 29px;
+          }
+        }
+      }
+    }
+    &__list-content{
+      width: 95px;
+      height: 95px;
+    } 
+    &__list-text{
+      gap: 12px;
+      width: 184px;
+      height: 115px
+    }
+    &__list-text-title{
+      font-size: 25px;
+    }
+    &__list-text-subtitle{
+      font-size: 18px;
+  
+    }
+  }
+  .About-us-team{
+    padding: 177px 0 202px;
+    width: 1401px;
+    gap: 42px;
+    &__text{
+      width: 852px;
+      gap: 16px;
+    }
+    &__heading{
+      width: 454px;
+    }
+    &__list{
+      gap: 27px;
+    }
+    &__content{
+      img{
+        width: 449px;
+        height: 485px;
+      }
+    }
+    &__details{
+      width: 449px;
+      height: 130px;
+      padding: 34px 25px 35px 32px;
+    }
+    &__name{
+      gap: 2px;
+      .name{
+        font-size: 25px;
+      }
+      .job{
+        font-size: 22px;
+      }
+  
+    }
+    &__follow{
+      gap: 17px;
+    }
+    svg{
+      width: 22px;
+      height: 21px;
+    use{
+      width: 22px;
+      height: 21px;;  
+    }
+    }
+  }
+  .About-us-offer-product{
+    padding: 188px 0px ;
+    &__content{
+      gap: 33px;
+    }
+    &__heading{
+      width: 502px;
+      gap: 8px;
+    }
+    &__list{
+      gap: 21px;
+      img{
+        width: 334.102px;
+        height: 314px;   
+      }
+      p{
+        font-size: 25px;
+      }
+    }
+  }
+  
+}
+
