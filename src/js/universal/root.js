@@ -8,5 +8,4 @@ export const rooot = {
   categoryCardsList: document.querySelector(".offer__list"),
   modalBlur: document.querySelector(".modal__blur"),
   modal: document.querySelector(".detail"),
-  btnAddToCart: document.querySelector(".detail__btn"),
 };

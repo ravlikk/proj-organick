@@ -1,6 +1,5 @@
-import { createModal } from "./products/showModal.js";
+import { chekUrlByModal, createModal } from "./products/showModal.js";
 import {
-  getCardByModal,
   getCardsByCategory,
   getCategoryCards,
   getProducts,
@@ -10,3 +9,4 @@ getProducts();
 getCategoryCards();
 getCardsByCategory();
 createModal();
+chekUrlByModal();

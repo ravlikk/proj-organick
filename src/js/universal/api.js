@@ -39,9 +39,33 @@ export async function getCardsByCategory(params) {
   });
 }
 export async function getCardByModal(id) {
-  axios.get(`${url}/products/${id}`).then((response) => {
+  document.querySelector(".loader").classList.remove("modal-blur__close");
+  try {
+    const response = await axios.get(`${url}/products/${id}`);
     const data = response.data;
     modalProduct(data);
-    closeBtn();    
-  });
+    closeBtn(id);
+    if (location.pathname !== `/product/${id}`) {
+      history.pushState({}, "", `/product/${id}`);
+    }
+  } catch (error) {
+    console.log(error);
+    window.location.replace("../404.html");
+  } finally {
+    document
+      .querySelector(".loader")
+      .classList.add("loader", "modal-blur__close");
+  }
 }
+// export async function postToCart(quantity, id) {
+//   console.log(id, quantity);
+//   try {
+//     const response = await axios.post(`${url}/carts`, {
+//       quantity: quantity,
+//       id: id,
+//     });
+//     console.log(response.data);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }

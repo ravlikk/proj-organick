@@ -79,6 +79,8 @@ export function defaultProductOffer(data, i) {
 }
 
 export function modalProduct(data) {
+  rooot.modalBlur.classList.remove("modal-blur__close");
+
   rooot.modal.insertAdjacentHTML(
     "beforeend",
     `
@@ -125,4 +127,5 @@ export function modalProduct(data) {
             </div>
         </div>`
   );
+  
 }
