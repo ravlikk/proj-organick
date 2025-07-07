@@ -1,8 +1,87 @@
 $minWidth: 375;
 $maxWidth: 1920;
 
+$pc: 1920px;
+$pc-above: 1919px;
+
+$laptop: 1440px;
+$laptop-above: 1439px;
+
+$tablet: 768px;
+$tablet-above: 767px;
+
+$mobile: 376px;
+$mobile-above: 375.98px;
+
 @mixin adaptive-value($property, $minSize, $maxSize) {
   $addSize: $maxSize - $minSize;
 
   #{$property}: calc(#{$minSize}px + #{$addSize} * ((100vw - #{$minWidth}px) / (#{$maxWidth} - #{$minWidth})));
+}
+
+
+@mixin mobile-above {
+  @media (min-width: $mobile-above + 0.02px) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  @media (min-width: $tablet-above + 0.02px) {
+    @content;
+  }
+}
+
+@mixin laptop-above {
+  @media (min-width: $laptop-above) {
+    @content;
+  }
+}
+
+@mixin pc-above {
+  @media (min-width: $pc-above) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tablet-above) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) and (max-width:  $laptop-above) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop) and (max-width: $pc-above) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (min-width: $pc) {
+    @content;
+  }
+}
+
+@mixin pc-above {
+  @media (min-width: $pc-above) {
+    @content;
+  }
+}
+
+@mixin hover{
+    @media (hover: hover) {
+        &:hover{
+            @content
+        }
+    };
+    @media (hover: none) {
+        &:active{
+            @content;
+        }
+    }
 }
