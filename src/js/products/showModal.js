@@ -1,4 +1,4 @@
-import { getCardByModal, postToCart } from "../universal/api";
+import { getCardByModal } from "../universal/api";
 import { rooot } from "../universal/root";
 
 export function createModal() {
@@ -28,7 +28,7 @@ export function closeBtn(id) {
   });
   btnAddToCart.addEventListener("click", () => {
     const quantity = document.querySelector(".detail-quantity__count").value;
-    postToCart(id, quantity);
+    // postToCart(id, quantity);
     closeModal();
   });
 }
