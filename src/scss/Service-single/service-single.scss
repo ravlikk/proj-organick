@@ -3,16 +3,161 @@
     max-width: 1400px;
     margin: 0 auto;
   }
-  &__banner{
+  &__title{
+    color: #274C5B;
+    font-family: Roboto;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  &__text{
+    color: #525C60;
+font-family: "Open Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 165.4%;
+  }
+  &__banner {
+    margin: 0 auto;
+    background-image: url(../../image/Service-single/Service-single-banner/Banner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
     width: 100%;
     height: 450px;
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    font-size: 70px;
   }
+  
+
 }
 .service-single-store{
-  
+  padding: 181px 0px 131px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 78px;
+    &__content{
+      display: flex;
+      width: 936px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
+    }
+    &__heading{
+      display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 28px;
+p{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+    }
+    &__cards{
+      display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 28px;
+    }
+    &__why-organik{
+      display: flex;
+align-items: center;
+gap: 20px;
+
+img{
+width: 379px;
+height: 252px;
+}
+    }
+    &__card{
+      display: flex;
+padding: 63px 45px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+border-radius: 20px;
+background: #F9F8F8;
+h3{
+font-size: 25px;
+}
+    }
+    &__produce{
+      display: flex;
+      flex-direction: row-reverse;
+align-items: center;
+gap: 20px;
+    }
+    &__subcontent{
+      display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 59px;
+
+    }
+    &__subcontent-text{
+      display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 11px;
+h3{
+  font-size:35px;
+}
+    }
+    &__points{
+      display: flex;
+width: 820px;
+align-items: flex-start;
+gap: 28px;
+    }
+    &__point{
+      display: flex;
+padding: 15px 53px 15px 17px;
+
+justify-content: center;
+align-items: flex-start;
+
+border-radius: 100px;
+background: #F9F8F8;
+    }
+    &__ellipse{
+      display:flex ;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 69px;
+      height: 69px;
+      p{
+        color: #FFF;
+        font-size: 25px;
+        font-weight: 700;        
+        z-index: 1;
+      }
+      svg{
+        position: absolute;
+        width: 69px;
+      height: 69px;
+      }
+
+    }
+    &__point-text{
+      display: flex;
+align-items: center;
+gap: 19px;
+p{
+
+font-size: 25px;
+
+font-weight: 600;
+
+    }
+}
 }
