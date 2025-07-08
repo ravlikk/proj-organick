@@ -19,6 +19,10 @@ log: document.querySelector('.header__registration'),
 submitBtn: document.getElementById('submit'),
 iconUser: document.querySelector('.header__user'), 
 emailInput: document.getElementById('email'),
-passwordInput: document.getElementById('password')
+passwordInput: document.getElementById('password'),
+cartContent: document.getElementById('content'),
+cartButton: document.getElementById('cart'),
+deleteButton: document.querySelector('.cart-item__remove'),
+cartBody: document.querySelector('.cart')
 }
  

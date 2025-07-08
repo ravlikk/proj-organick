@@ -1,0 +1,210 @@
+.cart{
+    width: 100%;
+    height: 100%;
+    background-color: var(--colot-orange-light);
+
+    &__container{
+        width: 350px;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+      width: 700px;
+    }
+    @media (min-width: 1440px) {
+      width: 1300px;
+    }
+    @media (min-width: 1920px) {
+      width: 1596px;
+    }
+    > div {
+      @include adaptive-value(padding-bottom, 30, 69);
+      @include adaptive-value(padding-top, 30, 69);
+    }
+    }
+
+    & p, h1, h2, input{
+        font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 1.28;
+    color: var(--color-blue-dark);
+
+    }
+    
+
+    &-item{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        &__summary{
+            display: flex;
+            align-items: end;
+            flex-direction: column;
+            gap: 32px;
+            margin-top: 40px;
+            & p{
+                @include adaptive-value(font-size, 32, 40);
+                text-align: right;
+                display: flex;
+                gap: 30px;
+            }
+            & p:last-child{
+                display: flex;
+                gap: 75px;
+            }
+        }
+
+        & img{
+        width: 292px; 
+        height: 256px;
+    }
+
+        &__info{
+            display: flex;
+            flex-direction: column;
+        gap: 20px;
+    }
+
+        &__quantity{
+            @include adaptive-value(font-size, 24, 32);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px
+        }
+
+        &__quantity-info{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &__remove{
+            display: block;
+            width: 44px;
+            height: 30px;
+            border-radius: 16px;
+            background: var(--color-blue-dark);
+            color: white;
+        }
+
+         &__quantity-num{
+            border-radius: 16px;
+            border: 2px solid var(--color-blue-dark);
+            width: 90px;
+            height: 60px;
+            @include adaptive-value(font-size, 18, 20);
+            text-align: center
+         }
+
+        &__name{
+            @include adaptive-value(font-size, 25, 40);
+            gap: 10px;
+        }
+
+        &__text{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        &__old-price{
+            
+        font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 1.28;
+    color: $ligh-grey;
+    text-decoration: line-through;
+    @include adaptive-value(font-size, 14, 24);
+        }
+
+        &__new-price{
+            
+        font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 1.28;
+    color: var(--color-blue-dark);
+    @include adaptive-value(font-size, 25, 40);
+        }
+
+        &__price{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            
+        }
+    }
+    
+}
+
+@include tablet{
+    .cart{
+
+        &-item{
+        flex-direction: row;
+
+        &__info{
+            width: 400px;
+            justify-content: center;
+            
+        }
+
+
+         &__remove{
+            margin-left: 100px;
+        } 
+     }
+
+    }
+     
+}
+
+@include laptop{
+    .cart{
+
+        &-item{
+        flex-direction: row;
+
+        &__info{
+            width: 1100px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__summary{
+            justify-content: end;
+         }
+
+         &__remove{
+            @include adaptive-value(margin-left, 60, 100);
+        } 
+     }
+
+    }
+     
+}
+
+@include pc{
+    .cart{
+
+        &-item{
+        flex-direction: row;
+
+        &__info{
+            width: 1300px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+         &__remove{
+            margin-left: 100px;
+        } 
+
+         &__summary{
+            justify-content: end;
+         }
+     }
+
+    }
+     
+}

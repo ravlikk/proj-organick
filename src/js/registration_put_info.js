@@ -14,7 +14,7 @@ function checkInputsFilled() {
   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isPasswordValid = password.length >= 6;
 
-  const allValid = isEmailValid && isNameValid && isPasswordValid ;
+  const allValid = isEmailValid && isPasswordValid ;
 
   root.btn.disabled = !allValid;
 }

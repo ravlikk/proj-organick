@@ -31,3 +31,29 @@ export async function registerUser(email, password, url) {
     }
   }
 }
+
+export async function deleteQuantityOnServer(path, id) {
+  try {
+    const res = await axios.delete(url + path, {
+      data: { id }
+    });
+    console.log('Response from server:', res.data);
+
+    return res.data;
+  } catch (err) {
+    console.error('Помилка запиту:', err.response?.data || err.message);
+    return null;
+  }
+}
+
+export async function loadCart(path) {
+  try {
+    const res = await axios.get(url + path);
+    console.log('Response from server:', res.data);
+
+    return res.data; 
+  } catch (err) {
+    console.error('Помилка запиту:', err.response?.data || err.message);
+    return null; 
+  }
+}
