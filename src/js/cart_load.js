@@ -1,20 +1,21 @@
 import { loadCart } from "../js/universal/api";
 import { root } from '../js/universal/root';
 
-document.cartBody.addEventListener('DOMContentLoaded', () => {
-
-async function loadCartContent() {
+root.cartButton.addEventListener('click', async (e) => {
+  
+  e.preventDefault();
+  
   const pathToGetCart = '/products/';
   const token = localStorage.getItem('token');
-
   console.log("ready");
-
+  
   if (!token) {
     root.modal.classList.add('active');
     return;
   }
 
   try {
+    
     const products = await loadCart(pathToGetCart);
     const productArray = products.data;
 
@@ -63,13 +64,10 @@ async function loadCartContent() {
         <p>Discount <span>${totalDiscount}$</span></p>
       </div>
     `;
-
+    
     console.log("ready");
 
   } catch (error) {
     console.error("Помилка завантаження корзини:", error);
   }
-}
-
-loadCartContent();
 });

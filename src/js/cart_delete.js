@@ -2,30 +2,26 @@ import { root } from '../js/universal/root';
 import { deleteQuantityOnServer } from "../js/universal/api"; 
 
 
-root.cartButton.addEventListener('click', () => {
+root.cartContent.addEventListener('click', async (e) => {
 
-    setTimeout(() => {
-    root.deleteButton.addEventListener('click', async (e) => {
+  const removeBtn = e.target.closest('.cart-item__remove');
 
-  if (e.target.classList.contains('cart-item')) {
-    const cartItemId = e.target.dataset.cartId;
+  if (!removeBtn) return;
 
-    if (!cartItemId) {
-      console.warn('Відсутній cartItemId');
-      return;
-    }
+  const cartItemId = removeBtn.dataset.cartId;
 
-    try {
-      const path = `/carts/${cartItemId}`;
-      await deleteQuantityOnServer(path);
-
-      e.target.closest('.cart-item').remove();
-
-    } catch (err) {
-      console.error('Помилка при видаленні товару:', err);
-    }
+  if (!cartItemId) {
+    console.warn('Відсутній cartItemId');
+    return;
   }
-});
-  }, 2000);
 
+  try {
+    const path = `/carts/${cartItemId}`;
+    await deleteQuantityOnServer(path);
+
+    removeBtn.closest('.cart-item').remove();
+
+  } catch (err) {
+    console.error('Помилка при видаленні товару:', err);
+  }
 });

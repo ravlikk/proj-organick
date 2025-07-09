@@ -21,7 +21,7 @@ iconUser: document.querySelector('.header__user'),
 emailInput: document.getElementById('email'),
 passwordInput: document.getElementById('password'),
 cartContent: document.getElementById('content'),
-cartButton: document.getElementById('cart'),
+cartButton: document.querySelector('.header__info-cart'),
 deleteButton: document.querySelector('.cart-item__remove'),
 cartBody: document.querySelector('.cart')
 }

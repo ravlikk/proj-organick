@@ -5,7 +5,6 @@ import { url } from "../js/universal/api";
 
 let fullUrl = url;
 
-
 function checkInputsFilled() {
   const email = root.emailInput.value.trim();
   const password = root.passwordInput.value.trim();
@@ -26,13 +25,13 @@ checkInputsFilled();
 root.iconUser.addEventListener('click', async (e) => {
   root.modal.classList.add('active');
   fullUrl = url + "/auth/login";
-  console.log(fullUrl);
+
 });
 
 root.log.addEventListener('click', async (e) => {
   root.modal.classList.add('active');
   fullUrl = url + "/users";
-  console.log(fullUrl);
+
 });
 
 root.submitBtn.addEventListener('click', async (e) => {
