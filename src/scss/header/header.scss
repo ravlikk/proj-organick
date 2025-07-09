@@ -8,6 +8,11 @@
   width: 100%;
     z-index: 1000;
     
+  &__cart-nav{
+    display: flex;
+    align-items: center;
+  }
+
   &__conteiner {
     width: 360px;
     margin: 0 auto;
