@@ -19,3 +19,8 @@ root.btn.addEventListener('click', (e) => {
   }, 500); 
 });
 
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+      root.modal.classList.remove('active');
+    }
+});

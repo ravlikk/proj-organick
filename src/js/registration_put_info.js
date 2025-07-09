@@ -31,14 +31,11 @@ if (root.content.classList.contains('hidden') || root.closeModalBtn.classList.co
 
   root.modal.classList.add('active');
   fullUrl = url + "/auth/login";
-  console.log(fullUrl);
-
 });
 
 root.log.addEventListener('click', async (e) => {
   root.modal.classList.add('active');
   fullUrl = url + "/users";
-  console.log(fullUrl);
 });
 
 root.submitBtn.addEventListener('click', async (e) => {
