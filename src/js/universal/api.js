@@ -10,7 +10,7 @@ export async function registerUser(email, password, url) {
       });
 
     const data = res.data;
-    root.iconUser.display = 'block';
+    
 
     if (data.token) {
       localStorage.setItem('token', data.token);
