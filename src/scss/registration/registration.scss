@@ -13,7 +13,7 @@
 
    
 
-    & a{
+    & p, button{
       @include fluid-text(40, 32);
     font-family: var(--font-family);
     font-weight: 700;
