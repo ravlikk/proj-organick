@@ -57,7 +57,8 @@ export async function getCardByModal(id) {
       .classList.add("loader", "modal-blur__close");
   }
 }
-async function postToCart(productId, quantity) {
+export async function postToCart(productId, quantity) {
+  
   const token = localStorage.getItem('token');
 
   try {

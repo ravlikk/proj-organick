@@ -1,4 +1,4 @@
-import { getCardByModal, postToCart } from "../universal/api";
+import { getCardByModal, postToCart } from "../../js/universal/api.js";
 import { rooot } from "../universal/root";
 
 export function createModal() {
