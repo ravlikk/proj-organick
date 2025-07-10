@@ -3,6 +3,8 @@ import { root } from '../js/universal/root';
 
 root.cartButton.addEventListener('click', async (e) => {
   
+
+
   e.preventDefault();
   
   const pathToGetCart = '/products/';

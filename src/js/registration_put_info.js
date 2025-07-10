@@ -25,7 +25,7 @@ checkInputsFilled();
 root.iconUser.addEventListener('click', async (e) => {
   root.modal.classList.add('active');
   fullUrl = url + "/auth/login";
-
+  console.log(fullUrl);
 });
 
 root.log.addEventListener('click', async (e) => {

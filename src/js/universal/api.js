@@ -52,3 +52,18 @@ export async function loadCart(path) {
     return null; 
   }
 }
+
+export async function updateQuantityOnServer(path, quantity,id) {
+  try {
+    const res = await axios.put(url + path, {
+      quantity,
+      id
+    });
+    console.log('Response from server:', res.data);
+
+    return res.data;
+  } catch (err) {
+    console.error('Помилка запиту:', err.response?.data || err.message);
+    return null;
+  }
+}
