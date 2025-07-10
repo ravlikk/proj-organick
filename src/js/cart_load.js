@@ -1,23 +1,21 @@
 import { loadCart } from "../js/universal/api";
 import { root } from '../js/universal/root';
 
-root.cartButton.addEventListener('click', async (e) => {
-  
-
-
-  e.preventDefault();
-  
-  const pathToGetCart = '/products/';
+const pathToGetCart = '/products/';
+const currentPath = window.location.pathname;
+if (currentPath === '/cart.html') {
   const token = localStorage.getItem('token');
   console.log("ready");
-  
+
   if (!token) {
     root.modal.classList.add('active');
-    return;
+  } else {
+    loadCartData();
   }
+}
 
+async function loadCartData() {
   try {
-    
     const products = await loadCart(pathToGetCart);
     const productArray = products.data;
 
@@ -66,18 +64,17 @@ root.cartButton.addEventListener('click', async (e) => {
         <p>Discount <span>${totalDiscount}$</span></p>
       </div>
       <div class="cart-item__order-cont">
-      <button class="cart-item__order" >
-      <p>To order</p>
-      <svg class="cart-item__order-icon">
-                <use xlink:href="../image/symbol-defs.svg#icon-Aerrow"></use>
-            </svg>
-      </button>
+        <button class="cart-item__order">
+          <p>To order</p>
+          <svg class="cart-item__order-icon">
+            <use xlink:href="../image/symbol-defs.svg#icon-Aerrow"></use>
+          </svg>
+        </button>
       </div>
     `;
-    
-    console.log("ready");
+
 
   } catch (error) {
     console.error("Помилка завантаження корзини:", error);
   }
-});
+}
