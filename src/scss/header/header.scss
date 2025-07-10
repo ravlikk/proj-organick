@@ -269,6 +269,10 @@
   opacity: 0.6; 
 
 }
+
+  &__search-button{
+    display: none;
+  }
 }
 }
 @include pc{
@@ -337,7 +341,9 @@
       
     }
 
-  
+    &__search-button{
+    display: block;
+  }
 
 }
 }
