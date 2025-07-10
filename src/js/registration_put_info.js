@@ -5,6 +5,7 @@ import { url } from "../js/universal/api";
 
 let fullUrl = url;
 
+
 function checkInputsFilled() {
   const email = root.emailInput.value.trim();
   const password = root.passwordInput.value.trim();
@@ -23,15 +24,18 @@ root.passwordInput.addEventListener('input', checkInputsFilled);
 
 checkInputsFilled();
 root.iconUser.addEventListener('click', async (e) => {
+if (root.content.classList.contains('hidden') || root.closeModalBtn.classList.contains('hidden')) {
+  root.content.classList.remove('hidden');
+  root.closeModalBtn.classList.remove('hidden');
+}
+
   root.modal.classList.add('active');
   fullUrl = url + "/auth/login";
-  console.log(fullUrl);
 });
 
 root.log.addEventListener('click', async (e) => {
   root.modal.classList.add('active');
   fullUrl = url + "/users";
-
 });
 
 root.submitBtn.addEventListener('click', async (e) => {
@@ -39,7 +43,7 @@ root.submitBtn.addEventListener('click', async (e) => {
 
    const email = root.emailInput.value.trim();
   const password = root.passwordInput.value.trim();
-
+  form.reset();
   if (!email || !password ) {
     console.warn('Не всі поля заповнені');
     return;
