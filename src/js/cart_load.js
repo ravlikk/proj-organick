@@ -3,12 +3,21 @@ import { root } from '../js/universal/root';
 
 const pathToGetCart = '/products/';
 const currentPath = window.location.pathname;
+const token = localStorage.getItem('token')
 if (currentPath === '/cart.html') {
   const token = localStorage.getItem('token');
-  console.log("ready");
+
+if (!token) {
+ 
+}
 
   if (!token) {
-    root.modal.classList.add('active');
+    window.location.href = '/';
+    const mainPath = window.location.pathname;
+    if(mainPath === "/"){
+      event.pri
+      root.modal.classList.add('active');
+    }
   } else {
     loadCartData();
   }
@@ -16,7 +25,7 @@ if (currentPath === '/cart.html') {
 
 async function loadCartData() {
   try {
-    const products = await loadCart(pathToGetCart);
+    const products = await loadCart(pathToGetCart, token);
     const productArray = products.data;
 
     const totalDiscount = productArray.reduce((sum, product) =>
@@ -51,7 +60,7 @@ async function loadCartData() {
                   data-product-id="${product.id}"
                   data-cart-id="${cartItemId}" />
               </div>
-              <button class="cart-item__remove" data-cart-id="${cartItemId}">×</button>
+              <button class="cart-item__remove" id="${index}">×</button>
             </div>
           </div>
         </div>

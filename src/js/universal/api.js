@@ -10,30 +10,30 @@ export async function registerUser(email, password, url) {
     if (url !== 'https://test-nest-api-iqy9.onrender.com/api/users' && data.token) {
       localStorage.setItem('token', data.token);
       localStorage.setItem('isAuthenticated', 'true');
-    } else {
-      console.warn('Токен не збережено (тестовий режим)');
-    }
+    } 
 
     return data; 
   } catch (err) {
     if (err.response) {
-      console.error('Реєстрація неуспішна:', err.response.data.message || 'Невідома помилка');
-      throw new Error(err.response.data.message || 'Невідома помилка');
+      throw new Error(err.response.data.message);
     } else {
-      console.error('Помилка запиту:', err.message);
+      console.error( err.message);
       throw err;
     }
   }
 }
 
 
-export async function deleteQuantityOnServer(path, id) {
+export async function deleteQuantityOnServer(path, id, token) {
   try {
     const res = await axios.delete(url + path, {
-      data: { id }
+      data: { id }, 
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
     });
-    console.log('Response from server:', res.data);
 
+    console.log('Response from server:', res.data);
     return res.data;
   } catch (err) {
     console.error('Помилка запиту:', err.response?.data || err.message);
@@ -41,23 +41,29 @@ export async function deleteQuantityOnServer(path, id) {
   }
 }
 
-export async function loadCart(path) {
+export async function loadCart(path, token ) {
+
   try {
-    const res = await axios.get(url + path);
-    console.log('Response from server:', res.data);
+    const res = await axios.get(url + path, {
+    headers: {
+    Authorization: `Bearer ${token}`
+  }
+})
 
     return res.data; 
   } catch (err) {
-    console.error('Помилка запиту:', err.response?.data || err.message);
+    console.error( err.response?.data || err.message);
     return null; 
   }
 }
 
-export async function updateQuantityOnServer(path, quantity,id) {
+export async function updateQuantityOnServer(path, quantity, token) {
   try {
     const res = await axios.put(url + path, {
       quantity,
-      id
+      headers: {
+    Authorization: `Bearer ${token}`
+  }
     });
     console.log('Response from server:', res.data);
 

@@ -4,9 +4,23 @@
     background-color: var(--colot-orange-light);
 
     &__logo{
-        background: url("../../image/cart/Background.jpg");
+        background: url("../../image/cart/Image(1).png");
         margin-bottom: 140px;
         height: 450px;
+         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+    &__logo-text{
+        @include adaptive-value(font-size, 75, 82);
+        font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 1.28;
+    color: var(--color-blue-dark);
     }
 
     &__registr-conteiner{

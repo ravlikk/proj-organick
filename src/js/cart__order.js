@@ -6,8 +6,8 @@ if (currentPath === '/cart.html') {
   document.addEventListener('DOMContentLoaded', () => {
 
     const orderButton = root.cartContent.querySelector('.cart-item__order');
+    
 
-    if (orderButton) {
       orderButton.onclick = () => {
 
         if (root.cartContent.querySelector('.cart__registr-conteiner')) return;
@@ -44,6 +44,6 @@ if (currentPath === '/cart.html') {
 
         orderButton.style.display = 'none';
       };
-    }
+    
   });
 }

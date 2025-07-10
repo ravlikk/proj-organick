@@ -6,14 +6,14 @@ const currentPath = window.location.pathname;
 if (currentPath === '/cart.html') {
   document.addEventListener('DOMContentLoaded', () => {
     root.cartContent.addEventListener('click', async (e) => {
-      const removeBtn = e.target.closest('.cart-item__remove');
-      if (!removeBtn) return;
-
-      const cartItemId = removeBtn.dataset.cartId;
-
+      const token = localStorage.getItem('token');
+      const deleteButton = document.querySelector('.cart-item__remove')
+      console.log(deleteButton);
+      const cartItemId = deleteButton.id;
+      
       try {
         const path = `/carts/${cartItemId}`;
-        await deleteQuantityOnServer(path);
+        await deleteQuantityOnServer(path, token);
         removeBtn.closest('.cart-item').remove();
       } catch (err) {
         console.error('Помилка при видаленні товару:', err);
