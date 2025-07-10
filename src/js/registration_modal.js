@@ -10,13 +10,17 @@ root.btn.addEventListener('click', (e) => {
   root.content.classList.add('hidden');
   root.closeModalBtn.classList.add('hidden');
 
-  root.text.classList.add('visible');
 
   root.log.classList.add('log--shrink');
 
   setTimeout(() => {
     root.log.classList.add('hidden');
     root.modal.classList.remove('active');
-  }, 1000); 
+  }, 500); 
 });
 
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+      root.modal.classList.remove('active');
+    }
+});
