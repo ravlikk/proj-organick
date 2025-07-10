@@ -9,3 +9,4 @@ export const rooot = {
   modalBlur: document.querySelector(".modal__blur"),
   modal: document.querySelector(".detail"),
 };
+
