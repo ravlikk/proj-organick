@@ -1,0 +1,431 @@
+.service-single {
+	&__container {
+		max-width: 320px;
+		margin: 0 auto;
+	}
+	&__title {
+		color: $dark-blue-color;
+		font-family: Roboto;
+		font-size: 25px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: normal;
+	}
+	&__text {
+		color: $grey-text;
+		font-family: 'Open Sans';
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 165.4%;
+	}
+	&__banner {
+		margin: 0 auto;
+		background-image: url(../../image/Service-single/Service-single-banner/Banner.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+		height: 200px;
+		font-size: 40px;
+	}
+.service-single-store {
+	width: 320px;
+	padding: 100px 0px 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 45px;
+	&__image {
+		img {
+			width: 320px;
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 35px;
+	}
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+		p {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 14px;
+		img {
+			display: none;
+			width: 100px;
+			height: 75px;
+		}
+	}
+	&__why-organik {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	&__card {
+		display: flex;
+		padding: 30px 22.5px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+		border-radius: 20px;
+		background: #f9f8f8;
+		width: 100%;
+		h3 {
+			font-size: 16px;
+		}
+	}
+	&__produce {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		gap: 8px;
+	}
+	&__subcontent {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 25px;
+	}
+	&__subcontent-text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 7px;
+		h3 {
+			font-size: 16px;
+		}
+	}
+	&__points {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+		align-items: flex-start;
+		gap: 12px;
+	}
+	&__point {
+		display: flex;
+		padding: 7px 25px 7px 8px;
+		justify-content: center;
+		align-items: flex-start;
+
+		border-radius: 100px;
+		background: #f9f8f8;
+	}
+	&__ellipse {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		width: 33px;
+		height: 33px;
+		p {
+			color: $white-color;
+			font-size: 16px;
+			font-weight: 700;
+			z-index: 1;
+		}
+		svg {
+			position: absolute;
+			width: 33px;
+			height: 33px;
+		}
+	}
+	&__point-text {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		p {
+			font-size: 16px;
+		}
+	}
+}
+  @media (min-width: 768px) {
+    .service-single {
+			&__container {
+				max-width: 700px;
+			}
+			&__title {
+				font-size: 40px;
+			}
+			&__text {
+				font-size: 14px;
+			}
+			&__banner {
+				height: 300px;
+				font-size: 55px;
+			}
+		}
+		.service-single-store {
+      width: 700px;
+			padding: 120px 0px 100px;
+			gap: 55px;
+      &__image{
+        img{
+          width: 700px;
+        }
+      }
+			&__content {
+				gap: 55px;
+			}
+			&__heading {
+				gap: 18px;
+				p {
+					gap: 20px;
+				}
+			}
+			&__cards {
+				gap: 18px;
+        img {
+          display: block;
+					width: 250px;
+					height: 200px;
+				}
+			}
+			&__why-organik {
+				gap: 14px;
+				
+			}
+			&__card {
+				padding: 45px 30px;
+				h3 {
+					font-size: 18px;
+				}
+			}
+			&__produce {
+				gap: 9px;
+			}
+			&__subcontent {
+				gap: 30px;
+			}
+			&__subcontent-text {
+				gap: 7px;
+				h3 {
+					font-size: 35px;
+				}
+			}
+			&__points {
+        flex-direction: row ;
+				width: 600px;
+				gap: 18px;
+			}
+			&__point {
+				padding: 10px 35px 10px 12px;
+			}
+			&__ellipse {
+				width: 45px;
+				height: 45px;
+				p {
+					font-size: 18px;
+				}
+				svg {
+					width: 45px;
+					height: 45px;
+				}
+			}
+			&__point-text {
+				gap: 19px;
+				p {
+					font-size: 16px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+  @media (min-width: 1440px) {
+    .service-single {
+			&__container {
+				max-width: 1200px;
+			}
+			&__title {
+				font-size: 45px;
+			}
+			&__text {
+				font-size: 16px;
+			}
+			&__banner {
+				height: 350px;
+				font-size: 65px;
+			}
+		}
+		.service-single-store {
+      width: 1200px;
+			padding: 160px 0px 115px;
+			gap: 65px;
+      &__image{
+        img{
+          width: 1200px;
+        }
+      }
+			&__content {
+				gap: 60px;
+			}
+			&__heading {
+				gap: 18px;
+				p {
+					gap: 22px;
+				}
+			}
+			&__cards {
+				gap: 18px;
+        img {
+					width: 320px;
+					height: 250px;
+				}
+			}
+			&__why-organik {
+				gap: 16px;
+				
+			}
+			&__card {
+				padding: 50px 40px;
+				h3 {
+					font-size: 22px;
+				}
+			}
+			&__produce {
+				gap: 11px;
+			}
+			&__subcontent {
+				gap: 35px;
+			}
+			&__subcontent-text {
+				gap: 9px;
+				h3 {
+					font-size: 40px;
+				}
+			}
+			&__points {
+				width: 1000px;
+				gap: 18px;
+			}
+			&__point {
+				padding: 15px 40px 15px 17px;
+			}
+			&__ellipse {
+				width: 55px;
+				height: 55px;
+				svg {
+					width: 55px;
+					height: 55px;
+				}
+			}
+			&__point-text {
+				gap: 19px;
+				p {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	@media (min-width: 1920px) {
+		.service-single {
+			&__container {
+				max-width: 1400px;
+			}
+			&__title {
+				font-size: 50px;
+			}
+			&__text {
+				font-size: 18px;
+			}
+			&__banner {
+				height: 450px;
+				font-size: 70px;
+			}
+		}
+		.service-single-store {
+			width: 1400px;
+			padding: 181px 0px 131px;
+			gap: 78px;
+			&__image{
+				img{
+					width: 1400px;
+				}
+			}
+			&__content {
+				gap: 70px;
+			}
+			&__heading {
+				gap: 28px;
+				p {
+					gap: 30px;
+				}
+			}
+			&__cards {
+				gap: 28px;
+			}
+			&__why-organik {
+				gap: 20px;
+
+				img {
+					width: 379px;
+					height: 252px;
+				}
+			}
+			&__card {
+				padding: 63px 45px;
+				gap: 10px;
+				h3 {
+					font-size: 25px;
+				}
+			}
+			&__produce {
+				gap: 20px;
+			}
+			&__subcontent {
+				gap: 59px;
+			}
+			&__subcontent-text {
+				gap: 11px;
+				h3 {
+					font-size: 35px;
+				}
+			}
+			&__points {
+				width: 820px;
+				gap: 28px;
+			}
+			&__point {
+				padding: 15px 53px 15px 17px;
+			}
+			&__ellipse {
+				width: 69px;
+				height: 69px;
+				p {
+					font-size: 25px;
+				}
+				svg {
+					width: 69px;
+					height: 69px;
+				}
+			}
+			&__point-text {
+				gap: 19px;
+				p {
+					font-size: 25px;
+				}
+			}
+		}
+	}
+}
+
+
