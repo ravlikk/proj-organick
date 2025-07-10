@@ -65,6 +65,14 @@ root.cartButton.addEventListener('click', async (e) => {
         <p>Total Cost <span>${totalPrice}$</span></p>
         <p>Discount <span>${totalDiscount}$</span></p>
       </div>
+      <div class="cart-item__order-cont">
+      <button class="cart-item__order" >
+      <p>To order</p>
+      <svg class="cart-item__order-icon">
+                <use xlink:href="../image/symbol-defs.svg#icon-Aerrow"></use>
+            </svg>
+      </button>
+      </div>
     `;
     
     console.log("ready");

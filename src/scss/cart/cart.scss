@@ -9,6 +9,49 @@
         height: 450px;
     }
 
+    &__registr-conteiner{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+            align-items: center;
+
+        gap: 20px;
+    }
+
+     &__registr-cont{
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+     }
+
+     #massege{
+        @include adaptive-value(width, 300, 1250);
+            height: 247px;
+             font-size: 25px;
+        border-radius: 16px;
+        border: 1px solid #7EB693;
+       
+
+     }
+
+     &__messege{
+         @include adaptive-value(font-size, 25, 30);
+     }
+
+      &__registr p{
+        @include adaptive-value(font-size, 25, 30);
+      }
+
+    &__registr-item{
+         @include adaptive-value(width, 200, 569);
+        height: 80px;
+        font-size: 25px;
+        border-radius: 16px;
+        border: 1px solid #7EB693;
+
+    }
+
     &__container{
         width: 350px;
     margin: 0 auto;
@@ -41,6 +84,45 @@
         flex-direction: column;
         gap: 20px;
         
+        &__order-but{
+            border-radius: 16px;
+            background: var(--color-blue-dark);
+            padding: 28px 47px 29px 47px;
+            max-width: 220px;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__order-but p{
+            font-size: 25px;
+            color: white;
+        }
+
+        &__order-cont{
+            display: flex;
+            justify-content: center;
+        }
+
+        &__order-cont button{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 23px 57px;
+            border-radius: 16px;
+            background: var(--color-blue-dark);
+            
+        }
+
+         &__order p{
+            font-size: 20px;
+            color: white;
+        }
+
+        &__order-icon{
+            width: 19px;
+            height: 19px;
+        }
+
         &__summary{
             display: flex;
             align-items: end;
@@ -161,6 +243,8 @@
         } 
      }
 
+     
+
     }
      
 }
@@ -186,12 +270,26 @@
         } 
      }
 
+          &__registr-cont{
+        gap: 20px;
+        display: grid;
+        
+  grid-template-columns: repeat(2, 1fr);
+     }
+
     }
      
 }
 
 @include pc{
     .cart{
+
+        &__registr-cont{
+        gap: 20px;
+        display: grid;
+        
+  grid-template-columns: repeat(2, 1fr);
+     }
 
         &-item{
         flex-direction: row;

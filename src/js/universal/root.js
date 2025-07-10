@@ -24,6 +24,8 @@ cartContent: document.getElementById('content'),
 cartButton: document.querySelector('.header__info-cart'),
 deleteButton: document.querySelector('.cart-item__remove'),
 cartQuantity: document.querySelector('.cart-item__quantity-num'),
-cartBody: document.querySelector('.cart')
+cartBody: document.querySelector('.cart'),
+cartOrder: document.querySelector('.cart-item__order'),
+cartOrderCont: document.querySelector('.cart-item__order-cont')
 }
  

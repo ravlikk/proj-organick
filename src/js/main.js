@@ -6,3 +6,4 @@ import "./auterization";
 import "./cart_load";
 import "./cart_delete";
 import "./cart_put";
+import "./cart__order";
