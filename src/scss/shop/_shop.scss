@@ -2,36 +2,40 @@
 	background-color: $white-color;
 
 	&__banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    color: #274C5B;
-    font-family: Roboto;
-    font-weight: 800;
-    font-size: clamp(45px, 5vw, 70px);
+		color: #274C5B;
+		font-family: Roboto;
+		font-weight: 800;
+		font-size: clamp(45px, 5vw, 70px);
 
-    height: clamp(200px, 35vw, 450px);
-    background-image: url(../../image/shop/Banner.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+		height: clamp(200px, 35vw, 450px);
+		background-image: url(../../image/shop/Banner.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 
 	&__container {
 		width: 320px;
 		margin: 0 auto;
+
 		@media (min-width: 768px) {
 			width: 700px;
 		}
+
 		@media (min-width: 1440px) {
 			width: 1060px;
 		}
+
 		@media (min-width: 1920px) {
 			width: 1420px;
 		}
-		> div {
+
+		>div {
 			text-align: center;
 			@include adaptive-value(padding-bottom, 20, 40);
 		}
@@ -43,9 +47,11 @@
 		@include adaptive-value(font-size, 32, 50);
 		font-weight: 800;
 	}
+
 	&__list {
-    @include adaptive-value(padding-top, 20, 90);
-    @include adaptive-value(padding-bottom, 30, 140);
+		@include adaptive-value(padding-top, 20, 90);
+		@include adaptive-value(padding-bottom, 30, 140);
+
 		@media (min-width: 768px) {
 			display: flex;
 			flex-wrap: wrap;
@@ -53,6 +59,7 @@
 			justify-content: center;
 		}
 	}
+
 	&__item {
 		border-radius: 30px;
 		background: #f9f8f8;
@@ -68,6 +75,7 @@
 			font-family: 'Open Sans';
 			font-size: 15px;
 		}
+
 		.shop-item__title {
 			color: $dark-blue-color;
 			font-family: Roboto;
@@ -75,12 +83,14 @@
 			font-weight: 600;
 			padding-bottom: 19px;
 		}
+
 		.shop-item__info {
 			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 		}
+
 		.shop-item__info::after {
 			content: '';
 			position: absolute;
@@ -91,20 +101,24 @@
 			width: 100%;
 			background-color: $ligh-grey;
 		}
+
 		.shop-item__info div {
 			display: flex;
 			gap: 6px;
 		}
+
 		.shop-item__price {
 			font-family: 'Open Sans';
 			font-size: 18px;
 			font-weight: 600;
 			color: $dark-blue-color;
 		}
+
 		.cancel {
 			color: $ligh-grey;
 			text-decoration: line-through;
 		}
+
 		@media (min-width: 768px) {
 			margin-bottom: 0;
 		}
@@ -113,8 +127,8 @@
 	&__item:last-child {
 		margin-bottom: 0;
 	}
+
 	&__img {
-    background-color: $white-color;
 		border-radius: 30px;
 		padding-block: 10px;
 		position: relative;
