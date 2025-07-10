@@ -10,3 +10,4 @@ getCategoryCards();
 getCardsByCategory();
 createModal();
 chekUrlByModal();
+

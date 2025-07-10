@@ -1,10 +1,9 @@
-import { getCardByModal } from "../universal/api";
+import { getCardByModal, postToCart } from "../universal/api";
 import { rooot } from "../universal/root";
 
 export function createModal() {
   rooot.listProducts.addEventListener("click", (e) => {
     const clickedItem = e.target.closest(".products__item");
-    console.log(clickedItem);
     const id = clickedItem.dataset.id;
 
     if (clickedItem) {
@@ -17,7 +16,7 @@ function closeModal() {
   rooot.modal.innerHTML = "";
   history.back();
 }
-export function closeBtn(id) {
+export function closeBtn(productId) {
   const btnAddToCart = document.querySelector(".detail__btn");
   const btnClose = document.querySelector(".detail__close");
   btnClose.addEventListener("click", () => {
@@ -28,7 +27,8 @@ export function closeBtn(id) {
   });
   btnAddToCart.addEventListener("click", () => {
     const quantity = document.querySelector(".detail-quantity__count").value;
-    // postToCart(id, quantity);
+    const productId = document.querySelector(".detail__container").dataset.id;
+    postToCart(productId, quantity);
     closeModal();
   });
 }
