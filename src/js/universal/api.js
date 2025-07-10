@@ -57,19 +57,24 @@ export async function getCardByModal(id) {
       .classList.add("loader", "modal-blur__close");
   }
 }
-export async function postToCart(quantity, productId) {
-  const token = localStorage.getItem("token");
+async function postToCart(productId, quantity) {
+  const token = localStorage.getItem('token');
 
-  await axios.post(
-    `${url}/carts`,
-    {
-      productId,
-      quantity,
-    },
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
+  try {
+    await axios.post(
+      `${url}/carts`,
+      {
+        productId,
+        quantity,
       },
-    }
-  );
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  } catch (error) {
+    // later add modal
+  }
 }
+
