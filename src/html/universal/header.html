@@ -10,7 +10,7 @@
           <a href="../../html/products.html" class="header__logo-text custom-underline">Organick</a>
       </div>
 
-      <nav class="header__nav hidden-mobile">
+      <nav class="header__nav hidden-mobile hidden-tablet">
         <ul class="header__nav-list">
           <li class="header__nav-item custom-underline"><a href="../../html/products.html">Home</a></li>
           <li class="header__nav-item custom-underline"><a href="../../about.html">About</a></li>
@@ -37,36 +37,35 @@
      </button>
     </div>
 
-
-    <button class="header__info-cart" id="cart">
-      <a class="header__cart-nav" href="../../cart.html">
+    <button class="header__info-cart">
       <svg width="30" height="30" class="header__cart-icon">
         <use href="../../image/symbol-defs.svg#icon-cart"></use>
       </svg>
+      </button>
       <p class="header__cart-text hidden-mobile hidden-tablet">
         Cart <span class="header__cart-count ">( <span>2</span> )</span>
       </p>
-      </a>
-    </button>
+    
 
-    <button id="burger"  aria-expanded="false" aria-controls="sidebar-menu" class="header__info-burger-button visible-mobile visible-tablet">
+    <button id="burger"  aria-expanded="false" aria-controls="sidebar-menu" class="header__info-burger-button ">
           <svg  width="30px" height="30px" class="header__burger-icon">
-            <use href="../../image/symbol-defs.svg#icon-burger"></use>
+            <use href="../../image/symbol-defs.svg#icon-fast-food-burger-svgrepo-com-1"></use>
           </svg>
         </button>
         
-        
-  </div>
-
-  
-  <button class="header__registration"  id="openModalBtn">
-  <p>Log in</p>
+         <button class="header__registration"  id="openModalBtn">
+  <p>Sign up</p>
 </button>
 <button class="header__user ">
     <svg  width="30px" height="30px" class="header__user">
             <use href="../../image/symbol-defs.svg#icon-user"></use>
           </svg>
   </button>
+        
+  </div>
+
+  
+ 
 
 
 <aside id="sidebar-menu" class="header__sidebar" role="navigation">
