@@ -28,17 +28,15 @@ function updateTotals(productArray) {
 
 async function loadCartData() {
   try {
-    const res = await loadCart(pathToGetCart, token);
+    const cartItems = await loadCart(pathToGetCart, token);
 
-    if ( res.data.length === 0) {
+    if (!Array.isArray(cartItems) || cartItems.length === 0) {
       root.cartContent.innerHTML = `
         <div class="cart-empty">
           <p>Your cart is empty.</p>
         </div>`;
       return;
     }
-
-    const cartItems = res.data;
 
     const productArray = await Promise.all(cartItems.map(async (item) => {
       const product = await getProductById(item.id, token);

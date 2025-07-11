@@ -71,35 +71,7 @@ export async function getProductById(id, token) {
   }
 }
 
-export async function postToCart() {
-  const token = localStorage.getItem("token");
 
-  try {
-    await axios.post(
-      `${url}/carts`,
-      {
-        products: [
-          {
-            id: 44,
-            quantity: 3,
-          },
-        ],
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-  } catch (error) {
-    if (error.response) {
-      console.error("Статус:", error.response.status);
-      console.error("Дані помилки:", error.response.data);
-    } else {
-      console.error("Помилка:", error.message);
-    }
-  }
-}
 
 export async function loadCartDinamic(path, token) {
   try {
