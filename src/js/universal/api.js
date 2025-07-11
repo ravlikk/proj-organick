@@ -36,7 +36,7 @@ export async function deleteQuantityOnServer(path, token) {
     console.log('Response from server:', res.data);
     return res.data;
   } catch (err) {
-    console.error('Помилка запиту:', err.response?.data || err.message);
+    console.error( err.response?.data || err.message);
     return null;
   }
 }
@@ -88,10 +88,10 @@ export async function updateQuantityOnServer(path, quantity, token, id) {
         }
       }
     );
-    console.log('Response from server:', res.data);
+    console.log( res.data);
     return res.data;
   } catch (err) {
-    console.error('Помилка запиту:', err.response?.data || err.message);
+    console.error( err.response?.data || err.message);
     return null;
   }
 }

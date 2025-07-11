@@ -19,14 +19,12 @@ if (currentPath === '/cart.html') {
       const product = products[cartItemId].id;
       
 
-      console.log(`Видалення товару: cartItemId = ${cartItemId}, id = ${product}`);
-
       try {
         const path = `/carts/${product}`;
         await deleteQuantityOnServer(path, token);
         deleteButton.closest('.cart-item').remove();
       } catch (err) {
-        console.error('Помилка при видаленні товару:', err);
+        console.error(err);
       }
     });
   });

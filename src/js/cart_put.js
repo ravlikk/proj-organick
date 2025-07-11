@@ -2,12 +2,6 @@ import { updateQuantityOnServer } from "../js/universal/api";
 import { root } from '../js/universal/root';
 import { debounce } from 'lodash';
 
-const quantity = 2;
-const path = `/carts`;
-const id = 44;
-const token1 = localStorage.getItem('token')
-await updateQuantityOnServer(path, quantity, token1, id);
-
 const currentPath = window.location.pathname;
 const token = localStorage.getItem('token')
 if (currentPath === '/cart.html') {
@@ -21,7 +15,7 @@ if (currentPath === '/cart.html') {
     try {
       await updateQuantityOnServer(path, quantity, token);
     } catch (err) {
-      console.error('Помилка оновлення кількості:', err);
+      console.error(err);
     }
   }, 500));
 }

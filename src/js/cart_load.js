@@ -110,20 +110,20 @@ async function loadCartData() {
         updateTotals(products);
       } catch (err) {
         if (err.response?.status === 401) {
-          alert('Сесія закінчилась. Увійдіть знову.');
+          alert('Session end. Relogin please.');
           openModal(); 
         } else {
-          console.error('Помилка при видаленні товару:', err);
+          console.error(err);
         }
       }
     });
 
   } catch (error) {
     if (error.response?.status === 401) {
-      alert('Сесія закінчилась. Увійдіть знову.');
+      alert('Session end. Relogin please.');
       openModal();
     } else {
-      console.error("Помилка завантаження корзини:", error);
+      console.error(error);
     }
   }
 }
