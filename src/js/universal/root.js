@@ -1,4 +1,4 @@
-export const rooot = {
+export const root = {
   listProducts: document.querySelector(".products__list"),
   btnLoadMore: document.querySelector(".products__btn"),
   counter: [],

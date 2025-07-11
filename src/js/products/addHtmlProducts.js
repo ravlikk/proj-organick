@@ -1,7 +1,7 @@
-import { rooot } from "../universal/root";
+import { root } from "../universal/root";
 
 export function discountProduct(data, i) {
-  rooot.listProducts.insertAdjacentHTML(
+  root.listProducts.insertAdjacentHTML(
     "beforeend",
     `<li data-id="${data[i].id}" class="products__item">
                 <p class="products-item__text">${data[i].category.name}</p>
@@ -23,7 +23,7 @@ export function discountProduct(data, i) {
 }
 
 export function defaultProduct(data, i) {
-  rooot.listProducts.insertAdjacentHTML(
+  root.listProducts.insertAdjacentHTML(
     "beforeend",
     `<li data-id="${data[i].id}" class="products__item">
                 <p class="products-item__text">${data[i].category.name}</p>
@@ -40,7 +40,7 @@ export function defaultProduct(data, i) {
 }
 
 export function discountProductOffer(data, i) {
-  rooot.categoryCardsList.insertAdjacentHTML(
+  root.categoryCardsList.insertAdjacentHTML(
     "beforeend",
     `<li data-id="${data[i].id}" class="products__item">
                 <p class="products-item__text">${data[i].category.name}</p>
@@ -62,7 +62,7 @@ export function discountProductOffer(data, i) {
 }
 
 export function defaultProductOffer(data, i) {
-  rooot.categoryCardsList.insertAdjacentHTML(
+  root.categoryCardsList.insertAdjacentHTML(
     "beforeend",
     `<li data-id="${data[i].id}" class="products__item">
                 <p class="products-item__text">${data[i].category.name}</p>
@@ -79,9 +79,9 @@ export function defaultProductOffer(data, i) {
 }
 
 export function modalProduct(data) {
-  rooot.modalBlur.classList.remove("modal-blur__close");
+  root.modalBlur.classList.remove("modal-blur__close");
 
-  rooot.modal.insertAdjacentHTML(
+  root.modal.insertAdjacentHTML(
     "beforeend",
     `
     <div class="detail__container" data-id="${data.id}">

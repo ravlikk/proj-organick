@@ -1,4 +1,3 @@
-import { rooot } from "../universal/root.js";
 import { defaultProduct, discountProduct } from "./addHtmlProducts.js";
 
 export function createCards(data) {
