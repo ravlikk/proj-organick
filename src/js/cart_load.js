@@ -12,7 +12,7 @@ if (!token) {
   }
 
 if (currentPath === '/cart.html') {
-    loadCartData();
+    loadCartData(pathToGetCart, token);
   }
 
 function updateTotals(productArray) {
@@ -26,7 +26,7 @@ function updateTotals(productArray) {
   document.querySelector('.cart-item__summary-dis').textContent = `${totalDiscount}$`;
 }
 
-async function loadCartData() {
+async function loadCartData(pathToGetCart, token) {
   try {
     const res = await loadCart(pathToGetCart, token);
 
