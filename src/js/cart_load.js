@@ -1,66 +1,46 @@
 import { loadCart } from "../js/universal/api";
 import { root } from '../js/universal/root';
 
+export let products;
+
 const pathToGetCart = '/products/';
 const currentPath = window.location.pathname;
-const token = localStorage.getItem('token')
+const token = localStorage.getItem('token');
+
 if (currentPath === '/cart.html') {
-  const token = localStorage.getItem('token');
-
-if (!token) {
- 
-}
-
   if (!token) {
+    
+    localStorage.setItem('showModal', 'true');
     window.location.href = '/';
-    const mainPath = window.location.pathname;
-    if(mainPath === "/"){
-      event.pri
-      root.modal.classList.add('active');
-    }
   } else {
     loadCartData();
   }
 }
 
-async function loadTotal(){
-  const products = await loadCart(pathToGetCart, token);
-    const productArray = products.data;
-
+function updateTotals(productArray) {
   const totalDiscount = productArray.reduce((sum, product) =>
-      sum + product.price * (product.discount / 100), 0);
+    sum + product.price * (product.discount / 100), 0);
 
-    const totalPrice = productArray.reduce((sum, product) =>
-      sum + product.price, 0);
+  const totalPrice = productArray.reduce((sum, product) =>
+    sum + product.price, 0);
 
-    document.querySelector('.cart-item__summary-price').textContent = totalPrice;
-  document.querySelector('.cart-item__summary-dis').textContent = totalDiscount;
-
-     
+  document.querySelector('.cart-item__summary-price').textContent = `${totalPrice}$`;
+  document.querySelector('.cart-item__summary-dis').textContent = `${totalDiscount}$`;
 }
-
 
 async function loadCartData() {
   try {
-    const products = await loadCart(pathToGetCart, token);
-    const productArray = products.data;
-
-    const totalDiscount = productArray.reduce((sum, product) =>
-      sum + product.price * (product.discount / 100), 0);
-
-    const totalPrice = productArray.reduce((sum, product) =>
-      sum + product.price, 0);
+    const res = await loadCart(pathToGetCart, token);
+    const productArray = res.data;
+    products = productArray;
 
     root.cartContent.innerHTML = productArray.map((product, index) => {
       const priceAfterDiscount = product.price * (1 - product.discount / 100);
       const cartItemId = product.cartItemId;
 
-      
-
       return `
-        <div class="cart-item" id="cartItem-${index}">
+        <div class="cart-item" data-cart-id="${cartItemId}">
           <img src="${product.img}" class="cart-item__image">
-
           <div class="cart-item__info">
             <div class="cart-item__text">
               <h2 class="cart-item__name">${product.name}</h2>
@@ -79,7 +59,7 @@ async function loadCartData() {
                   data-product-id="${product.id}"
                   data-cart-id="${cartItemId}" />
               </div>
-              <button class="cart-item__remove" id="${index}">×</button>
+              <button class="cart-item__remove" data-cart-id="${cartItemId}">×</button>
             </div>
           </div>
         </div>
@@ -88,8 +68,8 @@ async function loadCartData() {
 
     root.cartContent.innerHTML += `
       <div class="cart-item__summary">
-        <p>Total Cost <span class="cart-item__summary-price">${totalPrice}$</span></p>
-        <p>Discount <span class="cart-item__summary-dis">${totalDiscount}$</span></p>
+        <p>Total Cost <span class="cart-item__summary-price"></span></p>
+        <p>Discount <span class="cart-item__summary-dis"></span></p>
       </div>
       <div class="cart-item__order-cont">
         <button class="cart-item__order">
@@ -101,9 +81,31 @@ async function loadCartData() {
       </div>
     `;
 
-root.cartContent.addEventListener('click', () => {
-        loadTotal(productArray);
-      });
+    updateTotals(productArray);
+
+    root.cartContent.addEventListener('click', async (e) => {
+      const deleteButton = e.target.closest('.cart-item__remove');
+      if (!deleteButton) return;
+
+      const cartId = deleteButton.dataset.cartId;
+      if (!cartId) return;
+
+      try {
+        const path = `/carts/${cartId}`;
+        await deleteQuantityOnServer(path, token);
+
+        const cartItem = deleteButton.closest('.cart-item');
+        cartItem.remove();
+
+        const updatedProducts = products.filter(p => p.cartItemId != cartId);
+        products = updatedProducts;
+        updateTotals(products);
+
+      } catch (err) {
+        console.error('Помилка при видаленні товару:', err);
+      }
+    });
+
   } catch (error) {
     console.error("Помилка завантаження корзини:", error);
   }
