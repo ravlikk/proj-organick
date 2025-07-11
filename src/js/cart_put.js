@@ -1,7 +1,6 @@
 import { updateQuantityOnServer, postToCart } from "../js/universal/api";
 import { root } from '../js/universal/root';
 import { debounce } from 'lodash';
-postToCart();
 const currentPath = window.location.pathname;
 const token = localStorage.getItem('token')
 if (currentPath === '/cart.html') {

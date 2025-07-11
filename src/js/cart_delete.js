@@ -6,26 +6,28 @@ import { products } from "../js/cart_load";
 const currentPath = window.location.pathname;
 
 if (currentPath === '/cart.html') {
-  document.addEventListener('DOMContentLoaded', () => {
-    root.cartContent.addEventListener('click', async (e) => {
-      const token = localStorage.getItem('token');
-
+  root.cartContent.addEventListener('click', async (e) => {
       const deleteButton = e.target.closest('.cart-item__remove');
       if (!deleteButton) return;
 
-      cartDinamic();
-
-      let cartItemId = deleteButton.id;
-      const product = products[cartItemId].id;
-      
+      const cartId = deleteButton.dataset.cartId;
+      if (!cartId) return;
 
       try {
-        const path = `/carts/${product}`;
+        const path = `/carts/${cartId}`;
         await deleteQuantityOnServer(path, token);
+
         deleteButton.closest('.cart-item').remove();
+
+        await loadCartData();
+
       } catch (err) {
-        console.error(err);
+        if (err.response?.status === 401) {
+          alert('Session expired. Please log in again.');
+          if (typeof openModal === "function") openModal();
+        } else {
+          console.error('Помилка при видаленні товару:', err);
+        }
       }
     });
-  });
 }

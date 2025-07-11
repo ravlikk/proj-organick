@@ -57,19 +57,7 @@ export async function loadCart(path, token) {
   }
 }
 
-export async function getProductById(id, token) {
-  try {
-    const res = await axios.get(`${url}/products/${id}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    return res.data;
-  } catch (err) {
-    console.error(err.response?.data || err.message);
-    return null;
-  }
-}
+
 
 
 
