@@ -17,7 +17,7 @@ export async function loadCartData(pathToGetCart, token) {
 
     const cartItems = response.products;
 
-    products = [];
+    const products = [];
     let allItemsHTML = '';
 
     for (let index = 0; index < cartItems.length; index++) {
