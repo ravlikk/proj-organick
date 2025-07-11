@@ -16,13 +16,13 @@ if (currentPath === '/cart.html') {
       cartDinamic();
 
       let cartItemId = deleteButton.id;
+      const product = products[cartItemId].id;
+      
 
-      const productId = product.id; 
-
-      console.log(`Видалення товару: cartItemId = ${cartItemId}, id = ${productId}`);
+      console.log(`Видалення товару: cartItemId = ${cartItemId}, id = ${product}`);
 
       try {
-        const path = `/carts/${productId}`;
+        const path = `/carts/${product}`;
         await deleteQuantityOnServer(path, token);
         deleteButton.closest('.cart-item').remove();
       } catch (err) {

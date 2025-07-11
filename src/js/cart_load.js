@@ -39,7 +39,7 @@ async function loadCartData() {
       const cartItemId = product.cartItemId;
 
       return `
-        <div class="cart-item" data-cart-id="${cartItemId}">
+        <div class="cart-item" data-cart-id="${index}">
           <img src="${product.img}" class="cart-item__image">
           <div class="cart-item__info">
             <div class="cart-item__text">
@@ -59,7 +59,7 @@ async function loadCartData() {
                   data-product-id="${product.id}"
                   data-cart-id="${cartItemId}" />
               </div>
-              <button class="cart-item__remove" data-cart-id="${cartItemId}">×</button>
+              <button class="cart-item__remove" id="${index}">×</button>
             </div>
           </div>
         </div>
