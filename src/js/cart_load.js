@@ -3,13 +3,12 @@ import { root } from '../js/universal/root';
 
 export let products;
 
-const pathToGetCart = '/products/';
+const pathToGetCart = '/carts';
 const currentPath = window.location.pathname;
 const token = localStorage.getItem('token');
 
 if (currentPath === '/cart.html') {
   if (!token) {
-    
     localStorage.setItem('showModal', 'true');
     window.location.href = '/';
   } else {
@@ -31,6 +30,16 @@ function updateTotals(productArray) {
 async function loadCartData() {
   try {
     const res = await loadCart(pathToGetCart, token);
+
+    // ✅ Перевірка: якщо даних немає або масив порожній
+    if (!res?.data || !Array.isArray(res.data) || res.data.length === 0) {
+      root.cartContent.innerHTML = `
+        <div class="cart-empty">
+          <p>Your cart is empty.</p>
+        </div>`;
+      return;
+    }
+
     const productArray = res.data;
     products = productArray;
 
