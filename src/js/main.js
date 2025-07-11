@@ -11,3 +11,15 @@ import "./cart__dinamic";
 import "./cart_html";
 import "./cart_load-data";
 import "./cart_update";
+import { chekUrlByModal, createModal } from "./products/showModal.js";
+import {
+  getCardsByCategory,
+  getCategoryCards,
+  getProducts,
+} from "./universal/api.js";
+
+getProducts();
+getCategoryCards();
+getCardsByCategory();
+createModal();
+chekUrlByModal();

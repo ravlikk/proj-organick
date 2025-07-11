@@ -1,0 +1,65 @@
+.error-404 {
+  height: 100vh;
+  background-color: $brichen-color;
+  @media (min-width: 1440px) {
+    background: url(../../image/404/404.png) lightgray 50% / cover no-repeat;
+  }
+  &__container {
+    width: 320px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    @media (min-width: 768px) {
+      width: 700px;
+    }
+    @media (min-width: 1440px) {
+      width: 1060px;
+      align-items: end;
+    }
+    @media (min-width: 1920px) {
+      width: 1520px;
+    }
+  }
+  &__title {
+    color: $dark-blue-color;
+    font-family: Roboto;
+    @include adaptive-value(font-size, 40, 70);
+    font-weight: 800;
+    @include adaptive-value(margin-bottom, 1, 10);
+  }
+  &__text {
+    color: #525c60;
+    font-family: "Open Sans";
+    @include adaptive-value(font-size, 11, 18);
+    font-weight: 600;
+    line-height: 1.6;
+    @include adaptive-value(margin-bottom, 20, 40);
+  }
+  &__img {
+    position: absolute;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    background: $dark-blue-color;
+    @include adaptive-value(width, 180, 275);
+    @include adaptive-value(height, 50, 80);
+    color: $white-color;
+    font-family: Roboto;
+    @include adaptive-value(font-size, 16, 20);
+    font-weight: 700;
+    .error-404-link__svg {
+      @include adaptive-value(width, 19, 22);
+      @include adaptive-value(height, 19, 22);
+    }
+  }
+}
