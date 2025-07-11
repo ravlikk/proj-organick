@@ -4,7 +4,6 @@ import { debounce } from 'lodash';
 
 const currentPath = window.location.pathname;
 const token = localStorage.getItem('token')
-console.log(token);
 if (currentPath === '/cart.html') {
   root.cartContent.addEventListener('input', debounce(async (e) => {
     const input = e.target.closest('.cart-item__quantity-num');

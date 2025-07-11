@@ -24,10 +24,10 @@ export async function registerUser(email, password, url) {
 }
 
 
-export async function deleteQuantityOnServer(path, id, token) {
+export async function deleteQuantityOnServer(path, quantity, token) {
   try {
     const res = await axios.delete(url + path, {
-      data: { id }, 
+      data: quantity,
       headers: {
         Authorization: `Bearer ${token}`
       }

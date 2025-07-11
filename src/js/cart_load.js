@@ -23,6 +23,23 @@ if (!token) {
   }
 }
 
+async function loadTotal(){
+  const products = await loadCart(pathToGetCart, token);
+    const productArray = products.data;
+
+  const totalDiscount = productArray.reduce((sum, product) =>
+      sum + product.price * (product.discount / 100), 0);
+
+    const totalPrice = productArray.reduce((sum, product) =>
+      sum + product.price, 0);
+
+    document.querySelector('.cart-item__summary-price').textContent = totalPrice;
+  document.querySelector('.cart-item__summary-dis').textContent = totalDiscount;
+
+     
+}
+
+
 async function loadCartData() {
   try {
     const products = await loadCart(pathToGetCart, token);
@@ -37,6 +54,8 @@ async function loadCartData() {
     root.cartContent.innerHTML = productArray.map((product, index) => {
       const priceAfterDiscount = product.price * (1 - product.discount / 100);
       const cartItemId = product.cartItemId;
+
+      
 
       return `
         <div class="cart-item" id="cartItem-${index}">
@@ -69,8 +88,8 @@ async function loadCartData() {
 
     root.cartContent.innerHTML += `
       <div class="cart-item__summary">
-        <p>Total Cost <span>${totalPrice}$</span></p>
-        <p>Discount <span>${totalDiscount}$</span></p>
+        <p>Total Cost <span class="cart-item__summary-price">${totalPrice}$</span></p>
+        <p>Discount <span class="cart-item__summary-dis">${totalDiscount}$</span></p>
       </div>
       <div class="cart-item__order-cont">
         <button class="cart-item__order">
@@ -82,7 +101,9 @@ async function loadCartData() {
       </div>
     `;
 
-
+root.cartContent.addEventListener('click', () => {
+        loadTotal(productArray);
+      });
   } catch (error) {
     console.error("Помилка завантаження корзини:", error);
   }
