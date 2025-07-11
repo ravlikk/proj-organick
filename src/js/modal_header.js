@@ -1,6 +1,6 @@
 import { root } from '../js/universal/root';
 
-function openMenu() {
+export function openMenu() {
   root.sidebar.classList.add('active', 'slide-in-right');
   root.sidebar.classList.remove('slide-out-right');
 

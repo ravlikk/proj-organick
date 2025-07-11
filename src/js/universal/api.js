@@ -60,14 +60,13 @@ export async function loadCart(path, token ) {
 }
 
 export async function loadCartDinamic(path, token ) {
-
   try {
     const res = await axios.get(url + path, {
     headers: {
     Authorization: `Bearer ${token}`
   }
 })
-
+  
     return res.data; 
   } catch (err) {
     console.error( err.response?.data || err.message);
@@ -75,16 +74,21 @@ export async function loadCartDinamic(path, token ) {
   }
 }
 
-export async function updateQuantityOnServer(path, quantity, token) {
+export async function updateQuantityOnServer(path, quantity, token, id) {
   try {
-    const res = await axios.put(url + path, {
-      quantity,
-      headers: {
-    Authorization: `Bearer ${token}`
-  }
-    });
+    const res = await axios.put(
+      url + path,
+      {
+        id,         
+        quantity   
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+    );
     console.log('Response from server:', res.data);
-
     return res.data;
   } catch (err) {
     console.error('Помилка запиту:', err.response?.data || err.message);

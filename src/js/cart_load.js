@@ -31,7 +31,6 @@ async function loadCartData() {
   try {
     const res = await loadCart(pathToGetCart, token);
 
-    // ✅ Перевірка: якщо даних немає або масив порожній
     if (!res?.data || !Array.isArray(res.data) || res.data.length === 0) {
       root.cartContent.innerHTML = `
         <div class="cart-empty">
@@ -48,7 +47,7 @@ async function loadCartData() {
       const cartItemId = product.cartItemId;
 
       return `
-        <div class="cart-item" data-cart-id="${index}">
+        <div class="cart-item" data-cart-id="${cartItemId}">
           <img src="${product.img}" class="cart-item__image">
           <div class="cart-item__info">
             <div class="cart-item__text">
@@ -109,13 +108,22 @@ async function loadCartData() {
         const updatedProducts = products.filter(p => p.cartItemId != cartId);
         products = updatedProducts;
         updateTotals(products);
-
       } catch (err) {
-        console.error('Помилка при видаленні товару:', err);
+        if (err.response?.status === 401) {
+          alert('Сесія закінчилась. Увійдіть знову.');
+          openModal(); 
+        } else {
+          console.error('Помилка при видаленні товару:', err);
+        }
       }
     });
 
   } catch (error) {
-    console.error("Помилка завантаження корзини:", error);
+    if (error.response?.status === 401) {
+      alert('Сесія закінчилась. Увійдіть знову.');
+      openModal();
+    } else {
+      console.error("Помилка завантаження корзини:", error);
+    }
   }
 }

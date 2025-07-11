@@ -1,9 +1,6 @@
 import { root } from '../js/universal/root';
 
 
-
-
-
 root.btn.addEventListener('click', (e) => {
   e.preventDefault(); 
 
