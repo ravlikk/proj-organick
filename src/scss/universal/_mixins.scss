@@ -1,0 +1,8 @@
+@mixin fluid-text ($max: 40, $min: 18){
+    font-size: clamp(#{$min}px, #{($min / 16)}rem + #{(($max - $min) / 100)}vw, #{$max}px);
+}
+@mixin reset-button{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}

@@ -1,4 +1,5 @@
 @import "./universal/_reset.scss";
+@import "./universal/_mixins.scss";
 @import "./universal/_variables.scss";
 @import "./universal/adaptiv-value.scss";
 @import "./homepage/_homepage.scss";
@@ -10,4 +11,10 @@
 @import "./blog/_blog";
 @import "./service/_service";
 @import "./Service-single/_service-single.scss";
-@import "./shop/shop";
+@import "./shop/_shop";
+@import "./universal/_reset.scss";
+@import "./registration/_registration.scss";
+@import "./header/_header.scss";
+@import "./universal/_modal.scss";
+@import "./universal/_utils.scss";
+@import "./universal/_animations.scss";

@@ -1,13 +1,13 @@
-import { rooot } from "../universal/root";
+import { root } from "../universal/root";
 import { defaultProductOffer, discountProductOffer } from "./addHtmlProducts";
 import { categoryList } from "./categorySelect";
 
 export function getCategory(data) {
   for (let i = 0; i < data.length; i++) {
     if (i === 1) {
-      rooot.categoryName.textContent = `${data[i].name}`;
+      root.categoryName.textContent = `${data[i].name}`;
     } else {
-      rooot.categoryList.insertAdjacentHTML(
+      root.categoryList.insertAdjacentHTML(
         "beforeend",
         `<li data-value="cat2">${data[i].name}</li>`
       );
@@ -16,9 +16,9 @@ export function getCategory(data) {
   categoryList();
 }
 export function createCategoryList(data) {
-  rooot.categoryCardsList.innerHTML = "";
+  root.categoryCardsList.innerHTML = "";
   for (let i = 0; i < data.length; i++) {
-    if (data[i].category.name === rooot.categoryName.textContent) {
+    if (data[i].category.name === root.categoryName.textContent) {
       if (data[i].discount !== 0) {
         discountProductOffer(data, i);
       } else {

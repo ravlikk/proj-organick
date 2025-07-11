@@ -5,39 +5,154 @@ import { createCategoryList, getCategory } from "../products/categoryCards";
 import { modalProduct } from "../products/addHtmlProducts";
 import { closeBtn } from "../products/showModal";
 
-const url = "https://test-nest-api-iqy9.onrender.com/api";
+export const url = "https://test-nest-api-iqy9.onrender.com/api";
 
-export async function getProducts(params) {
-  axios
-    .get(`${url}/products`)
-    .then((response) => {
-      const data = response.data.data;
-      createCards(data);
-      loadMore(data);
-    })
-    .catch((error) => {
-      console.log(error);
-      window.location.replace("../404.html");
-    });
+export async function registerUser(email, password, url) {
+  try {
+    const res = await axios.post(url, { email, password });
+    const data = res.data;
+
+    if (
+      url !== "https://test-nest-api-iqy9.onrender.com/api/users" &&
+      data.token
+    ) {
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("isAuthenticated", "true");
+    }
+
+    return data;
+  } catch (err) {
+    if (err.response) {
+      throw new Error(err.response.data.message);
+    } else {
+      console.error(err.message);
+      throw err;
+    }
+  }
 }
-export async function getCategoryCards(params) {
-  axios
-    .get(`${url}/categories`)
-    .then((response) => {
-      const data = response.data;
-      getCategory(data);
-    })
-    .catch((error) => {
-      console.log(error);
-      window.location.replace("../404.html");
+
+export async function deleteQuantityOnServer(path, token) {
+  try {
+    const res = await axios.delete(url + path, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
+    return res.data;
+  } catch (err) {
+    console.error(err.response?.data || err.message);
+    return null;
+  }
 }
-export async function getCardsByCategory(params) {
-  axios.get(`${url}/products`).then((response) => {
+
+export async function loadCart(path, token) {
+  try {
+    const res = await axios.get(url + path, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return res.data;
+  } catch (err) {
+    console.error(err.response?.data || err.message);
+    return null;
+  }
+}
+
+export async function loadCartDinamic(path, token) {
+  try {
+    const res = await axios.get(url + path, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return res.data;
+  } catch (err) {
+    console.error(err.response?.data || err.message);
+    return null;
+  }
+}
+
+export async function updateQuantityOnServer(path, quantity, token, id) {
+  try {
+    const res = await axios.put(
+      url + path,
+      {
+        id,
+        quantity,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return res.data;
+  } catch (err) {
+    console.error(err.response?.data || err.message);
+    return null;
+  }
+}
+
+export async function postToCart(productId, quantity) {
+  const token = localStorage.getItem("token");
+
+  try {
+    await axios.post(
+      `${url}/carts`,
+      {
+        productId,
+        quantity,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  } catch (error) {
+    if (error.response) {
+      console.error("Статус:", error.response.status);
+      console.error("Дані помилки:", error.response.data);
+    } else {
+      console.error("Помилка:", error.message);
+    }
+  }
+}
+
+export async function getProducts() {
+  try {
+    const response = await axios.get(`${url}/products`);
+    const data = response.data.data;
+    createCards(data);
+    loadMore(data);
+  } catch (error) {
+    console.log(error);
+    window.location.replace("../404.html");
+  }
+}
+
+export async function getCategoryCards() {
+  try {
+    const response = await axios.get(`${url}/categories`);
+    const data = response.data;
+    getCategory(data);
+  } catch (error) {
+    console.log(error);
+    window.location.replace("../404.html");
+  }
+}
+
+export async function getCardsByCategory() {
+  try {
+    const response = await axios.get(`${url}/products`);
     const data = response.data.data;
     createCategoryList(data);
-  });
+  } catch (error) {
+    console.log(error);
+  }
 }
+
 export async function getCardByModal(id) {
   document.querySelector(".loader").classList.remove("modal-blur__close");
   try {
@@ -57,25 +172,3 @@ export async function getCardByModal(id) {
       .classList.add("loader", "modal-blur__close");
   }
 }
-export async function postToCart(productId, quantity) {
-  
-  const token = localStorage.getItem('token');
-
-  try {
-    await axios.post(
-      `${url}/carts`,
-      {
-        productId,
-        quantity,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-  } catch (error) {
-    // later add modal
-  }
-}
-

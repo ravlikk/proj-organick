@@ -1,8 +1,8 @@
 import { getCardByModal, postToCart } from "../../js/universal/api.js";
-import { rooot } from "../universal/root";
+import { root } from "../universal/root";
 
 export function createModal() {
-  rooot.listProducts.addEventListener("click", (e) => {
+  root.listProducts.addEventListener("click", (e) => {
     const clickedItem = e.target.closest(".products__item");
     const id = clickedItem.dataset.id;
 
@@ -12,8 +12,8 @@ export function createModal() {
   });
 }
 function closeModal() {
-  rooot.modalBlur.classList.add("modal-blur__close");
-  rooot.modal.innerHTML = "";
+  root.modalBlur.classList.add("modal-blur__close");
+  root.modal.innerHTML = "";
   history.back();
 }
 export function closeBtn(productId) {
@@ -22,7 +22,7 @@ export function closeBtn(productId) {
   btnClose.addEventListener("click", () => {
     closeModal();
   });
-  rooot.modalBlur.addEventListener("click", () => {
+  root.modalBlur.addEventListener("click", () => {
     closeModal();
   });
   btnAddToCart.addEventListener("click", () => {
