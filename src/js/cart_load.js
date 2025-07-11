@@ -1,20 +1,20 @@
 import { loadCart } from "../js/universal/api";
 import { root } from '../js/universal/root';
+import { openMenu } from '../js/modal_header';
 
 export let products;
-
+localStorage.clear();
 const pathToGetCart = '/carts';
 const currentPath = window.location.pathname;
 const token = localStorage.getItem('token');
 
+if (!token) {
+      root.modal.classList.add('active');
+  }
+
 if (currentPath === '/cart.html') {
-  if (!token) {
-    localStorage.setItem('showModal', 'true');
-    window.location.href = '/';
-  } else {
     loadCartData();
   }
-}
 
 function updateTotals(productArray) {
   const totalDiscount = productArray.reduce((sum, product) =>

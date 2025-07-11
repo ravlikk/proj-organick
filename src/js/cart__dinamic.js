@@ -8,8 +8,7 @@ if(token){
     const path = `/carts`;
 const data = await loadCartDinamic(path, token);
 if(!data){
-    alert("Please registrate to get all abilities")
-    openMenu();
+    root.modal.classList.add('active');
 }
 let length = data.products.length
 root.cartNum.textContent = length;
