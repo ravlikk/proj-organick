@@ -25,6 +25,7 @@ cartButton: document.querySelector('.header__info-cart'),
 cartQuantity: document.querySelector('.cart-item__quantity-num'),
 cartBody: document.querySelector('.cart'),
 cartOrder: document.querySelector('.cart-item__order'),
+cartNum: document.querySelector('.header__cart-count span'),
 cartOrderCont: document.querySelector('.cart-item__order-cont')
 }
  

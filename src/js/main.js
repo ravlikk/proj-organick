@@ -7,3 +7,4 @@ import "./cart_load";
 import "./cart_delete";
 import "./cart_put";
 import "./cart__order";
+import "./cart__dinamic";

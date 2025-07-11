@@ -3,6 +3,10 @@
     height: 100%;
     background-color: var(--colot-orange-light);
 
+    &-item img{
+        border-radius: 30px;
+    }
+
     &__logo{
         background: url("../../image/cart/Image(1).png");
         margin-bottom: 140px;
@@ -30,6 +34,12 @@
             align-items: center;
 
         gap: 20px;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
 
      &__registr-cont{
@@ -181,9 +191,13 @@
         }
 
         &__remove{
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 44px;
             height: 30px;
+            padding: 20px 30px;
+            font-size: 30px;
             border-radius: 16px;
             background: var(--color-blue-dark);
             color: white;

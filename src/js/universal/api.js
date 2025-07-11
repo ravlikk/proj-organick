@@ -57,6 +57,22 @@ export async function loadCart(path, token ) {
   }
 }
 
+export async function loadCartDinamic(path, token ) {
+
+  try {
+    const res = await axios.get(url + path, {
+    headers: {
+    Authorization: `Bearer ${token}`
+  }
+})
+
+    return res.data; 
+  } catch (err) {
+    console.error( err.response?.data || err.message);
+    return null; 
+  }
+}
+
 export async function updateQuantityOnServer(path, quantity, token) {
   try {
     const res = await axios.put(url + path, {
