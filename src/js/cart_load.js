@@ -1,6 +1,5 @@
 import { loadCart } from "../js/universal/api";
 import { root } from '../js/universal/root';
-import { openMenu } from '../js/modal_header';
 
 export let products;
 localStorage.clear();
@@ -13,7 +12,7 @@ if (!token) {
   }
 
 if (currentPath === '/cart.html') {
-    loadCartData();
+    loadCart();
   }
 
 function updateTotals(productArray) {
