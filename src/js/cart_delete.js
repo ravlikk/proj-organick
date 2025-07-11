@@ -1,7 +1,6 @@
 import { root } from '../js/universal/root';
 import { deleteQuantityOnServer } from "../js/universal/api"; 
-import { cartDinamic } from "../js/cart__dinamic"; 
-import { products } from "../js/cart_load"; 
+import { loadCartData } from "../js/cart_load-data";
 
 const currentPath = window.location.pathname;
 const token = localStorage.getItem('token');
