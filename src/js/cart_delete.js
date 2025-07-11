@@ -4,6 +4,7 @@ import { cartDinamic } from "../js/cart__dinamic";
 import { products } from "../js/cart_load"; 
 
 const currentPath = window.location.pathname;
+const token = localStorage.getItem('token');
 
 if (currentPath === '/cart.html') {
   root.cartContent.addEventListener('click', async (e) => {
