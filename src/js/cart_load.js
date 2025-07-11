@@ -2,7 +2,6 @@ import { loadCart } from "../js/universal/api";
 import { root } from '../js/universal/root';
 
 export let products;
-localStorage.clear();
 const pathToGetCart = '/carts';
 const currentPath = window.location.pathname;
 const token = localStorage.getItem('token');
