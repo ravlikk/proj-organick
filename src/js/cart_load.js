@@ -12,7 +12,7 @@ if (!token) {
   }
 
 if (currentPath === '/cart.html') {
-    loadCart();
+    loadCartData();
   }
 
 function updateTotals(productArray) {
