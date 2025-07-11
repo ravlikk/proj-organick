@@ -30,7 +30,7 @@ async function loadCartData() {
   try {
     const res = await loadCart(pathToGetCart, token);
 
-    if (!res?.data || !Array.isArray(res.data) || res.data.length === 0) {
+    if ( res.data.length === 0) {
       root.cartContent.innerHTML = `
         <div class="cart-empty">
           <p>Your cart is empty.</p>
