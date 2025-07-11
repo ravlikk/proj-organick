@@ -4,7 +4,6 @@ import { url } from "../js/universal/api";
 
 let fullUrl = url;
 
-// ==== Перевірка заповнення полів ====
 function checkInputsFilled() {
   const email = root.emailInput.value.trim();
   const password = root.passwordInput.value.trim();
