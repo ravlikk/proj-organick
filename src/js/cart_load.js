@@ -1,18 +1,19 @@
-import { loadCart } from "../js/universal/api";
+import { loadCart, getProductById, deleteQuantityOnServer } from "../js/universal/api";
 import { root } from '../js/universal/root';
 
-export let products;
+export let products = [];
+
 const pathToGetCart = '/carts';
 const currentPath = window.location.pathname;
 const token = localStorage.getItem('token');
 
-if (!token) {
-      root.modal.classList.add('active');
-  }
+if (!token && currentPath === '/cart.html') {
+  root.modal.classList.add('active');
+}
 
 if (currentPath === '/cart.html') {
-    loadCartData(pathToGetCart, token);
-  }
+  loadCartData();
+}
 
 function updateTotals(productArray) {
   const totalDiscount = productArray.reduce((sum, product) =>
@@ -25,7 +26,7 @@ function updateTotals(productArray) {
   document.querySelector('.cart-item__summary-dis').textContent = `${totalDiscount}$`;
 }
 
-async function loadCartData(pathToGetCart, token) {
+async function loadCartData() {
   try {
     const res = await loadCart(pathToGetCart, token);
 
@@ -37,15 +38,23 @@ async function loadCartData(pathToGetCart, token) {
       return;
     }
 
-    const productArray = res.data;
+    const cartItems = res.data;
+
+    const productArray = await Promise.all(cartItems.map(async (item) => {
+      const product = await getProductById(item.id, token);
+      return {
+        ...product,
+        cartItemId: item.cartItemId
+      };
+    }));
+
     products = productArray;
 
-    root.cartContent.innerHTML = productArray.map((product, index) => {
+    root.cartContent.innerHTML = productArray.map((product) => {
       const priceAfterDiscount = product.price * (1 - product.discount / 100);
-      const cartItemId = product.cartItemId;
 
       return `
-        <div class="cart-item" data-cart-id="${cartItemId}">
+        <div class="cart-item" data-cart-id="${product.cartItemId}">
           <img src="${product.img}" class="cart-item__image">
           <div class="cart-item__info">
             <div class="cart-item__text">
@@ -63,9 +72,9 @@ async function loadCartData(pathToGetCart, token) {
                   value="1" 
                   type="number"
                   data-product-id="${product.id}"
-                  data-cart-id="${cartItemId}" />
+                  data-cart-id="${product.cartItemId}" />
               </div>
-              <button class="cart-item__remove" id="${index}">×</button>
+              <button class="cart-item__remove" data-cart-id="${product.cartItemId}">×</button>
             </div>
           </div>
         </div>
@@ -87,7 +96,7 @@ async function loadCartData(pathToGetCart, token) {
       </div>
     `;
 
-    updateTotals(productArray);
+    updateTotals(products);
 
     root.cartContent.addEventListener('click', async (e) => {
       const deleteButton = e.target.closest('.cart-item__remove');
@@ -100,28 +109,27 @@ async function loadCartData(pathToGetCart, token) {
         const path = `/carts/${cartId}`;
         await deleteQuantityOnServer(path, token);
 
-        const cartItem = deleteButton.closest('.cart-item');
-        cartItem.remove();
+        deleteButton.closest('.cart-item').remove();
 
-        const updatedProducts = products.filter(p => p.cartItemId != cartId);
-        products = updatedProducts;
+        products = products.filter(p => p.cartItemId != cartId);
         updateTotals(products);
+
       } catch (err) {
         if (err.response?.status === 401) {
-          alert('Session end. Relogin please.');
-          openModal(); 
+          alert('Session expired. Please log in again.');
+          if (typeof openModal === "function") openModal();
         } else {
-          console.error(err);
+          console.error('Помилка при видаленні товару:', err);
         }
       }
     });
 
   } catch (error) {
     if (error.response?.status === 401) {
-      alert('Session end. Relogin please.');
-      openModal();
+      alert('Session expired. Please log in again.');
+      if (typeof openModal === "function") openModal();
     } else {
-      console.error(error);
+      console.error("Помилка завантаження корзини:", error);
     }
   }
 }
