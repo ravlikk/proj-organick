@@ -15,7 +15,7 @@
       width: 775px;
     }
     @media (min-width: 1440px) {
-      width: 1300px;
+      width: 1400px;
     }
     @media (min-width: 1920px) {
       width: 1596px;
@@ -35,6 +35,13 @@
 
     &__logo-text{
       @include adaptive-value(font-size, 24, 38);
+    }
+
+    &__registration p{
+      font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 1.28;
+  
     }
 
    &__registration{
@@ -134,7 +141,7 @@
   &__info {
     display: flex;
     align-items: center;
-    @include adaptive-value(gap, 18, 25);
+    @include adaptive-value(gap, 0, 20);
     
     
   }
@@ -160,6 +167,11 @@
     height: 44px;
     
   }
+
+  
+   &__cart-count span{
+    color: var(--color-red);
+   }
   }
 
 
@@ -207,6 +219,10 @@
     display: none;
   }
 
+  
+   &__cart-count span{
+    color: var(--color-red);
+   }
   }
 }
 
@@ -223,28 +239,32 @@
     
     }
 
+    &__nav-list{
+      display: none;
+    }
+
     &__cart-icon,
     &__search-icon{
       width: 56px;
       height: 56px;
     }
 
-    &__info-burger-button{
-      display: none;
+    &__info-burger-button svg{
+      width: 56px;
+      height: 56px;
     }
 
     &__info-search{
-      display: flex;
-      flex-direction: row;
-      position: relative;
-      max-width: 306px;
+      display: none;
     }
 
     &__search-input{
       border-radius: 36px;
     }
 
-   
+   &__cart-count span{
+    color: var(--color-red);
+   }
 
     h2{
       font-size: 38px;
@@ -269,6 +289,7 @@
   opacity: 0.6; 
 
 }
+
 }
 }
 @include pc{
@@ -291,9 +312,10 @@
       
     }
 
-    &__info-burger-button{
+    &__info-burger-button svg{
       display: none;
     }
+
 
     &__search-icon{
        position: absolute;
@@ -337,7 +359,9 @@
       
     }
 
-  
+    &__search-button{
+    display: block;
+  }
 
 }
 }
