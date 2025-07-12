@@ -81,7 +81,7 @@ export function defaultProductOffer(data, i) {
 export function modalProduct(data) {
   root.modalBlur.classList.remove("modal-blur__close");
 
-  root.modal.insertAdjacentHTML(
+  root.modalProduct.insertAdjacentHTML(
     "beforeend",
     `
     <div class="detail__container" data-id="${data.id}">

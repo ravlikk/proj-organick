@@ -164,6 +164,7 @@ export async function getCardByModal(id) {
     const data = response.data;
     modalProduct(data);
     closeBtn(id);
+    
     if (location.pathname !== `/product/${id}`) {
       history.pushState({}, "", `/product/${id}`);
     }

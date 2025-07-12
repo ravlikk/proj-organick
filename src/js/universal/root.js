@@ -1,3 +1,5 @@
+import { modalProduct } from "../products/addHtmlProducts";
+
 export const root = {
   listProducts: document.querySelector(".products__list"),
   btnLoadMore: document.querySelector(".products__btn"),
@@ -7,7 +9,7 @@ export const root = {
   categoryList: document.querySelector(".select-list"),
   categoryCardsList: document.querySelector(".offer__list"),
   modalBlur: document.querySelector(".modal__blur"),
-  modal: document.querySelector(".detail"),
+  modalProduct: document.querySelector(".detail"),
   burger: document.getElementById("burger"),
   searchBut: document.getElementById("search-button"),
   sidebar: document.getElementById("sidebar-menu"),
