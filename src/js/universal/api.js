@@ -101,8 +101,12 @@ export async function postToCart(productId, quantity) {
     await axios.post(
       `${url}/carts`,
       {
-        productId,
-        quantity,
+        products: [
+          {
+            productId,
+            quantity,
+          },
+        ],
       },
       {
         headers: {
