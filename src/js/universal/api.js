@@ -4,6 +4,7 @@ import { loadMore } from "../products/loadMore";
 import { createCategoryList, getCategory } from "../products/categoryCards";
 import { modalProduct } from "../products/addHtmlProducts";
 import { closeBtn } from "../products/showModal";
+import { root } from "./root";
 
 export const url = "https://test-nest-api-iqy9.onrender.com/api";
 
@@ -115,12 +116,7 @@ export async function postToCart(productId, quantity) {
       }
     );
   } catch (error) {
-    if (error.response) {
-      console.error("Статус:", error.response.status);
-      console.error("Дані помилки:", error.response.data);
-    } else {
-      console.error("Помилка:", error.message);
-    }
+    
   }
 }
 
@@ -164,7 +160,7 @@ export async function getCardByModal(id) {
     const data = response.data;
     modalProduct(data);
     closeBtn(id);
-    
+
     if (location.pathname !== `/product/${id}`) {
       history.pushState({}, "", `/product/${id}`);
     }
