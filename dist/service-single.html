@@ -6,11 +6,142 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Organick</title>
-  <script type="module" crossorigin src="/assets/main-CusLZwpX.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-D2dq74MV.css">
+  <script type="module" crossorigin src="/assets/main-BQ8QM_qY.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DONQkwz6.css">
 </head>
 
 <body>
+    <header class="header" >
+  <div class="header__conteiner">
+  <div class="header__wrapper">
+      
+    
+      <div class="header__logo">
+        <svg  class="header__logo-icon" viewBox="0 0 39 56" width="37px" height="54px" loading="lazy">
+          <use  href="/public/logo.svg"></use>
+        </svg>
+          <a href="../../index.html" class="header__logo-text ">Organick</a>
+      </div>
+
+      <nav class="header__nav hidden-mobile hidden-tablet">
+        <ul class="header__nav-list">
+          <li class="header__nav-item custom-underline"><a href="../../index.html">Home</a></li>
+          <li class="header__nav-item custom-underline"><a href="../../about.html">About</a></li>
+          <li class="header__nav-item custom-underline" id="menu">
+            <a href="">Pages</a>
+          <svg width="10" height="10" class="header__nav-arrow">
+  <use href="../../image/symbol-defs.svg#icon-Vector"></use>
+</svg>
+
+          </li>
+          <li class="header__nav-item custom-underline"><a href="../../shop.html">Shop</a></li>
+          <li class="header__nav-item custom-underline"><a href="../../projects.html">Projects</a></li>
+          <li class="header__nav-item custom-underline"><a href="../../blog.html">News</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__info">
+    <div class="header__info-search" >
+      <input type="text" class="header__search-input hidden-mobile hidden-tablet"/>
+     <button class="header__search-button" id="search-button">
+         <svg width="30" height="30" class="header__search-icon">
+        <use href="../../image/symbol-defs.svg#icon-search"></use>
+      </svg>
+     </button>
+    </div>
+
+    <button class="header__info-cart">
+      <a href="../../cart.html">
+      <svg width="30" height="30" class="header__cart-icon">
+        <use href="../../image/symbol-defs.svg#icon-cart"></use>
+      </svg>
+      </a>
+      </button>
+      <p class="header__cart-text ">
+        Cart <span class="header__cart-count ">( <span>0</span> )</span>
+      </p>
+    
+
+    <button id="burger"  aria-expanded="false" aria-controls="sidebar-menu" class="header__info-burger-button ">
+          <svg  width="30px" height="30px" class="header__burger-icon">
+            <use href="../../image/symbol-defs.svg#icon-fast-food-burger-svgrepo-com-1"></use>
+          </svg>
+        </button>
+        
+         <button class="header__registration"  id="openModalBtn">
+  <p>Sign up</p>
+</button>
+<button class="header__user ">
+    <svg  width="30px" height="30px" class="header__user">
+            <use href="../../image/symbol-defs.svg#icon-user"></use>
+          </svg>
+  </button>
+        
+  </div>
+
+  
+ 
+
+
+<aside id="sidebar-menu" class="header__sidebar" role="navigation">
+
+  <button id="close-menu" aria-label="Закрити меню">
+    <svg  width="20px" height="20px" class="header__burger-icon">
+            <use href="../../image/symbol-defs.svg#icon-cross"></use>
+          </svg>
+  </button>
+
+  <input type="text" id="sidebar-search" class="header__search-input" placeholder="Search..." />
+
+  <nav class="header__sidebar-nav">
+  <ul class="header__sidebar-list">
+        <li class="header__sidebar-item custom-underline"><a href="../../index.html">Home</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../about.html">About</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../shop.html">Shop</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../projects.html">Projects</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../blog.html">News</a></li>
+    </ul>
+  </nav>
+</aside>
+</div>
+</div>
+</header>
+
+    
+<div id="modal" class="modal ">
+
+  <button class="modal__cancel">
+    <svg width="30px" height="30px" class="header__burger-icon">
+      <use href="../../image/symbol-defs.svg#icon-cross"></use>
+    </svg>
+  </button>
+
+  <form id="form" class="modal__content">
+    <div>
+      <p>*First name*</p>
+      <input id="first" type="text" name="username" autocomplete="off" required>
+    </div>
+
+    <div>
+      <p>*Email*</p>
+      <input id="email" type="email" autocomplete="off" required>
+    </div>
+
+    <div>
+      <p>*Password. Min 6 sym*</p>
+      <input id="password" type="password" autocomplete="off" required>
+    </div>
+
+
+    <button id="submit" type="submit">Confirm</button>
+  </form>
+
+  <h1 class="modal__message hidden">
+    Thank for registration!
+  </h1>
+  
+</div>
+
     <main>
         <section class="service-single">
     <h1 class=" service-single__banner service-single__title">Quality standard
@@ -85,7 +216,7 @@
   </div>
 </section>
     </main>
-      <footer class="footer">
+    <footer class="footer">
     <div class="footer__container">
         <div class="footer__wrapper">
             <div class="footer__contact">
