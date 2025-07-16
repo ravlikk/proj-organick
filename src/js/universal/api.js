@@ -128,7 +128,7 @@ export async function getProducts() {
     loadMore(data);
   } catch (error) {
     console.log(error);
-    window.location.replace("../404.html");
+    // window.location.replace("../404.html");
   }
 }
 
@@ -139,7 +139,7 @@ export async function getCategoryCards() {
     getCategory(data);
   } catch (error) {
     console.log(error);
-    window.location.replace("../404.html");
+    // window.location.replace("../404.html");
   }
 }
 
@@ -166,7 +166,7 @@ export async function getCardByModal(id) {
     }
   } catch (error) {
     console.log(error);
-    window.location.replace("../404.html");
+    // window.location.replace("../404.html");
   } finally {
     document
       .querySelector(".loader")
