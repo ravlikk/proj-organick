@@ -1,4 +1,5 @@
 .service-single {
+	@include adaptive-value(padding-bottom, 30, 140);
 	&__container {
 		max-width: 320px;
 		margin: 0 auto;
@@ -19,7 +20,7 @@
 		font-weight: 400;
 		line-height: 165.4%;
 	}
-	&__banner {
+	&__banner h1 {
 		margin: 0 auto;
 		background-image: url(../../image/Service-single/Service-single-banner/Banner.png);
 		background-size: cover;
@@ -36,7 +37,7 @@
 	}
 .service-single-store {
 	width: 320px;
-	padding: 100px 0px 80px;
+	padding: 100px 0px 0px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -169,14 +170,14 @@
 			&__text {
 				font-size: 14px;
 			}
-			&__banner {
+			&__banner h1 {
 				height: 300px;
 				font-size: 55px;
 			}
 		}
 		.service-single-store {
       width: 700px;
-			padding: 120px 0px 100px;
+			padding: 120px 0px 0px;
 			gap: 55px;
       &__image{
         img{
@@ -261,14 +262,14 @@
 			&__text {
 				font-size: 16px;
 			}
-			&__banner {
+			&__banner h1 {
 				height: 350px;
 				font-size: 65px;
 			}
 		}
 		.service-single-store {
       width: 1200px;
-			padding: 160px 0px 115px;
+			padding: 160px 0px 0px;
 			gap: 65px;
       &__image{
         img{
@@ -347,14 +348,14 @@
 			&__text {
 				font-size: 18px;
 			}
-			&__banner {
+			&__banner h1 {
 				height: 450px;
 				font-size: 70px;
 			}
 		}
 		.service-single-store {
 			width: 1400px;
-			padding: 181px 0px 131px;
+			padding: 181px 0px 0px;
 			gap: 78px;
 			&__image{
 				img{

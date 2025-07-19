@@ -10,22 +10,23 @@
 	}
 }
 
-.services__banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../../image/service/services-photo/Banner.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-size: 45px;
-  color: #274C5B;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  height: 200px;
-  width: 100%;
+.services__banner h1 {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: url(../../image/service/services-photo/Banner.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		font-size: 45px;
+		color: #274C5B;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 800;
+		line-height: normal;
+		height: 200px;
+		width: 100%;
 }
 
 .subtitle {
@@ -191,8 +192,11 @@
 			max-width: 700px;
 		}
 		&__banner {
-      font-size: 55px;
+			h1{
+			font-size: 55px;
 			height: 300px;
+			}
+
 		}
 		.title {
 			font-size: 30px;
@@ -329,8 +333,11 @@
 			max-width: 1200px;
 		}
 		&__banner {
-      font-size: 65px;
-			height: 350px;
+			h1{
+				font-size: 65px;
+				height: 350px;
+			}
+
 		}
 		.title {
 			font-size: 40px;
@@ -423,8 +430,11 @@
 			max-width: 1400px;
 		}
 		&__banner {
-      font-size: 70px;
+			h1{
+			font-size: 70px;
 			height: 450px;
+			}
+
 		}
 	}
 

@@ -1,7 +1,7 @@
 .shop {
 	background-color: $white-color;
 
-	&__banner {
+	&__banner h1 {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -129,6 +129,7 @@
 	}
 
 	&__img {
+		background-color: $white-color;
 		border-radius: 30px;
 		padding-block: 10px;
 		position: relative;
