@@ -6,7 +6,7 @@ import { modalProduct } from "../products/addHtmlProducts";
 import { closeBtn } from "../products/showModal";
 import { root } from "./root";
 
-export const url = "https://test-nest-api-iqy9.onrender.com/api";
+export const url = "https://api.fivecoins.top/api";
 
 export async function registerUser(email, password, url) {
   try {
@@ -115,9 +115,7 @@ export async function postToCart(productId, quantity) {
         },
       }
     );
-  } catch (error) {
-    
-  }
+  } catch (error) {}
 }
 
 export async function getProducts() {

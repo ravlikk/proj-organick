@@ -23,3 +23,4 @@ getCategoryCards();
 getCardsByCategory();
 createModal();
 chekUrlByModal();
+
