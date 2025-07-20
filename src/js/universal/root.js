@@ -6,7 +6,6 @@ closeBtn: document.getElementById("close-menu"),
 searchBox: document.getElementById("sidebar-search"),
 modal: document.getElementById('modal'),
 openModalBtn: document.getElementById('openModalBtn'),
-closeModalBtn: document.querySelector('.modal__cancel'),
 btn: document.getElementById('submit'),
 content: document.querySelector('.modal__content'),
 closeModalBtn:document.querySelector('.modal__cancel'),
@@ -18,6 +17,7 @@ log: document.querySelector('.header__registration'),
 submitBtn: document.getElementById('submit'),
 iconUser: document.querySelector('.header__user'), 
 emailInput: document.getElementById('email'),
-passwordInput: document.getElementById('password')
+passwordInput: document.getElementById('password'),
+overlay: document.querySelector('.header__overlay')
 }
  
