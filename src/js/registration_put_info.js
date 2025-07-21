@@ -13,7 +13,6 @@ function checkInputsFilled() {
 
   const allValid = isEmailValid && isPasswordValid;
 
-  root.btn.disabled = !allValid;
 }
 
 root.emailInput.addEventListener('input', checkInputsFilled);
@@ -25,15 +24,31 @@ root.modalog.addEventListener('click', () => {
     root.content.classList.remove('hidden');
     root.closeModalBtn.classList.remove('hidden');
   }
-  fullUrl = url + "/auth/login";
 });
 
-root.modareg.addEventListener('click', () => {
-  fullUrl = url + "/users";
-});
 
-root.submitBtn.addEventListener('click', async (e) => {
+root.modareg.addEventListener('click', async  (e) => {
   e.preventDefault();
+  fullUrl = url + "/users";
+
+  const email = root.emailInput.value.trim();
+  const password = root.passwordInput.value.trim();
+
+  try {
+    const result = await registerUser(email, password, fullUrl);
+    console.log('Результат реєстрації:', result);
+
+    root.modal.classList.remove('active');
+  } catch (error) {
+    console.error(error.message);
+  }
+
+  form.reset();
+});
+
+root.modalog.addEventListener('click', async  (e) => {
+  e.preventDefault();
+  fullUrl = url + "/auth/login";
 
   const email = root.emailInput.value.trim();
   const password = root.passwordInput.value.trim();

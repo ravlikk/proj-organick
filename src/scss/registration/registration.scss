@@ -1,8 +1,8 @@
 .modal {
   display: none;
   position: fixed;
-  top: 20%;
-   left: 0;
+  @include adaptive-value(top, 30, 100);
+  left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
@@ -84,7 +84,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
     padding: 20px;
     opacity: 1;
     transform: translateY(0);
@@ -96,6 +96,9 @@
       font-size: 16px;
       border: 2px solid #ccc;
       border-radius: 8px;
+      color: var(--color-blue-dark);
+      font-family: var(--font-family);
+      font-weight: 600;
 
       &:focus {
         outline: none;
