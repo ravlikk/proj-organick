@@ -20,17 +20,15 @@ root.emailInput.addEventListener('input', checkInputsFilled);
 root.passwordInput.addEventListener('input', checkInputsFilled);
 checkInputsFilled();
 
-root.iconUser.addEventListener('click', () => {
+root.modalog.addEventListener('click', () => {
   if (root.content.classList.contains('hidden') || root.closeModalBtn.classList.contains('hidden')) {
     root.content.classList.remove('hidden');
     root.closeModalBtn.classList.remove('hidden');
   }
-  root.modal.classList.add('active');
   fullUrl = url + "/auth/login";
 });
 
-root.log.addEventListener('click', () => {
-  root.modal.classList.add('active');
+root.modareg.addEventListener('click', () => {
   fullUrl = url + "/users";
 });
 

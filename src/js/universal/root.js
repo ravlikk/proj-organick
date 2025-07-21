@@ -13,11 +13,12 @@ log: document.querySelector('.header__registration'),
 modal: document.querySelector('.modal'),
 form: document.getElementById('form'),
 inputs: form.querySelectorAll('input'),
-log: document.querySelector('.header__registration'),
 submitBtn: document.getElementById('submit'),
 iconUser: document.querySelector('.header__user'), 
 emailInput: document.getElementById('email'),
 passwordInput: document.getElementById('password'),
-overlay: document.querySelector('.header__overlay')
+overlay: document.querySelector('.header__overlay'),
+modalog: document.querySelector('.modal__log'),
+modareg: document.querySelector('.modal__reg')
 }
  
