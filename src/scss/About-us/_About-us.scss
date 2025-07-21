@@ -1,5 +1,5 @@
 .About-us {
-	margin-bottom: clamp(60px, 10vw, 130px);
+	
 	&__banner h1 {
 		width: 100%;
 		height: 200px;
@@ -41,13 +41,16 @@
 	}
 }
 .About-us-creative {
-	position: relative;
+		padding-top: 100px;
+	padding-bottom: 80px;
+
+	&__all{
+		position: relative;
 	display: flex;
-	flex-direction: column;
 	justify-content: flex-end;
 	gap: 10px;
-	padding-top: 100px;
-	padding-bottom: 80px;
+
+	}
 
 	&__img {
 		display: none;
@@ -324,9 +327,12 @@
 	display: flex;
 	padding: 100px 0 100px;
 	width: 100%;
-	flex-direction: column;
-	align-items: center;
-	gap: 22px;
+	&__all{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 22px;
+	}
 	&__text {
 		display: flex;
 		width: 290px;
@@ -399,8 +405,10 @@
 	}
 }
 .About-us-offer-product {
+	margin-bottom: clamp(60px, 10vw, 130px);
 	background-color: $dark-blue-color;
 	padding: 90px 0px;
+
 	&__content {
 		background-color: $dark-blue-color;
 		display: flex;
@@ -468,6 +476,9 @@
 		gap: 20px;
 		padding-top: 120px;
 		padding-bottom: 100px;
+		&__all{
+				gap: 20px;
+		}
 
 		&__content {
 			width: 650px;
@@ -634,8 +645,10 @@
 	}
 	.About-us-team {
 		padding: 120px 0 140px;
-		width: 650px;
 		gap: 35px;
+			&__all{
+			gap: 35px;
+	}
 		&__text {
 			width: 450px;
 			gap: 16px;
@@ -718,10 +731,12 @@
 		}
 	}
 	.About-us-creative {
-		flex-direction: row;
-		gap: 18px;
 		padding-top: 140px;
 		padding-bottom: 120px;
+		&__all{
+			gap: 20px;
+		}
+		
 
 		&__img {
 			display: block;
@@ -890,8 +905,10 @@
 	}
 	.About-us-team {
 		padding: 160px 0 180px;
-		width: 1200px;
-		gap: 38px;
+
+					&__all{
+			gap: 38px;
+	}
 		&__text {
 			width: 800px;
 		}
@@ -965,7 +982,6 @@
 		}
 	}
 	.About-us-creative {
-		gap: 20px;
 		padding-top: 163px;
 		padding-bottom: 143px;
 
@@ -1132,8 +1148,10 @@
 	}
 	.About-us-team {
 		padding: 177px 0 202px;
-		width: 1401px;
-		gap: 42px;
+
+		&__all{
+			gap: 42px;
+	}
 		&__text {
 			width: 852px;
 			gap: 16px;
