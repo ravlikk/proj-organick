@@ -2,13 +2,15 @@
   display: none;
   position: fixed;
   top: 20%;
-  right: 35%;
-  height: 650px;
-  width: 500px; 
+   left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 375px; 
   background-color: var(--color-orange);
   padding: 30px;
   transition: transform 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 1001;
   border-radius: 30px;
 
     & p, #submit{
@@ -125,4 +127,23 @@
 
 .hidden{
     display: none;
+}
+
+@include tablet{
+  .modal{
+    width: 500px;
+  }
+  
+}
+
+@include laptop{
+  .modal{
+    width: 500px;
+  }
+}
+
+@include pc{
+  .modal{
+    width: 500px;
+  }
 }
