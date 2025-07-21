@@ -54,6 +54,8 @@ img{
 &__content{
     display: flex;
     flex-direction: column;
+    max-width: 451px;
+    
     gap: 20px;
 }
 
@@ -61,6 +63,7 @@ img{
     
     display: flex;
     flex-direction: column;
+    
     gap: 15px;
 }
 
@@ -127,12 +130,18 @@ height: 46px
 
 @include laptop{
 
-    
+   
 
     .projects{
 
+        &__content-item{
+        padding-left: 60px;
+    }
+
+
         &__content-item :hover{
 
+             
 .projects__content-overlay {
     
     top: 5%;
