@@ -17,12 +17,18 @@
         <ul class="header__nav-list">
           <li class="header__nav-item custom-underline"><a href="../../index.html">Home</a></li>
           <li class="header__nav-item custom-underline"><a href="../../about.html">About</a></li>
-          <li class="header__nav-item custom-underline" id="menu">
-            <a href="">Pages</a>
+          <li class="header__nav-item " id="menu">
+            <div class="header__pages">
+            <p class="page" href="">Pages</p>
           <svg width="10" height="10" class="header__nav-arrow">
   <use href="../../image/symbol-defs.svg#icon-Vector"></use>
 </svg>
-
+</div>
+   <ul class="dropdown-list">
+        <li><a href="../../service.html">Services</a></li>
+        <li><a href="../../service-single.html">Service Single</a></li>
+       
+      </ul>
           </li>
           <li class="header__nav-item custom-underline"><a href="../../shop.html">Shop</a></li>
           <li class="header__nav-item custom-underline"><a href="../../projects.html">Projects</a></li>
@@ -31,14 +37,6 @@
       </nav>
 
       <div class="header__info">
-    <div class="header__info-search" >
-      <input type="text" class="header__search-input hidden-mobile hidden-tablet"/>
-     <button class="header__search-button" id="search-button">
-         <svg width="30" height="30" class="header__search-icon">
-        <use href="../../image/symbol-defs.svg#icon-Search-Icon-1"></use>
-      </svg>
-     </button>
-    </div>
 
     
 
@@ -58,7 +56,7 @@
         </button>
         
          <button class="header__registration"  id="openModalBtn">
-  <p>Log in</p>
+  <p>Sign in</p>
 </button>     
   </div>
 
@@ -73,17 +71,28 @@
   </button>
 
   <div class="header__sidebar-cont">
-  <input type="text" id="sidebar-search" class="header__search-input" placeholder="Search..." />
 
-  <nav class="header__sidebar-nav">
-  <ul class="header__sidebar-list">
-        <li class="header__sidebar-item custom-underline"><a href="../../index.html">Home</a></li>
-        <li class="header__sidebar-item custom-underline"><a href="../../about.html">About</a></li>
-        <li class="header__sidebar-item custom-underline"><a href="../../shop.html">Shop</a></li>
-        <li class="header__sidebar-item custom-underline"><a href="../../projects.html">Projects</a></li>
-        <li class="header__sidebar-item custom-underline"><a href="../../blog.html">News</a></li>
-    </ul>
-  </nav>
+  <ul class="header__nav-list" id="modal-list">
+          <li class="header__nav-item custom-underline"><a href="../../index.html">Home</a></li>
+          <li class="header__nav-item custom-underline"><a href="../../about.html">About</a></li>
+          <li class="header__nav-item " id="menu">
+            <div class="header__pages">
+            <p class="page" id="page-modal" href="">Pages</p>
+          <svg width="10" height="10" class="header__nav-arrow">
+  <use href="../../image/symbol-defs.svg#icon-Vector"></use>
+</svg>
+</div>
+   <ul class="dropdown-list" id="drop-modal">
+        <li><a href="../../service.html">Services</a></li>
+        <li><a href="../../service-single.html">Service Single</a></li>
+        
+      </ul>
+          </li>
+          <li class="header__nav-item custom-underline"><a href="../../shop.html">Shop</a></li>
+          <li class="header__nav-item custom-underline"><a href="../../projects.html">Projects</a></li>
+          <li class="header__nav-item custom-underline"><a href="../../blog.html">News</a></li>
+        </ul>
+      </nav>
   </div>
 </aside>
 </div>

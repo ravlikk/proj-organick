@@ -19,6 +19,10 @@ emailInput: document.getElementById('email'),
 passwordInput: document.getElementById('password'),
 overlay: document.querySelector('.header__overlay'),
 modalog: document.querySelector('.modal__log'),
-modareg: document.querySelector('.modal__reg')
+modareg: document.querySelector('.modal__reg'),
+pages: document.querySelector('.header__pages'),
+list:  document.querySelector('.dropdown-list'),
+pageModal: document.getElementById('page-modal'),
+listModal: document.getElementById('drop-modal'),
 }
  

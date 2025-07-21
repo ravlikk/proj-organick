@@ -24,3 +24,9 @@ root.closeModalBtn.addEventListener('click', () => {
     
   }, 400); 
 });
+
+root.overlay.addEventListener('click', () => {
+ 
+    root.overlay.style.display = 'none';
+    root.modal.style.display = 'none';
+});
