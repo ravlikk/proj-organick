@@ -13,7 +13,7 @@ export function createModal() {
 }
 function closeModal() {
   root.modalBlur.classList.add("modal-blur__close");
-  root.modal.innerHTML = "";
+  root.Productmodal.innerHTML = "";
   history.back();
 }
 export function closeBtn(productId) {
@@ -26,9 +26,13 @@ export function closeBtn(productId) {
     closeModal();
   });
   btnAddToCart.addEventListener("click", () => {
-    const quantity = document.querySelector(".detail-quantity__count").value;
-    const productId = document.querySelector(".detail__container").dataset.id;
-    postToCart(productId, quantity);
+    const quantity = Number(
+      document.querySelector(".detail-quantity__count").value
+    );
+    const id = Number(
+      document.querySelector(".detail__container").dataset.id
+    );
+    postToCart(id, quantity);
     closeModal();
   });
 }

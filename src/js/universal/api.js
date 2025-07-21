@@ -95,7 +95,7 @@ export async function updateQuantityOnServer(path, quantity, token, id) {
   }
 }
 
-export async function postToCart(productId, quantity) {
+export async function postToCart(id, quantity) {
   const token = localStorage.getItem("token");
 
   try {
@@ -104,7 +104,7 @@ export async function postToCart(productId, quantity) {
       {
         products: [
           {
-            productId,
+            id,
             quantity,
           },
         ],
@@ -115,7 +115,8 @@ export async function postToCart(productId, quantity) {
         },
       }
     );
-  } catch (error) {}
+  } catch (error) {
+  }
 }
 
 export async function getProducts() {
@@ -126,7 +127,6 @@ export async function getProducts() {
     loadMore(data);
   } catch (error) {
     console.log(error);
-    // window.location.replace("../404.html");
   }
 }
 
@@ -137,7 +137,6 @@ export async function getCategoryCards() {
     getCategory(data);
   } catch (error) {
     console.log(error);
-    // window.location.replace("../404.html");
   }
 }
 

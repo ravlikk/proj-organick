@@ -23,7 +23,7 @@ export const root = {
   content: document.querySelector(".modal__content"),
   closeModalBtn: document.querySelector(".modal__cancel"),
   log: document.querySelector(".header__registration"),
-  modal: document.querySelector(".modal"),
+  Productmodal: document.querySelector(".detail"),
   form: document.getElementById("form"),
   inputs: form.querySelectorAll("input"),
   log: document.querySelector(".header__registration"),

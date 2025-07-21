@@ -1,3 +1,4 @@
+import { getProducts } from "../universal/api.js";
 import { defaultProduct, discountProduct } from "./addHtmlProducts.js";
 
 export function createCards(data) {
@@ -9,3 +10,4 @@ export function createCards(data) {
     }
   }
 }
+
