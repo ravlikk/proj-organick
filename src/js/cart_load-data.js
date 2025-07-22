@@ -26,8 +26,6 @@ export async function loadCartData(pathToGetCart, token) {
       const quantity = item.quantity;
       const cartItemId = item.id;
 
-      console.log(item); 
-
       products.push({
         price: product.price,
         discount: product.discount,
