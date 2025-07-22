@@ -4,7 +4,6 @@ import { url } from "../js/universal/api";
 
 let fullUrl = url;
 
-// Створюємо модалку повідомлень
 const feedbackBox = document.createElement('div');
 feedbackBox.id = 'feedbackBox';
 document.body.appendChild(feedbackBox);
