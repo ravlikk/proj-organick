@@ -1,6 +1,6 @@
 import { updateQuantityOnServer, postToCart } from "../js/universal/api";
 import { root } from '../js/universal/root';
-import axios from "axios";
+import { updateTotals } from "../js/cart_update";
 import { debounce } from 'lodash';
 
 const currentPath = window.location.pathname;
@@ -15,6 +15,7 @@ if (currentPath === '/cart.html') {
 
     try {
       await updateQuantityOnServer(path, quantity, token);
+      updateTotals();
     } catch (err) {
       console.error(err);
     }

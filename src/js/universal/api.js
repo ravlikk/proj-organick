@@ -6,6 +6,7 @@ import { modalProduct } from "../products/addHtmlProducts";
 import { closeBtn } from "../products/showModal";
 import { cartDinamic } from "../cart__dinamic";
 
+
 export const url = "https://api.fivecoins.top/api";
 
 export async function registerUser(email, password, url) {
@@ -116,7 +117,7 @@ export async function postToCart(id, quantity) {
         },
       }
     );
-    cartDinamic();
+      cartDinamic();
   } catch (error) {
   }
 }

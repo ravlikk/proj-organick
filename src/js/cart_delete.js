@@ -2,6 +2,7 @@ import { root } from '../js/universal/root';
 import { deleteQuantityOnServer } from "../js/universal/api"; 
 import { updateTotals } from "../js/cart_update";
 
+
 function gatherProductsFromDOM() {
   const items = root.cartContent.querySelectorAll('.cart-item');
   const products = [];
@@ -45,7 +46,6 @@ if (currentPath === '/cart.html' && root.cartContent) {
     try {
       const path = `/carts/${cartId}`;
       await deleteQuantityOnServer(path, token);
-
       const cartItem = deleteButton.closest('.cart-item');
       cartItem.remove();
 

@@ -25,13 +25,14 @@ export async function loadCartData(pathToGetCart, token) {
       const product = item.product;
       const quantity = item.quantity;
       const cartItemId = item.id;
+      
 
       products.push({
         price: product.price,
         discount: product.discount,
         quantity
       });
-
+      
       allItemsHTML += createCartItemHTML(product, quantity, cartItemId);
     }
 
@@ -52,6 +53,7 @@ export async function loadCartData(pathToGetCart, token) {
 
     root.cartContent.innerHTML = allItemsHTML;
 
+    
     updateTotals(products);
 
     
