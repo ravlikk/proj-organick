@@ -4,7 +4,7 @@ import { loadMore } from "../products/loadMore";
 import { createCategoryList, getCategory } from "../products/categoryCards";
 import { modalProduct } from "../products/addHtmlProducts";
 import { closeBtn } from "../products/showModal";
-import { root } from "./root";
+import { cartDinamic } from "../cart__dinamic";
 
 export const url = "https://api.fivecoins.top/api";
 
@@ -39,6 +39,7 @@ export async function deleteQuantityOnServer(path, token) {
         Authorization: `Bearer ${token}`,
       },
     });
+    cartDinamic();
     return res.data;
   } catch (err) {
     console.error(err.response?.data || err.message);
@@ -115,6 +116,7 @@ export async function postToCart(id, quantity) {
         },
       }
     );
+    cartDinamic();
   } catch (error) {
   }
 }
@@ -163,7 +165,6 @@ export async function getCardByModal(id) {
     }
   } catch (error) {
     console.log(error);
-    // window.location.replace("../404.html");
   } finally {
     document
       .querySelector(".loader")
