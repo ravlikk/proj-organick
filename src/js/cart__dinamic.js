@@ -1,6 +1,6 @@
 import { loadCartDinamic } from "../js/universal/api";
 import { root } from '../js/universal/root';
-import { openMenu } from '../js/modal_header';
+import { deleteQuantityOnServer } from "../js/universal/api"; 
 
 export async function  cartDinamic() {
 const token = localStorage.getItem('token');

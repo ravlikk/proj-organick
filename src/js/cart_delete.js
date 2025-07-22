@@ -12,8 +12,7 @@ function gatherProductsFromDOM() {
 
     const discountText = item.querySelector('.cart-item__new-price')?.textContent || "$0";
     const priceAfterDiscount = parseFloat(discountText.replace('$', '')) || 0;
-
-    // Обчислюємо дисконт у %
+ 
     let discount = 0;
     if (priceOld > 0) {
       discount = ((priceOld - priceAfterDiscount) / priceOld) * 100;
@@ -58,8 +57,6 @@ if (currentPath === '/cart.html' && root.cartContent) {
             <p>Your cart is empty.</p>
           </div>`;
         
-        document.querySelector('.cart-item__summary-price').textContent = '0$';
-        document.querySelector('.cart-item__summary-dis').textContent = '0$';
       } else {
         const currentProducts = gatherProductsFromDOM();
         updateTotals(currentProducts);
