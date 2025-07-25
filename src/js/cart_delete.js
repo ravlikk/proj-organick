@@ -42,7 +42,6 @@ if (currentPath === '/cart.html' && root.cartContent) {
 
     const cartId = deleteButton.dataset.cartId;
     if (!cartId) return;
-
     try {
       const path = `/carts/${cartId}`;
       await deleteQuantityOnServer(path, token);

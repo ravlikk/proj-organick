@@ -80,10 +80,12 @@ export async function updateQuantityOnServer(path, quantity, token, id) {
   try {
     const res = await axios.put(
       url + path,
-      {
-        id,
-        quantity,
-      },
+      [
+        {
+          id,
+          quantity
+        }
+      ], 
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -96,6 +98,8 @@ export async function updateQuantityOnServer(path, quantity, token, id) {
     return null;
   }
 }
+
+
 
 export async function postToCart(id, quantity) {
   const token = localStorage.getItem("token");

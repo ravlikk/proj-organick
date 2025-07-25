@@ -5,8 +5,10 @@ import { root } from '../js/universal/root';
 export function createCartItemHTML(product, quantity, cartItemId) {
   const priceAfterDiscount = product.price * (1 - product.discount / 100);
 
+  console.log(cartItemId);
+
   return `
-    <div class="cart-item" data-cart-id="${cartItemId}">
+    <div class="cart-item" >
       <img src="${product.img}" class="cart-item__image" alt="${product.name}">
       <div class="cart-item__info">
         <div class="cart-item__text">
@@ -25,7 +27,7 @@ export function createCartItemHTML(product, quantity, cartItemId) {
               type="number"
               min="1"
               data-product-id="${product.id}"
-              data-cart-id="${cartItemId}" />
+              id="${cartItemId}" />
           </div>
           <button class="cart-item__remove" data-cart-id="${cartItemId}">×</button>
         </div>

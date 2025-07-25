@@ -3,6 +3,8 @@ import { root } from '../js/universal/root';
 import { updateTotals } from "../js/cart_update";
 import { createCartItemHTML } from "../js/cart_html";
 
+export let cartProducts = [];
+
 export async function loadCartData(pathToGetCart, token) {
   try {
     const response = await loadCart(pathToGetCart, token);
@@ -11,13 +13,14 @@ export async function loadCartData(pathToGetCart, token) {
       root.cartContent.innerHTML = `
         <div class="cart-empty">
           <p>Your cart is empty.</p>
-        </div>`;
+        </div>
+      `;
       return;
     }
 
     const cartItems = response.products;
 
-    const products = [];
+    cartProducts = [];
     let allItemsHTML = '';
 
     for (let index = 0; index < cartItems.length; index++) {
@@ -25,15 +28,15 @@ export async function loadCartData(pathToGetCart, token) {
       const product = item.product;
       const quantity = item.quantity;
       const cartItemId = item.id;
-      
 
-      products.push({
+      cartProducts.push({
         price: product.price,
         discount: product.discount,
         quantity
       });
-      
+
       allItemsHTML += createCartItemHTML(product, quantity, cartItemId);
+      console.log(cartItemId);
     }
 
     allItemsHTML += `
@@ -52,11 +55,8 @@ export async function loadCartData(pathToGetCart, token) {
     `;
 
     root.cartContent.innerHTML = allItemsHTML;
-
     
-    updateTotals(products);
-
-    
+    updateTotals(cartProducts);
 
   } catch (error) {
     if (error.response?.status === 401) {
