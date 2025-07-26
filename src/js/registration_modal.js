@@ -1,23 +1,31 @@
-import { root } from '../js/universal/root';
+import { root } from "../js/universal/root";
 
+root.log.addEventListener("click", () => {
+  root.modal.classList.remove("modal-hide");
 
-root.btn.addEventListener('click', (e) => {
-  e.preventDefault(); 
+  root.modal.style.display = "block";
+  root.overlay.style.display = "block";
+  document.body.classList.add("no-scroll");
 
-  root.content.classList.add('hidden');
-  root.closeModalBtn.classList.add('hidden');
-
-
-  root.log.classList.add('log--shrink');
-
-  setTimeout(() => {
-    root.log.classList.add('hidden');
-    root.modal.classList.remove('active');
-  }, 500); 
+  root.modal.classList.add("modal-show");
 });
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-      root.modal.classList.remove('active');
-    }
+root.closeModalBtn.addEventListener("click", () => {
+  root.modal.classList.remove("modal-show");
+
+  root.modal.classList.add("modal-hide");
+
+  setTimeout(() => {
+    root.modal.style.display = "none";
+    root.overlay.classList.remove("modal-overlay-hide");
+    root.overlay.style.display = "none";
+    document.body.classList.remove("no-scroll");
+
+    root.modal.classList.remove("modal-hide");
+  }, 400);
+});
+
+root.overlay.addEventListener("click", () => {
+  root.overlay.style.display = "none";
+  root.modal.style.display = "none";
 });
