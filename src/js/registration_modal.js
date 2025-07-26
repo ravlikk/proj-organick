@@ -1,31 +1,23 @@
-import { root } from "../js/universal/root";
+import { root } from '../js/universal/root';
 
-root.log.addEventListener("click", () => {
-  root.modal.classList.remove("modal-hide");
 
-  root.modal.style.display = "block";
-  root.overlay.style.display = "block";
-  document.body.classList.add("no-scroll");
+root.btn.addEventListener('click', (e) => {
+  e.preventDefault(); 
 
-  root.modal.classList.add("modal-show");
-});
+  root.content.classList.add('hidden');
+  root.closeModalBtn.classList.add('hidden');
 
-root.closeModalBtn.addEventListener("click", () => {
-  root.modal.classList.remove("modal-show");
 
-  root.modal.classList.add("modal-hide");
+  root.log.classList.add('log--shrink');
 
   setTimeout(() => {
-    root.modal.style.display = "none";
-    root.overlay.classList.remove("modal-overlay-hide");
-    root.overlay.style.display = "none";
-    document.body.classList.remove("no-scroll");
-
-    root.modal.classList.remove("modal-hide");
-  }, 400);
+    root.log.classList.add('hidden');
+    root.modal.classList.remove('active');
+  }, 500); 
 });
 
-root.overlay.addEventListener("click", () => {
-  root.overlay.style.display = "none";
-  root.modal.style.display = "none";
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+      root.modal.classList.remove('active');
+    }
 });

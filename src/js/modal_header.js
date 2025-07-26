@@ -1,50 +1,47 @@
-import { root } from "../js/universal/root";
+import { root } from '../js/universal/root';
 
-function openModal() {
-  root.sidebar.classList.remove("close");
-  root.sidebar.classList.add("open");
+export function openMenu() {
+  root.sidebar.classList.add('active', 'slide-in-right');
+  root.sidebar.classList.remove('slide-out-right');
+
+
+  root.searchBox.classList.remove('search-animate-out');
+  root.searchBox.classList.add('search-animate-in');
+
 }
 
-function closeModal() {
-  root.sidebar.classList.remove("open");
-  root.sidebar.classList.add("close");
+function closeMenu() {
+  root.sidebar.classList.remove('slide-in-right');
+  root.sidebar.classList.add('slide-out-right');
+
+  root.searchBox.classList.remove('search-animate-in');
+  root.searchBox.classList.add('search-animate-out');
+
+  setTimeout(() => {
+    root.sidebar.classList.remove('active', 'slide-out-right');
+
+    document.body.classList.remove('modal-open');
+  }, 400);
 }
 
-let isSidebarOpen = false;
 
-root.burger.addEventListener("click", () => {
-  if (isSidebarOpen) {
-    closeModal();
-  } else {
-    root.sidebar.style.display = "block";
-    openModal();
+root.burger.addEventListener('click', openMenu);
+root.searchBut.addEventListener('click', openMenu);
+root.closeBtn.addEventListener('click', closeMenu);
+document.addEventListener('keydown', (e) => {
+ if (e.key === 'Escape' && root.sidebar.classList.contains('active')) {
+    closeMenu(); 
   }
-  isSidebarOpen = !isSidebarOpen;
 });
 
-root.closeBtn.addEventListener("click", () => {
-  closeModal();
-  isSidebarOpen = false;
-});
+function toggleNavClass() {
+  const nav = document.querySelector('.header__nav');
+    nav.classList.remove('visible-non-mobile');
+    nav.classList.add('visible-non-mobile');
+}
 
-let isOpen = false;
+toggleNavClass();
 
-root.pages.addEventListener("click", () => {
-  if (isOpen) {
-    root.list.style.display = "none";
-  } else {
-    root.list.style.display = "flex";
-  }
-  isOpen = !isOpen;
-});
+window.addEventListener('resize', toggleNavClass);
 
-let isOpenMod = false;
 
-root.pageModal.addEventListener("click", () => {
-  if (isOpenMod) {
-    root.listModal.style.display = "none";
-  } else {
-    root.listModal.style.display = "flex";
-  }
-  isOpenMod = !isOpenMod;
-});

@@ -73,23 +73,3 @@ button{
 .visible{
   display: block;
 }
-
-.modal-show {
-  animation: modalOpen 0.4s forwards;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.modal-overlay-show {
-  animation: overlayOpen 0.4s 0.4s forwards; 
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.modal-hide {
-  animation: modalClose 0.4s forwards;
-}
-
-.modal-overlay-hide {
-  animation: overlayClose 0.4s 0.4s forwards; 
-}

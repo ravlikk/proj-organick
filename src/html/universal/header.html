@@ -1,34 +1,25 @@
-<header class="header">
-  <div class="header__overlay"></div>
+<header class="header" >
   <div class="header__conteiner">
-
-    <div class="header__wrapper">
-
-
-
+  <div class="header__wrapper">
+      
+    
       <div class="header__logo">
-        <svg class="header__logo-icon" viewBox="0 0 39 56" width="37px" height="54px" loading="lazy">
-          <use href="../../image/symbol-defs.svg#icon-plant"></use>
+        <svg  class="header__logo-icon" viewBox="0 0 39 56" width="37px" height="54px" loading="lazy">
+          <use  href="../../image/symbol-defs.svg#icon-logo"></use>
         </svg>
-        <a href="../../index.html" class="header__logo-text ">Organick</a>
+          <a href="../../index.html" class="header__logo-text ">Organick</a>
       </div>
 
-      <nav class="header__nav">
+      <nav class="header__nav hidden-mobile hidden-tablet">
         <ul class="header__nav-list">
           <li class="header__nav-item custom-underline"><a href="../../index.html">Home</a></li>
           <li class="header__nav-item custom-underline"><a href="../../about.html">About</a></li>
-          <li class="header__nav-item " id="menu">
-            <div class="header__pages">
-              <p class="page" href="">Pages</p>
-              <svg width="10" height="10" class="header__nav-arrow">
-                <use href="../../image/symbol-defs.svg#icon-Vector"></use>
-              </svg>
-            </div>
-            <ul class="dropdown-list">
-              <li><a href="../../service.html">Services</a></li>
-              <li><a href="../../service-single.html">Service Single</a></li>
+          <li class="header__nav-item custom-underline" id="menu">
+            <a href="">Pages</a>
+          <svg width="10" height="10" class="header__nav-arrow">
+  <use href="../../image/symbol-defs.svg#icon-Vector"></use>
+</svg>
 
-            </ul>
           </li>
           <li class="header__nav-item custom-underline"><a href="../../shop.html">Shop</a></li>
           <li class="header__nav-item custom-underline"><a href="../../projects.html">Projects</a></li>
@@ -37,64 +28,68 @@
       </nav>
 
       <div class="header__info">
+    <div class="header__info-search" >
+      <input type="text" class="header__search-input hidden-mobile hidden-tablet"/>
+     <button class="header__search-button" id="search-button">
+         <svg width="30" height="30" class="header__search-icon">
+        <use href="../../image/symbol-defs.svg#icon-search"></use>
+      </svg>
+     </button>
+    </div>
 
+    <button class="header__info-cart">
+      <a href="../../cart.html">
+      <svg width="30" height="30" class="header__cart-icon">
+        <use href="../../image/symbol-defs.svg#icon-cart"></use>
+      </svg>
+      </a>
+      </button>
+      <p class="header__cart-text ">
+        Cart <span class="header__cart-count ">( <span>0</span> )</span>
+      </p>
+    
 
-
-        <a class="header__info-cart" href="../../cart.html">
-          <svg width="30" height="30" class="header__cart-icon">
-            <use href="../../image/symbol-defs.svg#icon-cart"></use>
-          </svg>
-          <p class="header__cart-text ">
-            Cart <span class="header__cart-count ">( <span>0</span> )</span>
-          </p>
-        </a>
-
-        <button id="burger" class="header__info-burger-button ">
-          <svg width="30px" height="30px" class="header__burger-icon">
+    <button id="burger"  aria-expanded="false" aria-controls="sidebar-menu" class="header__info-burger-button ">
+          <svg  width="30px" height="30px" class="header__burger-icon">
             <use href="../../image/symbol-defs.svg#icon-fast-food-burger-svgrepo-com-1"></use>
           </svg>
         </button>
+        
+         <button class="header__registration"  id="openModalBtn">
+  <p>Sign up</p>
+</button>
+<button class="header__user ">
+    <svg  width="30px" height="30px" class="header__user">
+            <use href="../../image/symbol-defs.svg#icon-user"></use>
+          </svg>
+  </button>
+        
+  </div>
 
-        <button class="header__registration" id="openModalBtn">
-          <p>Sign in</p>
-        </button>
-      </div>
+  
+ 
 
 
+<aside id="sidebar-menu" class="header__sidebar" role="navigation">
 
-      <aside id="sidebar-menu" class="header__sidebar" role="navigation">
-
-        <button id="close-menu" aria-label="Закрити меню">
-          <svg width="20px" height="20px" class="header__burger-icon">
+  <button id="close-menu" aria-label="Закрити меню">
+    <svg  width="20px" height="20px" class="header__burger-icon">
             <use href="../../image/symbol-defs.svg#icon-cross"></use>
           </svg>
-        </button>
+  </button>
 
-        <div class="header__sidebar-cont">
+  <input type="text" id="sidebar-search" class="header__search-input" placeholder="Search..." />
 
-          <ul class="header__nav-list" id="modal-list">
-            <li class="header__nav-item custom-underline"><a href="../../index.html">Home</a></li>
-            <li class="header__nav-item custom-underline"><a href="../../about.html">About</a></li>
-            <li class="header__nav-item " id="menu">
-              <div class="header__pages">
-                <p class="page" id="page-modal" href="">Pages</p>
-                <svg width="10" height="10" class="header__nav-arrow">
-                  <use href="../../image/symbol-defs.svg#icon-Vector"></use>
-                </svg>
-              </div>
-              <ul class="dropdown-list" id="drop-modal">
-                <li><a href="../../service.html">Services</a></li>
-                <li><a href="../../service-single.html">Service Single</a></li>
-
-              </ul>
-            </li>
-            <li class="header__nav-item custom-underline"><a href="../../shop.html">Shop</a></li>
-            <li class="header__nav-item custom-underline"><a href="../../projects.html">Projects</a></li>
-            <li class="header__nav-item custom-underline"><a href="../../blog.html">News</a></li>
-          </ul>
-          </nav>
-        </div>
-      </aside>
-    </div>
-  </div>
+  <nav class="header__sidebar-nav">
+  <ul class="header__sidebar-list">
+        <li class="header__sidebar-item custom-underline"><a href="../../index.html">Home</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../about.html">About</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../shop.html">Shop</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../projects.html">Projects</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../blog.html">News</a></li>
+    </ul>
+  </nav>
+</aside>
+</div>
+</div>
 </header>
