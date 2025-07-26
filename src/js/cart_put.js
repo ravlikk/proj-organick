@@ -11,19 +11,22 @@ if (currentPath === '/cart.html') {
   root.cartContent.addEventListener('input', debounce(async (e) => {
     const cart = e.target.closest('.cart-item');
     const input = e.target.closest('.cart-item__quantity-num');
-    if (!cart) return;
+    if (!cart || !input) return;
 
-    const quantity = input.value;
-    console.log(quantity);
-    const cartItemId = cart.dataset.id; 
-
-    console.log(cartItemId);
-
+    const quantity = Number(input.value);
+    const cartItemId = Number(cart.dataset.id); 
     const path = `/carts`; 
 
     try {
-     console.log( await updateQuantityOnServer(path, quantity, token, cartItemId));
+      await updateQuantityOnServer(path, quantity, token, cartItemId);
+
+      const index = cartProducts.findIndex(p => p.id === cartItemId);
+      if (index !== -1) {
+        cartProducts[index].quantity = quantity;
+      }
+
       updateTotals(cartProducts);
+      location.reload();
     } catch (err) {
       console.error(err);
     }
