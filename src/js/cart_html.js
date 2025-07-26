@@ -5,7 +5,6 @@ import { root } from '../js/universal/root';
 export function createCartItemHTML(product, quantity, cartItemId) {
   const priceAfterDiscount = product.price * (1 - product.discount / 100);
 
-  console.log(cartItemId);
 
   return `
     <div class="cart-item" data-id="${product.id}" >
