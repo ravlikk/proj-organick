@@ -28,6 +28,7 @@ export async function loadCartData(pathToGetCart, token) {
       const product = item.product;
       const quantity = item.quantity;
       const cartItemId = item.id;
+      const cartItemIdFor = item.id;
 
       cartProducts.push({
         price: product.price,
@@ -35,7 +36,7 @@ export async function loadCartData(pathToGetCart, token) {
         quantity
       });
 
-      allItemsHTML += createCartItemHTML(product, quantity, cartItemId);
+      allItemsHTML += createCartItemHTML(product, quantity, cartItemIdFor);
       console.log(cartItemId);
     }
 

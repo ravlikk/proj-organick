@@ -9,21 +9,20 @@ const token = localStorage.getItem('token');
 
 if (currentPath === '/cart.html') {
   root.cartContent.addEventListener('input', debounce(async (e) => {
+    const cart = e.target.closest('.cart-item');
     const input = e.target.closest('.cart-item__quantity-num');
-    if (!input) return;
+    if (!cart) return;
 
     const quantity = input.value;
-    const cartItemId = input.id; 
+    console.log(quantity);
+    const cartItemId = cart.dataset.id; 
 
-    if (!cartItemId) {
-      console.warn('Не знайдено cartItemId у data-id');
-      return;
-    }
+    console.log(cartItemId);
 
     const path = `/carts`; 
 
     try {
-      await updateQuantityOnServer(path, quantity, token, cartItemId);
+     console.log( await updateQuantityOnServer(path, quantity, token, cartItemId));
       updateTotals(cartProducts);
     } catch (err) {
       console.error(err);
