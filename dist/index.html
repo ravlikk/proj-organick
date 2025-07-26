@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organick</title>
+  <script type="module" crossorigin src="/assets/main-BQ8QM_qY.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DONQkwz6.css">
+</head>
+
+<body>
+  <header class="header" >
+  <div class="header__conteiner">
+  <div class="header__wrapper">
+      
+    
+      <div class="header__logo">
+        <svg  class="header__logo-icon" viewBox="0 0 39 56" width="37px" height="54px" loading="lazy">
+          <use  href="/public/logo.svg"></use>
+        </svg>
+          <a href="../../index.html" class="header__logo-text ">Organick</a>
+      </div>
+
+      <nav class="header__nav hidden-mobile hidden-tablet">
+        <ul class="header__nav-list">
+          <li class="header__nav-item custom-underline"><a href="../../index.html">Home</a></li>
+          <li class="header__nav-item custom-underline"><a href="../../about.html">About</a></li>
+          <li class="header__nav-item custom-underline" id="menu">
+            <a href="">Pages</a>
+          <svg width="10" height="10" class="header__nav-arrow">
+  <use href="../../image/symbol-defs.svg#icon-Vector"></use>
+</svg>
+
+          </li>
+          <li class="header__nav-item custom-underline"><a href="../../shop.html">Shop</a></li>
+          <li class="header__nav-item custom-underline"><a href="../../projects.html">Projects</a></li>
+          <li class="header__nav-item custom-underline"><a href="../../blog.html">News</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__info">
+    <div class="header__info-search" >
+      <input type="text" class="header__search-input hidden-mobile hidden-tablet"/>
+     <button class="header__search-button" id="search-button">
+         <svg width="30" height="30" class="header__search-icon">
+        <use href="../../image/symbol-defs.svg#icon-search"></use>
+      </svg>
+     </button>
+    </div>
+
+    <button class="header__info-cart">
+      <a href="../../cart.html">
+      <svg width="30" height="30" class="header__cart-icon">
+        <use href="../../image/symbol-defs.svg#icon-cart"></use>
+      </svg>
+      </a>
+      </button>
+      <p class="header__cart-text ">
+        Cart <span class="header__cart-count ">( <span>0</span> )</span>
+      </p>
+    
+
+    <button id="burger"  aria-expanded="false" aria-controls="sidebar-menu" class="header__info-burger-button ">
+          <svg  width="30px" height="30px" class="header__burger-icon">
+            <use href="../../image/symbol-defs.svg#icon-fast-food-burger-svgrepo-com-1"></use>
+          </svg>
+        </button>
+        
+         <button class="header__registration"  id="openModalBtn">
+  <p>Sign up</p>
+</button>
+<button class="header__user ">
+    <svg  width="30px" height="30px" class="header__user">
+            <use href="../../image/symbol-defs.svg#icon-user"></use>
+          </svg>
+  </button>
+        
+  </div>
+
+  
+ 
+
+
+<aside id="sidebar-menu" class="header__sidebar" role="navigation">
+
+  <button id="close-menu" aria-label="Закрити меню">
+    <svg  width="20px" height="20px" class="header__burger-icon">
+            <use href="../../image/symbol-defs.svg#icon-cross"></use>
+          </svg>
+  </button>
+
+  <input type="text" id="sidebar-search" class="header__search-input" placeholder="Search..." />
+
+  <nav class="header__sidebar-nav">
+  <ul class="header__sidebar-list">
+        <li class="header__sidebar-item custom-underline"><a href="../../index.html">Home</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../about.html">About</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../shop.html">Shop</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../projects.html">Projects</a></li>
+        <li class="header__sidebar-item custom-underline"><a href="../../blog.html">News</a></li>
+    </ul>
+  </nav>
+</aside>
+</div>
+</div>
+</header>
+
+  
+<div id="modal" class="modal ">
+
+  <button class="modal__cancel">
+    <svg width="30px" height="30px" class="header__burger-icon">
+      <use href="../../image/symbol-defs.svg#icon-cross"></use>
+    </svg>
+  </button>
+
+  <form id="form" class="modal__content">
+    <div>
+      <p>*First name*</p>
+      <input id="first" type="text" name="username" autocomplete="off" required>
+    </div>
+
+    <div>
+      <p>*Email*</p>
+      <input id="email" type="email" autocomplete="off" required>
+    </div>
+
+    <div>
+      <p>*Password. Min 6 sym*</p>
+      <input id="password" type="password" autocomplete="off" required>
+    </div>
+
+
+    <button id="submit" type="submit">Confirm</button>
+  </form>
+
+  <h1 class="modal__message hidden">
+    Thank for registration!
+  </h1>
+  
+</div>
+
+  <main>
+    <section class="hero">
+    <div class="hero__container">
+        <img class="hero__img hero__dekstop" src="../../image/homepage/hero/hero.jpg" alt="">
+        <div class="hero__wrapper">
+            <p class="section-text">100% Natural Food</p>
+            <h1 class="hero__title">Choose the best
+                healthier way
+                of life</h1>
+            <img class="hero__img hero__mobile" src="../../image/homepage/hero/hero.jpg" alt="">
+            <button class="hero__btn">Explore Now
+                <svg class="hero__svg">
+                    <use xlink:href="../image/symbol-defs.svg#icon-Aerrow"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+    <section class="banner">
+    <div class="banner__container">
+        <ul class="banner__list">
+            <li class="banner__item">
+                <p class="section-text white">Natural!!</p>
+                <h3 class="banner-item__title white">Get Garden Fresh Fruits</h3>
+            </li>
+            <li class="banner__item">
+                <p class="section-text">offer!!</p>
+                <h3 class="banner-item__title">Get 10% off
+                    on Vegetables</h3>
+            </li>
+        </ul>
+    </div>
+</section>
+    <section class="about">
+    <div class="about__container">
+        <img class="about__img" src="../../image/homepage/about/about.png" alt="">
+        <div class="about__wrapper">
+            <p class="section-text">About Us</p>
+            <h2 class="about__title">We Believe in Working
+                Accredited Farmers</h2>
+            <p class="about__text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to
+                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+            <ul class="about__list">
+                <li class="about__item"><img class="about-item__img" src="../../image/homepage/about/item1.png" alt="">
+                    <div class="about-item__content">
+                        <h3 class="about-item__title">Organic Foods Only</h3>
+                        <p class="about-item__text about__text">Simply dummy text of the printing and typesetting industry. Lorem
+                            Ipsum</p>
+                    </div>
+                </li>
+                <li class="about__item"><img class="about-item__img" src="../../image/homepage/about/item2.png" alt="">
+                    <div class="about-item__content">
+                        <h3 class="about-item__title">Quality Standards</h3>
+                        <p class="about-item__text about__text">Simply dummy text of the printing and typesetting industry. Lorem
+                            Ipsum</p>
+                    </div>
+                </li>
+            </ul>
+            <button class="about__btn">
+                Shop Now
+                <svg class="about__svg">
+                    <use xlink:href="../image/symbol-defs.svg#icon-Aerrow"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+    <section class="products">
+    <div class="modal__blur modal-blur__close"></div>
+    <div class="loader modal-blur__close"></div>
+    <div class="detail">
+    </div>
+    <div class="products__container">
+        <div class="products__wrapper">
+            <p class="section-text">Categories</p>
+            <h2 class="products__title">Our Products</h2>
+        </div>
+        <ul class="products__list">
+        </ul>
+        <button class="products__btn">
+            <span>Load More</span>
+            <svg>
+                <use xlink:href="../image/symbol-defs.svg#icon-Aerrow"></use>
+            </svg>
+        </button>
+    </div>
+</section>
+    <section class="testimonial">
+    <div class="testimonial__container">
+        <div class="testimonial__content">
+            <p class="section-text">Testimonial</p>
+            <h2 class="testimonial__title">What Our Customer Saying?</h2>
+            <img class="testimonial__img" src="../../image/homepage/testimonial/testimonial-avatar.png" alt="">
+            <img class="testimonial__rait" src="../../image/homepage/products/Star.png" alt="">
+            <p class="testimonial__text"> Simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                simply dummy text of the printing
+                and typesetting industry. Lorem Ipsum has been.</p>
+            <p class="testimonial__name">Sara Taylor</p>
+            <p class="testimonial__text">Consumer</p>
+        </div>
+        <div class="testimonial__border"></div>
+        <div class="testimonial__stats">
+            <div class="testimonial__stat">
+                <p class="testimonial-stat__number">100%</p>
+                <p class="testimonial-stat__text">Organic</p>
+            </div>
+            <div class="testimonial__stat">
+                <p class="testimonial-stat__number">285</p>
+                <p class="testimonial-stat__text">Active Product</p>
+            </div>
+            <div class="testimonial__stat">
+                <p class="testimonial-stat__number">350+</p>
+                <p class="testimonial-stat__text">Organic Orchads</p>
+            </div>
+            <div class="testimonial__stat">
+                <p class="testimonial-stat__number">25+</p>
+                <p class="testimonial-stat__text">Years of Farming</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="offer">
+    <div class="offer__container">
+        <div class="offer__wrapper">
+            <div>
+                <p class="section-text">Offer</p>
+                <h2 class="offer__title">We Offer Organic For You</h2>
+            </div>
+            <div class="custom-select" id="mySelect">
+                <div class="select-header">Оберіть категорію</div>
+                <ul class="select-list">
+                </ul>
+            </div>
+        </div>
+        <ul class="offer__list">
+        </ul>
+</section>
+    <section class="friendly">
+    <div class="friendly__container">
+        <picture>
+            <source type="image/avif" srcset="../../image/homepage/eco-friendly/eco-1x.avif 1x, ../../image/homepage/eco-friendly/eco-2x.avif 2x">
+            <source type="image/jpg" srcset="../../image/homepage/eco-friendly/eco-1x.jpg 1x, ../../image/homepage/eco-friendly/eco-2x.jpg 2x">
+            <source type="image/webp" srcset="../../image/homepage/eco-friendly/eco-1x.webp 1x, ../../image/homepage/eco-friendly/eco-2x.webp 2x">
+            <img class="friendly__img" src="#" alt="image">
+        </picture>
+        <div class="friendly__content">
+            <p class="section-text">Eco Friendly</p>
+            <h2 class="friendly__title">Econis is a Friendly
+                Organic Store</h2>
+            <ul class="friendly__list">
+                <li class="friendly__item">
+                    <h3 class="friendly-item__title">Econis is a Friendly
+                        Organic Store</h3>
+                    <p class="friendly-item__text">Sed ut perspiciatis unde omnis iste natus error sit voluptat
+                        accusantium doloremque laudantium. Sed ut perspiciatis.
+                    </p>
+                </li>
+                <li class="friendly__item">
+                    <h3 class="friendly-item__title">Learn How to Grow Yourself</h3>
+                    <p class="friendly-item__text">Sed ut perspiciatis unde omnis iste natus error sit voluptat
+                        accusantium doloremque laudantium. Sed ut perspiciatis.</p>
+                </li>
+                <li class="friendly__item">
+                    <h3 class="friendly-item__title">Farming Strategies of Today</h3>
+                    <p class="friendly-item__text">Sed ut perspiciatis unde omnis iste natus error sit voluptat
+                        accusantium doloremque laudantium. Sed ut perspiciatis.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+    <section class="gallery">
+    <div class="gallery__container">
+        <ul class="gallery__list">
+            <li class="gallery__item gallery__yellow">
+                <p class="gallery__text">Organic Juice</p>
+            </li>
+            <li class="gallery__item gallery__green">
+                <p class="gallery__text">Organic Food</p>
+            </li>
+            <li class="gallery__item gallery__brown">
+                <p class="gallery__text">Nuts Cookis</p>
+            </li>
+        </ul>
+    </div>
+</section>
+    <section class="news">
+    <div class="news__container">
+        <div class="news__wrapper">
+            <div>
+                <p class="section-text">News</p>
+                <h2 class="news__title">Discover weekly content about organic food, & more</h2>
+            </div>
+            <a href="../../blog.html" class="news__btn">
+                More News
+                <svg class="news__svg">
+                    <use xlink:href="../image/symbol-defs.svg#icon-Aerrow"></use>
+                </svg>
+            </a>
+        </div>
+        <ul class="news__list">
+            <li class="news__item">
+                <p class="news__text">25
+                    Nov</p>
+                <picture>
+                    <source type="image/avif" srcset="../../image/homepage/news/green-background.avif">
+                    <source type="image/jpeg" srcset="../../image/homepage/news/green-background.jpg">
+                    <source type="image/webp" srcset="../../image/homepage/news/green-background.webp">
+                    <img class="news__img" src="#" alt="">
+                </picture>
+                <div class="news-item__content">
+                    <p class="news-item__name">
+                        <svg class="news__svg">
+                            <use xlink:href="../image/symbol-defs.svg#icon-people"></use>
+                        </svg>
+                        By Rachi Card
+                    </p>
+                    <h3 class="news-item__title">The Benefits of Vitamin D & How to Get It</h3>
+                    <p class="news-item__text">Simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    </p>
+                    <a href="../../blog.html" class="news-item__btn">
+                        Read More
+                        <svg class="news__svg">
+                            <use xlink:href="../image/symbol-defs.svg#icon-Aerrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </li>
+            <li class="news__item">
+                <p class="news__text">25
+                    Nov</p>
+                <picture>
+                    <source type="image/avif" srcset="../../image/homepage/news/tomato-background.avif">
+                    <source type="image/jpeg" srcset="../../image/homepage/news/tomato-background.jpg">
+                    <source type="image/webp" srcset="../../image/homepage/news/tomato-background.webp">
+                    <img class="news__img" src="#" alt="">
+                </picture>
+                <div class="news-item__content">
+                    <p class="news-item__name">
+                        <svg class="news__svg">
+                            <use xlink:href="../image/symbol-defs.svg#icon-people"></use>
+                        </svg>
+                        By Rachi Card
+                    </p>
+                    <h3 class="news-item__title">Our Favourite Summertime Tommeto</h3>
+                    <p class="news-item__text">Simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    </p>
+                    <a href="../../blog.html" class="news-item__btn">
+                        Read More
+                        <svg class="news__svg">
+                            <use xlink:href="../image/symbol-defs.svg#icon-Aerrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+    <section class="subscribe">
+    <div class="subscribe__container">
+        <h2 class="subscribe__title">Subscribe to
+            our Newsletter
+        </h2>
+        <form class="subscribe__form">
+            <input class="subscribe__input" type="email" placeholder="Your Email Address">
+            <button class="subscribe__btn" type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+        <div class="footer__wrapper">
+            <div class="footer__contact">
+                <h3 class="footer-h3__title">Contact Us</h3>
+                <ul class="contact__list">
+                    <li class="contact__item">
+                        <p class="contact-item__text footer__text">Email</p>
+                        <a href="mailto:needhelp@Organia.com"
+                            class="contact-item__link footer__text">needhelp@Organia.com</a>
+                    </li>
+                    <li class="contact__item">
+                        <p class="contact-item__text footer__text">Phone</p>
+                        <a href="tel:666 888 888" class="contact-item__link footer__text">666 888 888</a>
+                    </li>
+                    <li class="contact__item">
+                        <p class="contact-item__text footer__text">Address</p>
+                        <a href="#" target="_blank" class="contact-item__link footer__text">88 road, borklyn street,
+                            USA</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__border"></div>
+            <div class="footer__social footer__dekstop">
+                <h2 class="footer__title">
+                    <svg class="footer__logo">
+                        <use xlink:href="../image/symbol-defs.svg#icon-logo"></use>
+                    </svg>
+                    Organick
+                </h2>
+                <p class="footer__text footer-social__text">Simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum simply dummy text of the printing </p>
+                <ul class="footer-social__list">
+                    <li class="footer-social__item">
+                        <a class="footer-social__link" href=""><svg class="footer-social__svg">
+                                <use xlink:href="../image/symbol-defs.svg#icon-instagram"></use>
+                            </svg></a>
+                    </li>
+                    <li class="footer-social__item">
+                        <a class="footer-social__link" href=""><svg style="border-radius: 50%;"
+                                class="footer-social__svg">
+                                <use xlink:href="../image/symbol-defs.svg#icon-facebook"></use>
+                            </svg></a>
+                    </li>
+                    <li class="footer-social__item">
+                        <a class="footer-social__link" href=""><svg class="footer-social__svg">
+                                <use xlink:href="../image/symbol-defs.svg#icon-twitter"></use>
+                            </svg></a>
+                    </li>
+                    <li class="footer-social__item">
+                        <a class="footer-social__link" href=""><svg class="footer-social__svg">
+                                <use xlink:href="../image/symbol-defs.svg#icon-pinterest"></use>
+                            </svg></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__border footer__dekstop"></div>
+            <div class="footer__inf">
+                <h3 class="footer-h3__title">Utility Pages</h3>
+                <ul class="footer-inf__lsit">
+                    <li class="footer-inf__item"><a class="footer-inf__item footer__text" href="#">Style Guide
+                        </a>
+                    </li>
+                    <li class="footer-inf__item"><a class="footer-inf__item footer__text" href="#">404 Not Found
+                        </a>
+                    </li>
+                    <li class="footer-inf__item"><a class="footer-inf__item footer__text" href="#">Password Protected
+                        </a>
+                    </li>
+                    <li class="footer-inf__item"><a class="footer-inf__item footer__text" href="#">Licences
+                        </a>
+                    </li>
+                    <li class="footer-inf__item"><a class="footer-inf__item footer__text" href="#">Changelog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__social footer__mobile">
+            <h2 class="footer__title">
+                <svg class="footer__logo">
+                    <use xlink:href="../image/symbol-defs.svg#icon-logo"></use>
+                </svg>
+                Organick
+            </h2>
+            <p class="footer__text footer-social__text">Simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum simply dummy text of the printing </p>
+            <ul class="footer-social__list">
+                <li class="footer-social__item">
+                    <a class="footer-social__link" href=""><svg class="footer-social__svg">
+                            <use xlink:href="../image/symbol-defs.svg#icon-instagram"></use>
+                        </svg></a>
+                </li>
+                <li class="footer-social__item">
+                    <a class="footer-social__link" href=""><svg style="border-radius: 50%;" class="footer-social__svg">
+                            <use xlink:href="../image/symbol-defs.svg#icon-facebook"></use>
+                        </svg></a>
+                </li>
+                <li class="footer-social__item">
+                    <a class="footer-social__link" href=""><svg class="footer-social__svg">
+                            <use xlink:href="../image/symbol-defs.svg#icon-twitter"></use>
+                        </svg></a>
+                </li>
+                <li class="footer-social__item">
+                    <a class="footer-social__link" href=""><svg class="footer-social__svg">
+                            <use xlink:href="../image/symbol-defs.svg#icon-pinterest"></use>
+                        </svg></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="footer__text footer-last">Copyright © <span>Organick</span></p>
+</footer>
+
+</body>
+
+</html>
