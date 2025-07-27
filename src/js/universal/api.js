@@ -177,3 +177,4 @@ export async function getCardByModal(id) {
       .classList.add("loader", "modal-blur__close");
   }
 }
+
