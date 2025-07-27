@@ -21,14 +21,13 @@ if (!token) {
   document.body.classList.add('no-scroll');
 
   root.modal.classList.add('modal-show');
+
   });
 
 }
 
-
 if (currentPath === '/cart.html') {
+
   loadCartData(pathToGetCart, token);
 }
-
-
 

@@ -21,7 +21,7 @@ export async function registerUser(email, password, url) {
       localStorage.setItem("token", data.token);
       localStorage.setItem("isAuthenticated", "true");
     }
-
+    location.reload();
     return data;
   } catch (err) {
     if (err.response) {
