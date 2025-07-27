@@ -10,7 +10,9 @@ export function validateRoute() {
     "/projects",
     "/index",
   ];
-  const path = window.location.pathname;
+  let path = window.location.pathname;
+  if (path === "/index.html") path = "/";
+
   const isProductPage = /^\/product\/\d+$/.test(path);
 
   if (!validRoutes.includes(path) && !isProductPage) {
