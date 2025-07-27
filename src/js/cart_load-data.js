@@ -37,7 +37,6 @@ export async function loadCartData(pathToGetCart, token) {
       });
 
       allItemsHTML += createCartItemHTML(product, quantity, cartItemIdFor);
-      console.log(cartItemId);
     }
 
     allItemsHTML += `

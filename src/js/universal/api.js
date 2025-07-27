@@ -69,7 +69,6 @@ export async function loadCartDinamic(path, token) {
         Authorization: `Bearer ${token}`,
       },
     });
-    console.log(res.data);
     return res.data;
   } catch (err) {
     console.error(err.response?.data || err.message);
