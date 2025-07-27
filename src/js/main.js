@@ -12,5 +12,8 @@ import "./cart_html";
 import "./cart_load-data";
 import "./cart_update";
 import { checkUrlByModal } from "./products/showModal";
+import { validateRoute } from "./universal/validateRoute";
+
 
 checkUrlByModal();
+validateRoute();
