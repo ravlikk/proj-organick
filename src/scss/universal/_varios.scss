@@ -98,6 +98,9 @@
     height: 60px;
     width: 160px;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media (min-width: 1440px) {
       @include adaptive-value(width, 160, 190);
       @include adaptive-value(height, 50, 80);
