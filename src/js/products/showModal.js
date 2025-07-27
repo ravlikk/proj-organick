@@ -29,22 +29,18 @@ export function closeBtn(productId) {
     const quantity = Number(
       document.querySelector(".detail-quantity__count").value
     );
-    const id = Number(
-      document.querySelector(".detail__container").dataset.id
-    );
+    const id = Number(document.querySelector(".detail__container").dataset.id);
     postToCart(id, quantity);
     closeModal();
   });
 }
 
-export function chekUrlByModal() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const path = location.pathname;
-    const match = path.match(/^\/product\/(\d+)$/);
+export function checkUrlByModal() {
+  const path = window.location.pathname;
+  const match = path.match(/^\/product\/(\d+)$/);
 
-    if (match) {
-      const id = match[1];
-      getCardByModal(id);
-    }
-  });
+  if (match) {
+    const id = match[1];
+    getCardByModal(id);
+  }
 }
