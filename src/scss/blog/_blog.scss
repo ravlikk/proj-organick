@@ -1,11 +1,13 @@
-
+.blog-section{
+  @include adaptive-value(padding-bottom, 30, 140);
+}
 .blog-section__container {
   max-width: 320px;
   background-color:$white-color;
   margin: 0 auto;
 }
 
-.blog-section__banner-image {
+.blog-section__banner h1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,7 +157,7 @@
     max-width: 700px;
   }
 
-  .blog-section__banner-image {
+  .blog-section__banner h1 {
     font-size: 55px;
     height: 350px;
   }
@@ -248,7 +250,7 @@
     max-width: 1200px;
   }
 
-  .blog-section__banner-image {
+  .blog-section__banner h1 {
     font-size: 65px;
     height: 350px;
   }
@@ -335,7 +337,7 @@
     max-width: 1400px;
   }
 
-  .blog-section__banner-image {
+  .blog-section__banner h1 {
     font-size: 70px;
     height: 450px;
   }
