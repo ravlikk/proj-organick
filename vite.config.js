@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import injectHTML from "vite-plugin-html-inject";
 import FullReload from "vite-plugin-full-reload";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   root: "src",
@@ -23,20 +22,5 @@ export default defineConfig({
     },
     outDir: "../dist",
   },
-  plugins: [
-    injectHTML(),
-    FullReload(["./src/**/*.html"]),
-    viteStaticCopy({
-      targets: [
-        {
-          src: "image/**/*",
-          dest: "image",
-        },
-        {
-          src: "fonts/**/*",
-          dest: "fonts",
-        },
-      ],
-    }),
-  ],
+  plugins: [injectHTML(), FullReload(["./src/**/*.html"])],
 });

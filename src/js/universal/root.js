@@ -1,5 +1,3 @@
-import { modalProduct } from "../products/addHtmlProducts";
-
 export const root = {
 burger: document.getElementById("burger"),
 searchBut: document.getElementById("search-button"),
@@ -28,3 +26,4 @@ list:  document.querySelector('.dropdown-list'),
 pageModal: document.getElementById('page-modal'),
 listModal: document.getElementById('drop-modal'),
 }
+ 

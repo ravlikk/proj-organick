@@ -3,7 +3,6 @@ $grey-text: #525c60;
 $dark-blue-color: #274c5b;
 $white-color: #fff;
 $ligh-grey: #b8b8b8;
-
 $pc: 1920px;
 $pc-above: 1919px;
 
@@ -19,37 +18,25 @@ $mobile-above: 375.98px;
 $sidebar-width: 375px;
 $z-sidebar: 1001;
 $z-overlay: 1000;
-$brichen-color: #e3f1e9;
-$placeholder-color: #ababab;
-$gray-white-color: #f1f8f4;
-$white-blue-btn-color: #eff6f1;
-$footer-border-color: #d4d4d4;
-$yellow-btn-color: #efd372;
-$about-background-color: #f9f8f8;
-:root {
-  --color-light: rgba(255, 255, 255, 0.9);
-  --colot-orange-light: rgba(253, 176, 45, 0.16);
-  --color-blue-dark: #274c5b;
-  --color-modal: #eff6f1;
-  --color-green: #7eb693;
-  --overlay: rgba(0, 0, 0, 0.6);
-  --color-green-dark: #598d6c;
-  --color-orange: rgba(253, 177, 45, 0.866);
-  --color-red: #f00;
+:root{
+    --color-light: rgba(255, 255, 255, 0.90);
+    --colot-orange-light: rgba(253, 176, 45, 0.16);
+    --color-blue-dark: #274C5B;
+    --color-modal: #eff6f1;
+    --color-green: #7EB693;
+    --overlay: rgba(0, 0, 0, 0.6);
+    --color-green-dark: #598d6c;
+    --color-orange: rgba(253, 177, 45, 0.866);
+    --color-red: #F00;
 
-  --color-light: rgba(255, 255, 255, 0.9);
-  --colot-orange-light: rgba(253, 176, 45, 0.16);
-  --color-blue-dark: #274c5b;
-  --color-green: #7eb693;
-  --color-orange: rgba(253, 177, 45, 0.866);
-  --color-red: #f00;
+    --border-small: 1px solid var(--color-green);
+    --border-big: 2px solid var(--color-blue-dark);
+    --border-radius: 16px;
+    --blur: 4px;
 
-  --border-small: 1px solid var(--color-green);
-  --border-big: 2px solid var(--color-blue-dark);
-  --border-radius: 16px;
-  --blur: 4px;
+    --font-family: 'Roboto';
 
-  --font-family: "Roboto";
+    --container-width: 375px;
 
-  --container-width: 375px;
+    
 }
