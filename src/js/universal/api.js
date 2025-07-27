@@ -5,7 +5,7 @@ import { createCategoryList, getCategory } from "../products/categoryCards";
 import { modalProduct } from "../products/addHtmlProducts";
 import { closeBtn } from "../products/showModal";
 import { cartDinamic } from "../cart__dinamic";
-
+import { root } from "./root";
 
 export const url = "https://api.fivecoins.top/api";
 
@@ -83,9 +83,9 @@ export async function updateQuantityOnServer(path, quantity, token, id) {
       [
         {
           id,
-          quantity
-        }
-      ], 
+          quantity,
+        },
+      ],
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -98,8 +98,6 @@ export async function updateQuantityOnServer(path, quantity, token, id) {
     return null;
   }
 }
-
-
 
 export async function postToCart(id, quantity) {
   const token = localStorage.getItem("token");
@@ -121,8 +119,17 @@ export async function postToCart(id, quantity) {
         },
       }
     );
-      cartDinamic();
+    cartDinamic();
   } catch (error) {
+    if (error.response && error.response.status === 401) {
+      root.modal.classList.remove("modal-hide");
+
+      root.modal.style.display = "block";
+      root.overlay.style.display = "block";
+      document.body.classList.add("no-scroll");
+
+      root.modal.classList.add("modal-show");
+    }
   }
 }
 
@@ -176,4 +183,3 @@ export async function getCardByModal(id) {
       .classList.add("loader", "modal-blur__close");
   }
 }
-
