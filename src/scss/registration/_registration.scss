@@ -1,19 +1,17 @@
 .modal {
+  display: none;
   position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 100%;
-  max-width: $sidebar-width; 
-  background-color: var(--color-orange);
-  padding: 20px;
-  transform: translateX(100%); 
+  top: 50%;
+  left: 50%;
+  width: 375px;
+   transform-origin: center center;
+  background-color: var(--color-modal);
+  padding: 30px;
   transition: transform 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 1001;
+  border-radius: 30px;
 
-   
-
-    & p, button{
+    & p, #submit{
       @include fluid-text(40, 32);
     font-family: var(--font-family);
     font-weight: 700;
@@ -46,16 +44,45 @@
   
   }
 
+  
+   
+
   &__message.visible {
     opacity: 1;
   transform: translate(-50%, -50%); 
   text-align: center;
 }
+&__options{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   
 
+    gap: 20px;
+}
+  &__log, &__reg {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-blue-dark);
+    font-family: var(--font-family);
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 20px;
+    color: white;
+  }
+
+  &__log:hover, &__reg:hover{
+    background-color: var(--color-green-dark);
+  }
+
+  &__reg{
+    background-color: var(--color-green);
+  }
+  
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
     padding: 20px;
     opacity: 1;
     transform: translateY(0);
@@ -67,6 +94,9 @@
       font-size: 16px;
       border: 2px solid #ccc;
       border-radius: 8px;
+      color: var(--color-blue-dark);
+      font-family: var(--font-family);
+      font-weight: 600;
 
       &:focus {
         outline: none;
@@ -76,14 +106,15 @@
       }
     }
 
-    button {
+    #submit {
       background-color: var(--color-blue-dark);
-      padding: 5px;
+      padding: 10px;
       border-radius: var(--border-radius);
       @include fluid-text(18, 14);
       color: white;
       max-width: 70px;
       width: 100%;
+      font-weight: 500;
       display: flex;
       justify-content: center;
       align-self: center;
@@ -97,4 +128,57 @@
 
 .hidden{
     display: none;
+}
+
+@include tablet{
+  .modal{
+    width: 500px;
+  }
+  
+}
+
+@include laptop{
+  .modal{
+    width: 500px;
+  }
+}
+
+@include pc{
+  .modal{
+    width: 500px;
+  }
+}
+
+.error {
+  color: #d9534f;
+  font-size: 0.9em;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 4px;
+  display: block;
+  padding: 4px 8px;
+  background-color: #fdf3f3;
+  border-left: 4px solid #d9534f;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#feedbackBox {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f44336;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-weight: bold;
+  z-index: 9999;
+  display: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
