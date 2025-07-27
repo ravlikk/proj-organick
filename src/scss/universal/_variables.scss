@@ -28,20 +28,23 @@ $yellow-btn-color: #efd372;
 $about-background-color: #f9f8f8;
 
 :root {
-  --color-light: rgba(255, 255, 255, 0.9);
-  --colot-orange-light: rgba(253, 176, 45, 0.16);
-  --color-blue-dark: #274c5b;
-  --color-green: #7eb693;
-  --color-orange: rgba(253, 177, 45, 0.866);
-  --color-red: #f00;
+ --color-light: rgba(255, 255, 255, 0.90);
+    --colot-orange-light: rgba(253, 176, 45, 0.16);
+    --color-blue-dark: #274C5B;
+    --color-modal: #eff6f1;
+    --color-green: #7EB693;
+    --overlay: rgba(0, 0, 0, 0.6);
+    --color-green-dark: #598d6c;
+    --color-orange: rgba(253, 177, 45, 0.866);
+    --color-red: #F00;
 
-  --border-small: 1px solid var(--color-green);
-  --border-big: 2px solid var(--color-blue-dark);
-  --border-radius: 16px;
-  --blur: 4px;
+    --border-small: 1px solid var(--color-green);
+    --border-big: 2px solid var(--color-blue-dark);
+    --border-radius: 16px;
+    --blur: 4px;
 
-  --font-family: "Roboto";
-  --font-family-hand: "Yellowtail";
+    --font-family: 'Roboto';
 
-  --container-width: 375px;
+    --container-width: 375px;
+
 }
