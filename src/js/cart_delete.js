@@ -2,6 +2,7 @@ import { root } from '../js/universal/root';
 import { deleteQuantityOnServer } from "../js/universal/api"; 
 import { updateTotals } from "../js/cart_update";
 
+
 function gatherProductsFromDOM() {
   const items = root.cartContent.querySelectorAll('.cart-item');
   const products = [];
@@ -12,8 +13,7 @@ function gatherProductsFromDOM() {
 
     const discountText = item.querySelector('.cart-item__new-price')?.textContent || "$0";
     const priceAfterDiscount = parseFloat(discountText.replace('$', '')) || 0;
-
-    // Обчислюємо дисконт у %
+ 
     let discount = 0;
     if (priceOld > 0) {
       discount = ((priceOld - priceAfterDiscount) / priceOld) * 100;
@@ -42,11 +42,9 @@ if (currentPath === '/cart.html' && root.cartContent) {
 
     const cartId = deleteButton.dataset.cartId;
     if (!cartId) return;
-
     try {
       const path = `/carts/${cartId}`;
       await deleteQuantityOnServer(path, token);
-
       const cartItem = deleteButton.closest('.cart-item');
       cartItem.remove();
 
@@ -58,8 +56,6 @@ if (currentPath === '/cart.html' && root.cartContent) {
             <p>Your cart is empty.</p>
           </div>`;
         
-        document.querySelector('.cart-item__summary-price').textContent = '0$';
-        document.querySelector('.cart-item__summary-dis').textContent = '0$';
       } else {
         const currentProducts = gatherProductsFromDOM();
         updateTotals(currentProducts);
