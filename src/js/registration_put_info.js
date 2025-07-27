@@ -6,7 +6,7 @@ let fullUrl = url;
 
 const feedbackBox = document.createElement('div');
 feedbackBox.id = 'feedbackBox';
-document.body.appendChild(feedbackBox);
+root.form.appendChild(feedbackBox);
 
 function clearFeedback() {
   feedbackBox.textContent = '';
