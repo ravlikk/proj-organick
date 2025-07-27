@@ -276,6 +276,8 @@
 			border-radius: 30px;
 			background: $white-color;
 			img {
+				width: 46px;
+				height: 46px;
 				position: absolute;
 				top: 22px;
 				left: 25%;
@@ -740,7 +742,7 @@
 
 		&__img {
 			display: block;
-			top: 206px;
+			top: 140px;
 			left: -100px;
 			position: absolute;
 			width: 600px;
@@ -987,7 +989,7 @@
 
 		&__img {
 			width: 750px;
-			height: 700px;
+			height: 650px;
 		}
 		&__content {
 			padding: 63px 0px 0px;

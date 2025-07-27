@@ -37,9 +37,9 @@
 	}
 }
 .service-single-store {
+	padding: 100px 0px 60px;
 	&__all {
 		width: 320px;
-		padding: 100px 0px 0px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -180,7 +180,7 @@
 		}
 	}
 	.service-single-store {
-		padding: 120px 0px 0px;
+		padding: 120px 0px 70px;
 		&__all {
 			width: 700px;
 			gap: 55px;
@@ -273,7 +273,7 @@
 		}
 	}
 	.service-single-store {
-		padding: 160px 0px 0px;
+		padding: 160px 0px 100px;
 		&__all {
 			width: 1200px;
 			gap: 65px;
@@ -360,7 +360,7 @@
 		}
 	}
 	.service-single-store {
-		padding: 181px 0px 0px;
+		padding: 181px 0px 120px;
 		gap: 78px;
 		&__all {
 			width: 1400px;

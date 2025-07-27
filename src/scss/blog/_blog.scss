@@ -1,5 +1,5 @@
 .blog-section{
-  @include adaptive-value(padding-bottom, 30, 140);
+  @include adaptive-value(padding-bottom, 30, 80);
 }
 .blog-section__container {
   max-width: 320px;
