@@ -7,7 +7,7 @@ import { closeBtn } from "../products/showModal";
 import { cartDinamic } from "../cart__dinamic";
 import { root } from "./root";
 
-export const url = "https://api.fivecoins.top/api";
+export const url = "https://test-nest-api-iqy9.onrender.com/api";
 
 export async function registerUser(email, password, url) {
   try {
