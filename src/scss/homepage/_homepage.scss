@@ -1,10 +1,12 @@
 .hero {
   @include adaptive-value(padding-block, 50, 246);
   position: relative;
+
   &__container {
     position: relative;
     width: 320px;
     margin: 0 auto;
+
     @media (min-width: 768px) {
       width: 700px;
       display: flex;
@@ -19,10 +21,12 @@
         z-index: 2;
         top: -50%;
         left: -10%;
+
         @media (min-width: 1920px) {
           top: -30%;
         }
       }
+
       &::before {
         content: url(../../image/homepage/hero/strawberry.svg);
         position: absolute;
@@ -30,29 +34,36 @@
         transform: translateX(-50%);
         left: 50%;
         top: -40%;
+
         @media (min-width: 1920px) {
           top: -10%;
         }
       }
+
       @media (min-width: 1440px) {
         width: 1060px;
         justify-content: space-between;
       }
+
       @media (min-width: 1920px) {
         width: 1420px;
       }
     }
   }
+
   &__wrapper {
     z-index: 999;
     position: relative;
+
     @media (min-width: 1440px) {
       width: 420px;
     }
+
     @media (min-width: 1920px) {
       width: 515px;
     }
   }
+
   &__title {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -60,6 +71,7 @@
     @include adaptive-value(padding-bottom, 15, 23);
     font-weight: 800;
   }
+
   &__btn {
     display: flex;
     align-items: center;
@@ -78,31 +90,39 @@
     font-size: 20px;
     font-weight: 700;
   }
+
   &__img {
     width: 320px;
     padding-bottom: 20px;
+
     @media (min-width: 1440px) {
       width: 520px;
     }
+
     @media (min-width: 1920px) {
       width: 820px;
     }
   }
+
   &__svg {
     @include adaptive-value(width, 19, 22);
     @include adaptive-value(height, 19, 22);
   }
+
   &__mobile {
     @media (min-width: 768px) {
       display: none;
     }
   }
+
   &__dekstop {
     display: none;
+
     @media (min-width: 768px) {
       display: block;
     }
   }
+
   @media (min-width: 768px) {
     &::after {
       content: url(../../image/homepage/hero/leaf.svg);
@@ -111,6 +131,7 @@
       top: -20px;
       right: 0;
     }
+
     &::before {
       content: url(../../image/homepage/hero/leafs.svg);
       position: absolute;
@@ -118,11 +139,13 @@
       bottom: 0;
       left: 0;
     }
+
     @media (min-width: 1920px) {
       bottom: 20%;
     }
   }
 }
+
 .modal__blur {
   position: absolute;
   width: 100%;
@@ -132,37 +155,47 @@
   background: rgba(244, 244, 244, 0.82);
   z-index: 999;
 }
+
 .modal-blur__close {
   display: none;
 }
+
 .products {
   @include adaptive-value(padding-block, 50, 176);
   position: relative;
+
   &__container {
     width: 320px;
     margin: 0 auto;
+
     @media (min-width: 768px) {
       width: 700px;
     }
+
     @media (min-width: 1440px) {
       width: 1060px;
     }
+
     @media (min-width: 1920px) {
       width: 1420px;
     }
   }
+
   &__wrapper {
     text-align: center;
     @include adaptive-value(padding-bottom, 20, 40);
   }
+
   &__title {
     color: $dark-blue-color;
     font-family: Roboto;
     @include adaptive-value(font-size, 32, 50);
     font-weight: 800;
   }
+
   &__list {
     @include adaptive-value(margin-bottom, 20, 122);
+
     @media (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
@@ -170,6 +203,7 @@
       justify-content: center;
     }
   }
+
   &__item {
     border-radius: 30px;
     background: #f9f8f8;
@@ -183,6 +217,7 @@
       font-weight: 600;
       padding-bottom: 19px;
     }
+
     .products-item__text {
       width: max-content;
       padding: 5px 12px;
@@ -192,12 +227,14 @@
       font-family: "Open Sans";
       font-size: 15px;
     }
+
     .products-item__info {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
     .products-item__info::after {
       content: "";
       position: absolute;
@@ -208,20 +245,24 @@
       width: 100%;
       background-color: $ligh-grey;
     }
+
     .products-item__info div {
       display: flex;
       gap: 6px;
     }
+
     .products-item__price {
       font-family: "Open Sans";
       font-size: 18px;
       font-weight: 600;
       color: $dark-blue-color;
     }
+
     .cancel {
       color: $ligh-grey;
       text-decoration: line-through;
     }
+
     @media (min-width: 768px) {
       margin-bottom: 0;
     }
@@ -230,6 +271,7 @@
   &__item:last-child {
     margin-bottom: 0;
   }
+
   &__img {
     border-radius: 30px;
     padding-block: 10px;
@@ -237,6 +279,7 @@
     width: 280px;
     height: 300px;
   }
+
   &__btn {
     display: flex;
     align-items: center;
@@ -253,16 +296,18 @@
     @include adaptive-value(font-size, 16, 20);
     font-weight: 700;
 
-    > svg {
+    >svg {
       @include adaptive-value(width, 19, 22);
       @include adaptive-value(height, 19, 22);
     }
   }
 }
+
 .testimonial {
   @include adaptive-value(padding-bottom, 50, 160);
   position: relative;
   overflow: hidden;
+
   @media (min-width: 1440px) {
     padding-top: 50px;
 
@@ -273,10 +318,12 @@
       height: 100%;
       top: 0;
       left: -10%;
+
       @media (min-width: 1920px) {
         left: 0;
       }
     }
+
     &::before {
       content: url(../../image/homepage/testimonial/right.png);
       position: absolute;
@@ -284,31 +331,38 @@
       height: 100%;
       top: 0;
       right: -5%;
+
       @media (min-width: 1920px) {
         right: 0;
       }
     }
   }
+
   &__container {
     text-align: center;
     margin: 0 auto;
     width: 320px;
+
     @media (min-width: 768px) {
       width: 700px;
     }
+
     @media (min-width: 1440px) {
       width: 920px;
     }
+
     @media (min-width: 1920px) {
       width: 1120px;
     }
   }
+
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     @include adaptive-value(padding-bottom, 50, 100);
   }
+
   &__title {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -316,15 +370,18 @@
     font-weight: 800;
     @include adaptive-value(padding-bottom, 20, 50);
   }
+
   &__text {
     color: $grey-text;
     font-family: "Open Sans";
     @include adaptive-value(font-size, 12, 18);
     line-height: 1.6;
+
     @media (min-width: 1440px) {
       max-width: 620px;
     }
   }
+
   &__name {
     padding-top: 15px;
     color: $dark-blue-color;
@@ -332,22 +389,28 @@
     @include adaptive-value(font-size, 18, 25);
     font-weight: 600;
   }
+
   &__border {
     border: 1px solid #e0e0e0;
   }
+
   &__img {
     border-radius: 50%;
     padding-bottom: 5px;
   }
+
   &__rait {
     padding-bottom: 10px;
   }
+
   &__stats {
     @include adaptive-value(padding-top, 50, 100);
+
     @media (min-width: 1440px) {
       display: flex;
     }
   }
+
   &__stat {
     margin: 0 auto;
     display: flex;
@@ -360,20 +423,24 @@
     border: 5px solid #7eb693;
     background-color: #f1f1f1;
     margin-bottom: 20px;
+
     &:last-child {
       padding-bottom: 0;
     }
+
     @media (min-width: 768px) {
       width: 211px;
       height: 211px;
     }
   }
+
   &-stat__number {
     color: $dark-blue-color;
     font-family: Roboto;
     @include adaptive-value(font-size, 32, 50);
     font-weight: 800;
   }
+
   &-stat__text {
     color: $dark-blue-color;
     font-family: "Open Sans";
@@ -382,33 +449,42 @@
     line-height: 1.6;
   }
 }
+
 .about {
   background-color: $about-background-color;
 
   @include adaptive-value(padding-block, 50, 120);
+
   &__container {
     width: 320px;
     margin: 0 auto;
+
     @media (min-width: 768px) {
       width: 700px;
     }
+
     @media (min-width: 1440px) {
       width: 1060px;
     }
+
     @media (min-width: 1920px) {
       width: 1420px;
       display: flex;
     }
   }
+
   &__img {
     width: 320px;
+
     @media (min-width: 768px) {
       width: 100%;
     }
+
     @media (min-width: 1920px) {
       width: 50%;
     }
   }
+
   &__title {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -416,6 +492,7 @@
     font-weight: 800;
     @include adaptive-value(padding-bottom, 7, 14);
   }
+
   &__text {
     color: $grey-text;
     font-family: "Open Sans";
@@ -423,18 +500,22 @@
     line-height: 1.6;
     @include adaptive-value(padding-bottom, 20, 48);
   }
-  &__list {
-  }
+
+  &__list {}
+
   &__item {
     padding-bottom: 20px;
+
     @media (min-width: 768px) {
       display: flex;
       @include adaptive-value(gap, 12, 19);
     }
   }
+
   &-item__img {
     padding-bottom: 15px;
   }
+
   &-item__title {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -442,9 +523,11 @@
     font-weight: 800;
     padding-bottom: 5px;
   }
+
   &-item__text {
     padding-bottom: 0;
   }
+
   &__btn {
     display: flex;
     align-items: center;
@@ -463,11 +546,13 @@
     font-size: 20px;
     font-weight: 700;
   }
+
   &__svg {
     @include adaptive-value(width, 19, 22);
     @include adaptive-value(height, 19, 22);
   }
 }
+
 .detail {
   background-color: $white-color;
   position: absolute;
@@ -476,30 +561,37 @@
   transform: translate(-50%, -50%);
   z-index: 999;
   width: 100%;
+
   &__container {
     position: relative;
     z-index: 900;
     margin: 0 auto;
     width: 320px;
     @include adaptive-value(padding-block, 20, 50);
+
     & div:first-child {
       position: relative;
     }
+
     @media (min-width: 768px) {
       width: 700px;
+
       & div:first-child {
         display: flex;
         gap: 30px;
         align-items: center;
       }
     }
+
     @media (min-width: 1440px) {
       width: 820px;
     }
+
     @media (min-width: 1920px) {
       width: 1173px;
     }
   }
+
   &__close {
     top: 12px;
     position: absolute;
@@ -517,14 +609,17 @@
     border-radius: 8px;
     background: #274c5b;
     border: none;
+
     @media (min-width: 768px) {
       top: 0;
       right: -65px;
     }
   }
+
   &__wrapper {
     position: relative;
   }
+
   &-wrapper__text {
     position: absolute;
     width: max-content;
@@ -538,6 +633,7 @@
     top: 15px;
     z-index: 2;
   }
+
   &__title {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -546,32 +642,39 @@
     font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
+
     @media (min-width: 768px) {
       text-align: left;
     }
   }
+
   &__inf {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-bottom: 15px;
+
     @media (min-width: 768px) {
       display: block;
     }
   }
+
   &__img {
     position: relative;
     width: 320px;
     height: 300px;
+
     @media (min-width: 1920px) {
       width: 600px;
       height: 600px;
     }
   }
+
   &__prices {
     display: flex;
     gap: 10px;
   }
+
   &__price {
     color: $dark-blue-color;
     text-align: center;
@@ -581,38 +684,45 @@
     font-weight: 700;
     line-height: normal;
   }
+
   &__text {
     color: $grey-text;
     font-family: "Open Sans";
     @include adaptive-value(font-size, 14, 18);
     line-height: 1.6;
+
     @media (min-width: 768px) {
       &:last-child {
         text-align: center;
       }
     }
   }
+
   &__quanity {
     display: flex;
     align-items: center;
     justify-content: space-between;
     @include adaptive-value(margin-block, 15, 35);
+
     @media (min-width: 768px) {
       padding-inline: 0;
       justify-content: left;
       gap: 10px;
     }
+
     @media (min-width: 1920px) {
       margin-block: 0;
       padding-top: 35px;
     }
   }
+
   &-quanity__text {
     color: $dark-blue-color;
     font-family: Roboto;
     @include adaptive-value(font-size, 16, 20);
     font-weight: 700;
   }
+
   &-quantity__count {
     text-align: center;
     display: flex;
@@ -628,6 +738,7 @@
     @include adaptive-value(font-size, 16, 20);
     font-weight: 700;
   }
+
   &__btn {
     border-radius: 16px;
     background: #274c5b;
@@ -643,21 +754,25 @@
     @include adaptive-value(font-size, 12, 20);
     font-weight: 700;
   }
+
   &__btns {
     display: flex;
     justify-content: space-between;
     padding-inline: 10px;
     margin-bottom: 10px;
+
     .active {
       color: $white-color;
       background: #274c5b;
     }
+
     @media (min-width: 768px) {
       gap: 20px;
       justify-content: center;
       margin-bottom: 20px;
     }
   }
+
   &-btns__btn {
     border: none;
     display: flex;
@@ -671,6 +786,7 @@
     font-family: "Open Sans";
     @include adaptive-value(font-size, 12, 20);
     font-weight: 700;
+
     @media (min-width: 768px) {
       @include adaptive-value(width, 140, 363);
       @include adaptive-value(height, 40, 80);
@@ -685,24 +801,30 @@
 
 .offer {
   background-color: $dark-blue-color;
+
   &__container {
     width: 320px;
     margin: 0 auto;
     @include adaptive-value(padding-block, 50, 200);
+
     @media (min-width: 768px) {
       width: 700px;
     }
+
     @media (min-width: 1440px) {
       width: 1060px;
     }
+
     @media (min-width: 1920px) {
       width: 1420px;
     }
-    > div {
+
+    >div {
       @include adaptive-value(margin-bottom, 20, 50);
       text-align: center;
     }
   }
+
   &__title {
     color: $white-color;
     font-family: Roboto;
@@ -710,8 +832,10 @@
     font-weight: 800;
     @include adaptive-value(margin-bottom, 10, 30);
   }
+
   &__list {
     @include adaptive-value(margin-bottom, 20, 122);
+
     @media (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
@@ -736,6 +860,7 @@
 .select-header {
   @include adaptive-value(padding, 10, 15);
   background: #fff;
+  color: $dark-blue-color;
   @include adaptive-value(font-size, 16, 32);
 }
 
@@ -755,22 +880,27 @@
 .select-list li {
   padding: 10px;
   border-bottom: 1px solid #eee;
+  color: $dark-blue-color;
   @include adaptive-value(font-size, 16, 32);
 }
 
 .select-list li:hover {
   background: #f0f0f0;
 }
+
 .gallery {
   background: $gray-white-color;
   @include adaptive-value(padding-block, 50, 187);
+
   &__container {
     @include adaptive-value(width, 320, 650);
     margin: 0 auto;
+
     @media (min-width: 920px) {
       width: 100%;
     }
   }
+
   &__list {
     @media (min-width: 920px) {
       display: flex;
@@ -778,13 +908,16 @@
       @include adaptive-value(gap, 20, 48);
     }
   }
+
   &__item {
     @include adaptive-value(height, 320, 550);
     @include adaptive-value(width, 320, 650);
+
     @media (min-width: 768px) {
       height: 220px;
       @include adaptive-value(height, 220, 650);
     }
+
     @media (min-width: 920px) {
       margin-bottom: 0;
     }
@@ -794,23 +927,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
 
   &__brown {
-    background: url(../../image/gallery/brown.png) lightgray 50% / cover
-      no-repeat;
+    background: url(../../image/gallery/brown.png) lightgray 50% / cover no-repeat;
   }
+
   &__green {
-    background: url(../../image/gallery/green.png) lightgray 50% / cover
-      no-repeat;
+    background: url(../../image/gallery/green.png) lightgray 50% / cover no-repeat;
   }
+
   &__yellow {
-    background: url(../../image/gallery/yellow.png) lightgray 50% / cover
-      no-repeat;
+    background: url(../../image/gallery/yellow.png) lightgray 50% / cover no-repeat;
   }
+
   &__text {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -820,39 +954,49 @@
     border-radius: 20px;
     background: #fff;
     padding: 20px 33px;
+
     @media (min-width: 768px) {
       @include adaptive-value(padding-block, 20, 33);
       @include adaptive-value(padding-inline, 33, 83);
     }
   }
 }
+
 .news {
   @include adaptive-value(padding-top, 50, 187);
   padding-bottom: 170px;
+
   @media (min-width: 768px) {
     padding-bottom: 210px;
   }
+
   &__container {
     width: 320px;
     margin: 0 auto;
+
     @media (min-width: 768px) {
       @include adaptive-value(width, 550, 1250);
     }
+
     @media (min-width: 1440px) {
       width: 1060px;
     }
+
     @media (min-width: 1920px) {
       width: 1420px;
     }
   }
+
   &__wrapper {
     padding-bottom: 20px;
+
     @media (min-width: 768px) {
       display: flex;
       justify-content: space-between;
       align-items: end;
     }
   }
+
   &__title {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -865,6 +1009,7 @@
       margin-bottom: 0;
     }
   }
+
   &__btn {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -881,6 +1026,7 @@
     border: 2px solid $dark-blue-color;
     background: $white-color;
   }
+
   &__list {
     @media (min-width: 768px) {
       display: flex;
@@ -889,16 +1035,20 @@
       justify-content: center;
     }
   }
+
   &__item {
     position: relative;
     margin-bottom: 150px;
+
     &:last-of-type {
       margin-bottom: 0;
     }
+
     @media (min-width: 768px) {
       margin-bottom: 0;
     }
   }
+
   &-item__content {
     position: absolute;
     padding: 20px;
@@ -906,15 +1056,18 @@
     border-radius: 31px 34px 30px 30px;
     background: $white-color;
     box-shadow: 0px 20px 35px 0px rgba(167, 167, 167, 0.25);
+
     @media (min-width: 768px) {
       @include adaptive-value(width, 320, 460);
       @include adaptive-value(height, 220, 260);
       @include adaptive-value(top, 150, 240);
     }
+
     @media (min-width: 1440px) {
       left: 50%;
       transform: translateX(-50%);
     }
+
     @media (min-width: 1920px) {
       width: 580px;
       height: 320px;
@@ -922,15 +1075,18 @@
       padding: 45px;
     }
   }
+
   &-item__name {
     color: $dark-blue-color;
     font-family: Roboto;
     @include adaptive-value(font-size, 14, 18);
     margin-bottom: 10px;
+
     @media (min-width: 1920px) {
       margin-bottom: 20px;
     }
   }
+
   &-item__title {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -938,10 +1094,12 @@
     font-weight: 800;
     margin-bottom: 2px;
     max-width: 400px;
+
     @media (min-width: 1920px) {
       max-width: 600px;
     }
   }
+
   &-item__text {
     color: $grey-text;
     font-family: "Open Sans";
@@ -949,11 +1107,13 @@
     line-height: 1.6;
     margin-bottom: 10px;
     max-width: 400px;
+
     @media (min-width: 1920px) {
       max-width: 600px;
       margin-bottom: 20px;
     }
   }
+
   &-item__btn {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -969,11 +1129,13 @@
 
     border-radius: 16px;
     background: $yellow-btn-color;
+
     @media (min-width: 1440px) {
       @include adaptive-value(height, 160, 220);
       @include adaptive-value(height, 50, 80);
     }
   }
+
   &__text {
     top: 15px;
     left: 15px;
@@ -991,18 +1153,22 @@
     @include adaptive-value(font-size, 16, 20);
     font-weight: 800;
   }
+
   &__img {
     border-radius: 16px;
     width: 320px;
     height: 280px;
+
     @media (min-width: 768px) {
       @include adaptive-value(width, 320, 460);
       @include adaptive-value(height, 280, 460);
     }
+
     @media (min-width: 1440px) {
       width: 500px;
       height: 420px;
     }
+
     @media (min-width: 1920px) {
       width: 680px;
       height: 520px;
@@ -1014,17 +1180,22 @@
     @include adaptive-value(height, 17, 19);
   }
 }
+
 .banner {
   @include adaptive-value(padding-bottom, 50, 100);
+
   &__container {
     width: 320px;
     margin: 0 auto;
+
     @media (min-width: 768px) {
       width: 700px;
     }
+
     @media (min-width: 1440px) {
       width: 1060px;
     }
+
     @media (min-width: 1920px) {
       width: 1420px;
     }
@@ -1036,10 +1207,12 @@
       gap: 30px;
       justify-content: center;
     }
+
     @media (min-width: 1920px) {
       gap: 35px;
     }
   }
+
   &__item {
     width: 320px;
     height: 240px;
@@ -1049,57 +1222,67 @@
     justify-content: center;
     padding-left: 35px;
     border-radius: 30px;
+
     &:nth-child(1) {
-      background: url(../../image/homepage/banner/pink-banner.png) lightgray 50% /
-        cover no-repeat;
+      background: url(../../image/homepage/banner/pink-banner.png) lightgray 50% / cover no-repeat;
     }
+
     &:nth-child(2) {
-      background: url(../../image/homepage/banner/white-banner.png) lightgray
-        50% / cover no-repeat;
+      background: url(../../image/homepage/banner/white-banner.png) lightgray 50% / cover no-repeat;
       margin-bottom: 0;
     }
+
     @media (min-width: 768px) {
       width: 360px;
       margin-bottom: 0;
     }
+
     @media (min-width: 1440px) {
       width: 480px;
       height: 240px;
     }
+
     @media (min-width: 1920px) {
       width: 660px;
       height: 376px;
     }
   }
+
   .white {
     color: $white-color;
   }
+
   &-item__title {
     color: $dark-blue-color;
     font-family: Roboto;
     font-size: 40px;
     @include adaptive-value(font-size, 30, 40);
     font-weight: 800;
+
     @media (min-width: 1440px) {
       max-width: 280px;
     }
   }
 }
+
 .friendly {
   position: relative;
-  background: url(../../image/homepage/eco-friendly/eco-1x.avif) lightgray 50% /
-    cover no-repeat;
+  background: url(../../image/homepage/eco-friendly/eco-1x.avif) lightgray 50% / cover no-repeat;
   padding-block: 50px;
+
   @media (min-width: 1440px) {
     background: none;
     padding-block: 0;
   }
+
   &__container {
     width: 320px;
     margin: 0 auto;
+
     @media (min-width: 768px) {
       width: 420px;
     }
+
     @media (min-width: 1440px) {
       @media (min-width: 1440px) {
         display: flex;
@@ -1109,58 +1292,70 @@
         align-items: center;
       }
     }
+
     @media (min-width: 1920px) {
       width: 100%;
     }
   }
+
   &__img {
     width: 100%;
     position: absolute;
     left: 0;
     display: none;
+
     @media (min-width: 1440px) {
       position: relative;
       display: block;
       width: 100%;
       height: 720px;
     }
+
     @media (min-width: 1920px) {
       height: 100%;
       width: 100%;
     }
   }
+
   &__content {
     background-color: $white-color;
     padding: 25px;
+
     @media (min-width: 1440px) {
       width: 620px;
       position: relative;
       left: -40px;
       border-radius: 30px;
     }
+
     @media (min-width: 1920px) {
       width: 740px;
       padding: 50px;
     }
   }
+
   &__title {
     color: $dark-blue-color;
     font-family: Roboto;
     @include adaptive-value(font-size, 24, 50);
     font-weight: 800;
     @include adaptive-value(margin-bottom, 15, 35);
+
     @media (min-width: 1920px) {
       max-width: 520px;
     }
   }
-  &__list {
-  }
+
+  &__list {}
+
   &__item {
     @include adaptive-value(padding-bottom, 15, 50);
+
     &:last-child {
       padding-bottom: 0;
     }
   }
+
   &-item__title {
     color: $dark-blue-color;
     font-family: Roboto;
@@ -1168,6 +1363,7 @@
     font-weight: 500;
     margin-bottom: 4px;
   }
+
   &-item__text {
     color: $grey-text;
     font-family: "Open Sans";
