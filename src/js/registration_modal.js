@@ -32,4 +32,5 @@ root.overlay.addEventListener('click', () => {
  
     root.overlay.style.display = 'none';
     root.modal.style.display = 'none';
+    document.body.classList.remove('no-scroll');
 });

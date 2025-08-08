@@ -96,6 +96,13 @@ checkInputsFilled(false);
 root.modalog.addEventListener('click', () => {
   root.content.classList.remove('hidden');
   root.closeModalBtn.classList.remove('hidden');
+  document.body.classList.remove('no-scroll');
+});
+
+root.modareg.addEventListener('click', () => {
+  root.content.classList.remove('hidden');
+  root.closeModalBtn.classList.remove('hidden');
+  document.body.classList.remove('no-scroll');
 });
 
 root.modareg.addEventListener('click', async (e) => {
